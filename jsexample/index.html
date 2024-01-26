@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+	<title>Diashow</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!--Link für Icons der Pfeile-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--JavaScript als Externe Datei-->
+	<script language="javascript" type="text/javascript" src="diashow.js"></script>
+	<!--Edit im nachhinein: besser wenn script tag in html ganz unten, dann ist onload in body tag
+		und somit die funktion main in js nicht nötig-->
+
+</head>
+
+<body onload="main()"> <!--Aufruf der JavaScript Methode-->
+	
+	<div id="diashow">
+
+		<div id="slide"><h2>Diashow</h2></div>
+		<div class="break"></div> <!--Break div mit flex-basis: 100% -> Nächste Zeile-->
+
+		<button id="button_left"><i class="fa fa-arrow-circle-left"></i></button>
+
+		<img id="image" src="src/1.png">
+
+		<button id="button_right"><i class="fa fa-arrow-circle-right"></i></button>
+
+		<div class="break"></div> 
+		<h1 id="counter">1</h1><h1 id="countermax">&nbsp&nbsp&nbsp5</h1> <!--&nbsp=Leerzeichen-->
+
+	</div>
+
+</body>
+</html>

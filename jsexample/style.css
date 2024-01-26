@@ -1,0 +1,135 @@
+* {
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+body {
+	background: linear-gradient(90deg, #fff 50%, #161616 50%);
+	cursor:url(https://cdn.custom-cursor.com/db/cursor/32/Yin_and_YangCursor.png) , default!important; /*Mauszeiger*/
+}
+
+/*Mit Flexbox zentriert*/
+#diashow { 
+	height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button {
+	transition: 0.5s;
+	margin: 25px;
+	font-size: 30px;
+	color: grey;
+  	border: none;
+  	outline: none;
+	background-color: transparent;
+}
+
+button:hover {
+	transition: 0.5s;
+	color: lightgrey;
+}
+
+/*Hover-Effekte für Buttons: Anderer Mauszeiger, Vergößern des Icons*/;
+#button_left {
+	cursor: url(https://cdn.custom-cursor.com/db/pointer/32/Black_pointer.png) , pointer!important;
+}
+
+#button_left:hover {
+	transition: 0.5s;
+	transform: scale(1.4, 1.4);
+	color: black;
+	cursor: url(https://cdn.custom-cursor.com/db/pointer/32/Black_pointer.png) , pointer!important;
+}
+
+#button_right {
+	cursor: url(https://cdn.custom-cursor.com/db/pointer/32/Gray_pointer.png) , pointer!important;
+}
+
+#button_right:hover {
+	transition: 0.5s;
+	transform: scale(1.4, 1.4);
+	color: white;
+	cursor: url(https://cdn.custom-cursor.com/db/pointer/32/Gray_pointer.png) , pointer!important;
+}
+
+img {
+	transition: 0.5s;
+	border: 3px solid #fff;
+	border-radius: 6%;
+	box-shadow: 0 0 0 2px #161616;
+}
+
+img:hover {
+	transition: 0.5s;
+	border-radius: 0%;
+	transform: scale(0.9);
+	transition-delay: 0.2s;
+}
+
+/*Für Flexbox neue Zeile*/
+.break {
+	flex-basis: 100%;
+}
+
+/*Nummern unterm Bild*/
+h1 {
+	font-size: 22px;
+	font-family: Florence;
+	font-style: italic;
+	color: black;
+	background-color: transparent;
+	text-align: center;
+	margin-top: 4px;
+}
+
+#counter {
+	animation: flicker 1.5s infinite;
+}
+
+@keyframes flicker { 
+  0%   { opacity:1; }
+  50%  { opacity:0.2; }
+  100% { opacity:1; }
+}
+
+#countermax {
+	color: white;
+}
+
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+
+/*Diashow Text überm Bild*/
+#slide {
+	font-family: neon;
+  	color: orange;
+  	font-size: 22px;
+}
+
+#slide h2 {
+	padding-left: 48px;
+	padding-right: 50px;
+	padding-bottom: 20px;
+	margin-bottom: -15px;
+	margin-top: -5px;
+	padding-top: 20px;
+	margin-right: 300px;
+}
+
+
+
+
+
+
+
+
+         
+
+
