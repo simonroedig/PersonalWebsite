@@ -80,8 +80,7 @@ function main() {
     document.getElementById("id_img_all_cards_arrow_right").addEventListener("click", rightArrowCardsClick);
     document.getElementById("id_img_close_opencards_icon").addEventListener("click", closeOpenedCardClick);
 
-    document.getElementById("id_div_toggle_cardsgroup_lever_big").addEventListener("click", toggleCards);
-    document.getElementById("id_img_toggle_cardsgroup_text").addEventListener("click", toggleCards);
+    document.getElementById("id_div_toggle_cardsgroup_space_wrapper").addEventListener("click", toggleCards);
 
     var cardElements = document.getElementsByClassName("cards");
     for (var i = 0; i < ammountOfAllCards; i++) {

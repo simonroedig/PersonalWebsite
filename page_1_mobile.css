@@ -12,7 +12,7 @@
         width: 120px;
         height: 7vh;
         cursor: pointer;
-        transition: all .5s ease;
+        transition: all .5s ease-in-out;
     }
     .class_div_navbar_button_burger {
         width: 17px;
@@ -20,7 +20,7 @@
         background: rgb(112, 112, 112);
         border: 5px solid black;
         border-radius: 100%;
-        transition: all .5s ease;
+        transition: all .5s ease-in-out;
     }
 
     .class_div_navbar_button.clicked .class_div_navbar_button_burger {
@@ -29,7 +29,7 @@
         background: rgb(112, 112, 112);
         border: 2px solid black;
         border-radius: 100%;
-        transition: all .5s ease;
+        transition: all .5s ease-in-out;
     }
 
     #id_div_profile_all {
@@ -50,7 +50,7 @@
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        transition: 1s ease;
+        transition: 1s ease-in-out;
     }
 
     #id_div_profile_right {
@@ -62,7 +62,7 @@
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        transition: 1s ease;
+        transition: 1s ease-in-out;
     }
 
     #id_p_profile_left_text {
@@ -71,11 +71,11 @@
         font-family: 'Space Mono', monospace;
         font-weight: 700;
         margin: 2vh;
-
         width: 22ch;
         animation: typing 2s steps(22);
         white-space: nowrap;
         overflow: hidden;
+        transition: 1s ease-in-out;
     }
 
     @keyframes typing {
@@ -93,7 +93,7 @@
         font-family: 'Space Mono', monospace;
         font-weight: 700;
         opacity: 0%;
-        transition: opacity 1s ease;
+        transition: 0.2s ease-in-out;
         margin: 2vh;
     }
 
@@ -111,13 +111,16 @@
         border-radius: 50%;
         height: 25vh;
         /* border: 0.5vh solid black; */
-        box-shadow: 0 0 0 0.5vh black;
-        transition: transform .5s ease;
+        box-shadow: 0 0 0 0.4vh black;
+        transition: .5s ease-in-out;
     }
 
-    #id_img_profile_picture:hover {
-        transform: scale(1.1);
-        transition: transform .5s ease;
+    @media (hover: hover) {
+        #id_img_profile_picture:hover {
+            transform: scale(1.1);
+            transition: .5s ease;
+            border-radius: 3vh;
+        }
     }
 
     #id_div_info_text_space {
@@ -140,6 +143,12 @@
         text-decoration: none;
         color: black;
         text-decoration: underline solid black 0.2vh;
+    }
+
+    @media (hover: hover) {
+        #id_p_info_text a:hover {
+            text-decoration: underline solid black 0.3vh;
+        }
     }
 
 }

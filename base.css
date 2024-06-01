@@ -21,7 +21,19 @@
     --scrollbrightest: #919191;
 }
 
-::-webkit-scrollbar {width: 1vw;}
-::-webkit-scrollbar-track {background: var(--scrolldark);}
-::-webkit-scrollbar-thumb {background: var(--scrollbrighter);}
-::-webkit-scrollbar-thumb:hover {background: var(--scrollbrightest);}
+::-webkit-scrollbar {
+    width: 0.7vw;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrolldark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbrighter);
+    border-radius: 50px;  /* Adjust this value to your liking */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbrightest);
+}

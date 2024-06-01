@@ -15,34 +15,37 @@
         height: 40vh;
         width: 35vh;
         margin: 0 1vh;
-        transition: 0.2s ease;
+        transition: 0.2s ease-in-out;
         border-radius: 2vh;
     }
     #id_img_all_cards_arrow_left {
         position: relative;
         height: 6.5vw;
         cursor: pointer;
-        animation: left1 2s infinite ease;
-        transition: 0.2s ease;
+        animation: left1 2s infinite ease-in-out;
+        transition: 0.2s ease-in-out;
         left: 0;
     }
     #id_img_all_cards_arrow_right {
         position: relative;
         height: 6.5vw;
         cursor: pointer;
-        animation: right1 2s infinite ease;
-        transition: 0.2s ease;
+        animation: right1 2s infinite ease-in-out;
+        transition: 0.2s ease-in-out;
         left: 0;
     }
 
-    #id_img_all_cards_arrow_left:hover {
-        transform: scale(0.8);
-        transition: 0.2s ease;
+    @media (hover: hover) {
+        #id_img_all_cards_arrow_left:hover {
+            transform: scale(0.8);
+            transition: 0.2s ease-in-out;
+        }
+        #id_img_all_cards_arrow_right:hover {
+            transform: scale(0.8);
+            transition: 0.2s ease-in-out;
+        }
     }
-    #id_img_all_cards_arrow_right:hover {
-        transform: scale(0.8);
-        transition: 0.2s ease;
-    }
+
     @keyframes left1 {
         0% {left: 1vh;}
         50% {left: 0vh;}
@@ -71,32 +74,36 @@
         height: 40vh;
         width: 35vh;
         margin: 0 3vh;
-        transition: 0.2s ease;
+        transition: 0.2s ease-in-out;
     }
     #id_img_all_cards_arrow_left {
         position: relative;
         height: 5vw;
         cursor: pointer;
-        animation: left1 2s infinite ease;
-        transition: 0.2s ease;
+        animation: left1 2s infinite ease-in-out;
+        transition: 0.2s ease-in-out;
         left: 0;
     }
     #id_img_all_cards_arrow_right {
         position: relative;
         height: 5vw;
         cursor: pointer;
-        animation: right1 2s infinite ease;
-        transition: 0.2s ease;
+        animation: right1 2s infinite ease-in-out;
+        transition: 0.2s ease-in-out;
         left: 0;
     }
-    #id_img_all_cards_arrow_left:hover {
-        transform: scale(1.2);
-        transition: 0.2s ease;
+
+    @media (hover: hover) {
+        #id_img_all_cards_arrow_left:hover {
+            transform: scale(0.8);
+            transition: 0.2s ease-in-out;
+        }
+        #id_img_all_cards_arrow_right:hover {
+            transform: scale(0.8);
+            transition: 0.2s ease-in-out;
+        }
     }
-    #id_img_all_cards_arrow_right:hover {
-        transform: scale(1.2);
-        transition: 0.2s ease;
-    }
+
     @keyframes left1 {
         0% {left: 2vh;}
         50% {left: 0vh;}
@@ -124,7 +131,7 @@
         height: 40vh;
         width: 35vh;
         margin: 0 3vh;
-        transition: 0.2s ease;
+        transition: 0.2s ease-in-out;
         border-radius: 2vh;
     }
 
@@ -135,9 +142,11 @@
 
 }
 
-.cardsAllForGeneralStyles:hover {
-    transform: scale(1.05);
-    transition: 0.2s ease;
-    cursor: pointer;
-    box-shadow: #333333;
+@media (hover: hover) {
+    .cardsAllForGeneralStyles:hover {
+        transform: scale(1.05);
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+        box-shadow: #333333;
+    }
 }

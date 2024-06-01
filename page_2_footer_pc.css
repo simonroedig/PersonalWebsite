@@ -1,32 +1,38 @@
 @media only screen and (min-width: 1000px) {
     #id_img_footer_youtube {
         height: 10vh;
-        transition: 0.2s ease;
+        transition: 0.2s ease-in-out;
     }
 
-    #id_img_footer_youtube:hover {
-        transform: scale(1.1);
-        transition: 0.2s ease;
+    @media (hover: hover) {
+        #id_img_footer_youtube:hover {
+            transform: scale(1.1);
+            transition: 0.2s ease-in-out;
+        }
     }
 
     #id_img_footer_mail {
         height: 10vh;
-        transition: 0.2s ease;
+        transition: 0.2s ease-in-out;
     }
 
-    #id_img_footer_mail:hover {
-        transform: scale(1.1);
-        transition: 0.2s ease;
+    @media (hover: hover) {
+        #id_img_footer_mail:hover {
+            transform: scale(1.1);
+            transition: 0.2s ease-in-out;
+        }
     }
 
     #id_img_footer_linkedin {
         height: 7.5vh;
-        transition: 0.2s ease;
+        transition: 0.2s ease-in-out;
     }
 
-    #id_img_footer_linkedin:hover {
-        transform: scale(1.1);
-        transition: 0.2s ease;
+    @media (hover: hover) {
+        #id_img_footer_linkedin:hover {
+            transform: scale(1.1);
+            transition: 0.2s ease-in-out;
+        }
     }
 
     #id_div_footer_left_rectangle {

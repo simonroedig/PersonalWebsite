@@ -29,14 +29,22 @@ function toggleCards() {
         toggleImage.src = "img/card_work.png"
     }
 
+    var allCards = document.querySelectorAll(".cardsAllForGeneralStyles");
     var personalCard = document.querySelectorAll(".personalCard");
     var uniCard = document.querySelectorAll(".uniCard");
-    var styleCards = document.querySelectorAll(".cardsAllForGeneralStyles");
+    var workCard = document.querySelectorAll(".cardsAllForGeneralStyles");
 
     
     rightClickedCards = 0;
 
+    // ALL CARDS
     if (toggleCardState === 0) {
+
+        allCards.forEach(function(card) {
+            card.classList.add('cards');
+            card.style.visibility = "visible";
+            card.style.display = "inline-flex";
+        });
 
         websiteCard.id = "card1";
         mediaDesignCard.id = "card2";
@@ -48,23 +56,21 @@ function toggleCards() {
         showerCard.id = "card8";
         rememoryCard.id = "card9";
         iotCard.id = "card10";
-
-        styleCards.forEach(function(card) {
-            card.classList.add('cards');
-        });
     }
 
+    // PERSONAL CARDS
     if (toggleCardState === 1) {
+
+        allCards.forEach(function(card) {
+            card.classList.remove('cards');
+            card.style.visibility = "hidden";
+            card.style.display = "none";
+        });
 
         personalCard.forEach(function(card) {
             card.classList.add('cards');
             card.style.visibility = "visible";
             card.style.display = "inline-flex";
-        });
-        uniCard.forEach(function(card) {
-            card.classList.remove('cards');
-            card.style.visibility = "hidden";
-            card.style.display = "none";
         });
 
         websiteCard.id = "card1";
@@ -80,13 +86,15 @@ function toggleCards() {
         iotCard.id = "ignore";
     }
 
+    // UNI CARDS
     if (toggleCardState === 2) {
 
-        personalCard.forEach(function(card) {
+        allCards.forEach(function(card) {
             card.classList.remove('cards');
             card.style.visibility = "hidden";
             card.style.display = "none";
         });
+
         uniCard.forEach(function(card) {
             card.classList.add('cards');
             card.style.visibility = "visible";
@@ -106,7 +114,20 @@ function toggleCards() {
         chromeCard.id = "ignore";
     }
 
+    // WORK CARDS
     if (toggleCardState === 3) {
+
+        allCards.forEach(function(card) {
+            card.classList.remove('cards');
+            card.style.visibility = "hidden";
+            card.style.display = "none";
+        });
+        
+        workCard.forEach(function(card) {
+            card.classList.add('cards');
+            card.style.visibility = "visible";
+            card.style.display = "inline-flex";
+        });
 
         websiteCard.id = "card1";
         mediaDesignCard.id = "card2";
@@ -118,14 +139,9 @@ function toggleCards() {
         showerCard.id = "card8";
         rememoryCard.id = "card9";
         iotCard.id = "card10";
-
-        styleCards.forEach(function(card) {
-            card.classList.add('cards');
-        });
     }
 
     
-
     ammountOfAllCards = document.getElementsByClassName("cards").length;
     var ammountOfAllCardNumber = document.getElementsByClassName("cardNumber").length;
     var j = 0;
@@ -136,19 +152,15 @@ function toggleCards() {
             j++;
         }
     }
-    rightArrowCardsClick();
-    rightArrowCardsClick();
-    rightArrowCardsClick();
-    rightArrowCardsClick();
-    rightArrowCardsClick();
-    rightArrowCardsClick();
-    leftArrowCardsClick();
-    leftArrowCardsClick();
-    leftArrowCardsClick();
-    leftArrowCardsClick();
-    leftArrowCardsClick();
-    leftArrowCardsClick();
-    
+    // Call rightArrowCardsClick a few times
+    for (let i = 0; i < 10; i++) {
+        rightArrowCardsClick();
+    }
+
+    // Call leftArrowCardsClick a few times
+    for (let i = 0; i < 10; i++) {
+        leftArrowCardsClick();
+    }
 }
 
 function leftArrowCardsClick() {
