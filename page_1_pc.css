@@ -144,16 +144,26 @@
         /* border: 0.5vh solid black; */
         box-shadow: 0 0 0 0.4vh black;
         transition: .5s ease;
+        animation: rotateAnimation2 5s ease-in-out infinite;
+    }
+
+    @keyframes rotateAnimation2 {
+        0%, 100% {
+            transform: rotate(-3deg);
+        }
+        50% {
+            transform: rotate(3deg);
+        }
     }
 
     @media (hover: hover) {
         #id_img_profile_picture:hover {
-            transform: scale(1.1);
+            height: 38vh;
             transition: .5s ease;
             border-radius: 3vh;
         }
     }
-
+   
     #id_div_info_text_space {
         height: 28vh;
         display: flex;

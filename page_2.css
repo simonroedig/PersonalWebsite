@@ -16,19 +16,21 @@
     position: relative;
     bottom: 0;
     height: 3.5vh;
-    animation: updown2 2s infinite ease-in-out;
+    animation: uparrowanim 2s infinite ease-in-out;
     transition: 0.2s ease-in-out;
 }
 
-@keyframes updown2 {
+@media (hover: hover) {
+    #id_img_arrowup:hover {
+        height: 3vh;
+        transition: 0.2s ease-in-out;
+    }
+}
+
+@keyframes uparrowanim {
     0% {bottom: -0.4vh;}
-    50% {bottom: 0.2vh;}
+    50% {bottom: 0.6vh;}
     100% {bottom: -0.4vh;}
-}
-
-#id_img_arrowup:hover {
-    opacity: 50%;
-    transition: 0.2s ease-in-out;
 }
 
 #id_div_toggle_cardsgroup_space {
@@ -113,4 +115,14 @@
 
 #id_img_copyright_icon {
     width: 1vh;
+    animation: rotateAnimation 4s ease-in-out infinite;
+}
+
+@keyframes rotateAnimation {
+    0%, 100% {
+        transform: rotate(-30deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
 }

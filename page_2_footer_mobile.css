@@ -36,18 +36,29 @@
     }
 
     #id_div_footer_left_rectangle {
-        height: 2vh;
-        width: 20vw;
+        height: 1.5vh;
+        width: 17vw;
         background-color: black;
         border-top-right-radius: 5vh;
         border-bottom-right-radius: 5vh;
+        animation: widthAnimation 5s infinite ease-in-out;
     }
 
     #id_div_footer_right_rectangle {
-        height: 2vh;
-        width: 20vw;
+        height: 1.5vh;
+        width: 17vw;
         background-color: black;
         border-top-left-radius: 5vh;
         border-bottom-left-radius: 5vh;
+        animation: widthAnimation 5s infinite ease-in-out;
+    }
+
+    @keyframes widthAnimation {
+        0%, 100% {
+            width: 17vw;
+        }
+        50% {
+            width: 13vw;
+        }
     }
 }

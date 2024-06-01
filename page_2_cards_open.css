@@ -25,18 +25,33 @@
     visibility: hidden;
     position: absolute;
     width: 5vh;
-    animation: open2 1s ease;
+    animation: appearAndScale 1s ease, rotateInfinite 4s linear infinite;
     transition: 0.2s ease;
     cursor: pointer;
 }
 
-@keyframes open2 {
-    0% {opacity: 0%; transform: rotate(0) scale(0.75);}
-    100% {opacity: 100%; transform: rotate(180deg) scale(1.0);;}
+@keyframes appearAndScale {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.75);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(180deg) scale(1.0);
+    }
+}
+
+@keyframes rotateInfinite {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(540deg);
+    }
 }
 
 #id_img_close_opencards_icon:hover {
-    transform: scale(1.15);
+    width: 4vh;
 }
 
 .opencard h {

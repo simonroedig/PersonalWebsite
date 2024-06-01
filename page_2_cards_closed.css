@@ -3,10 +3,45 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    transform: scale(1);
+}
+
+@media (hover: hover) {
+    .cardsAllForGeneralStyles:hover {
+        transform: scale(1.05);
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+        animation: floatEffect 0.5s ease-in-out;
+        transition: 0.2s ease-in-out;
+    }
 }
 
 .card1ForStyle {
     background-image: url("img/cards/webdevbg.png");
+    
+}
+@keyframes updown2 {
+    0% {transform: translateY(-0.4vh);}
+    50% {transform: translateY(0.2vh);}
+    100% {transform: translateY(-0.4vh);}
+}
+
+@keyframes floatEffect {
+    0% {
+        transform: translate(0, 0vh) rotate(0deg);
+    }
+    25% {
+        transform: translate(0.2vh, 0.2vh) rotate(1deg);
+    }
+    50% {
+        transform: translate(0.2vh, 0.4vh) rotate(-4deg);
+    }
+    75% {
+        transform: translate(0vh, 0vh) rotate(2deg) scale(1.05);
+    }
+    100% {
+        transform: translate(0, 0vh) rotate(0deg) scale(1.05);
+    }
 }
 
 .card2ForStyle {
