@@ -1,0 +1,47 @@
+@media only screen and (max-width: 1000px) {
+    #id_img_footer_youtube {
+        height: 6vh;
+        transition: 0.2s ease;
+    }
+
+    #id_img_footer_youtube:hover {
+        transform: scale(1.1);
+        transition: 0.2s ease;
+    }
+
+    #id_img_footer_mail {
+        height: 6vh;
+        transition: 0.2s ease;
+    }
+
+    #id_img_footer_mail:hover {
+        transform: scale(1.1);
+        transition: 0.2s ease;
+    }
+
+    #id_img_footer_linkedin {
+        height: 4.5vh;
+        transition: 0.2s ease;
+    }
+
+    #id_img_footer_linkedin:hover {
+        transform: scale(1.1);
+        transition: 0.2s ease;
+    }
+
+    #id_div_footer_left_rectangle {
+        height: 2vh;
+        width: 20vw;
+        background-color: black;
+        border-top-right-radius: 5vh;
+        border-bottom-right-radius: 5vh;
+    }
+
+    #id_div_footer_right_rectangle {
+        height: 2vh;
+        width: 20vw;
+        background-color: black;
+        border-top-left-radius: 5vh;
+        border-bottom-left-radius: 5vh;
+    }
+}

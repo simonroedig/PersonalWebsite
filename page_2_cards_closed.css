@@ -1,0 +1,81 @@
+.cardsAllForGeneralStyles {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card1ForStyle {
+    background-image: url("img/cards/webdevbg.png");
+}
+
+.card2ForStyle {
+    background-image: url("img/cards/mediadesignbg.png");
+}
+
+.card3ForStyle {
+    background-image: url("img/cards/meetbg.png");
+}
+
+.card4ForStyle {
+    background-image: url("img/cards/teachingbg.png");
+}
+
+.card5ForStyle {
+    background-image: url("img/cards/quartobg.png");
+}
+
+.card6ForStyle {
+    background-image: url("img/cards/musicbg.png");
+}
+
+.card7ForStyle {
+    background-image: url("img/cards/chromeextensionbg.png");
+}
+
+.card8ForStyle {
+    /* or no background */
+    background-image: url("img/cards/conceptbg.png");
+}
+
+.card9ForStyle {
+    background-image: url("img/cards/rememorybg.png");
+}
+
+.card10ForStyle {
+    background-image: url("img/cards/pwpbg.png");
+}
+
+.cardsAllForGeneralStyles h {
+    color: white;
+    font-size: 2vh;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    margin-top: auto;
+    border-bottom: 0.2vh solid white;
+}
+
+.cardsAllForGeneralStyles p {
+    color: white;
+    margin: 2vh;
+    font-size: 2vh;
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.cardsAllForGeneralStyles img {
+    width: 100%;
+    border-top: 0.5vh solid black;
+    margin-top: auto;
+}
+
+.cardNumber {
+    font-size: 1.5vh;
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    color: white;
+    width: 100%;
+    background-image: none;
+}

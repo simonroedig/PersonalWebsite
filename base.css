@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colleft: #333333;
+    --colright: #333333;
+    --colup: #333333;
+    --colbot: #333333;
+
+    --lightgrey: #e4e4e4;
+    --darkgrey: #b6b6b6;
+
+    --scrolldark: #333333;
+    --scrollbrighter: #575757;
+    --scrollbrightest: #919191;
+}
+
+::-webkit-scrollbar {width: 1vw;}
+::-webkit-scrollbar-track {background: var(--scrolldark);}
+::-webkit-scrollbar-thumb {background: var(--scrollbrighter);}
+::-webkit-scrollbar-thumb:hover {background: var(--scrollbrightest);}

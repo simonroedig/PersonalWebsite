@@ -8,24 +8,39 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <title>Simon Rödig</title>
         <link rel="shortcut icon" href="img/favicon3.png">
-        <link rel="stylesheet" href="style.css">
-        <script language="javascript" type="text/javascript" src="script.js"></script>
+
+        <link rel="stylesheet" href="base.css">
+        <link rel="stylesheet" href="page_1.css">
+        <link rel="stylesheet" href="page_1_mobile.css">
+        <link rel="stylesheet" href="page_1_pc.css">
+
+        <link rel="stylesheet" href="page_2.css">
+        <link rel="stylesheet" href="page_2_cards.css">
+        <link rel="stylesheet" href="page_2_cards_closed.css">
+        <link rel="stylesheet" href="page_2_cards_open.css">
+        <link rel="stylesheet" href="page_2_footer_mobile.css">
+        <link rel="stylesheet" href="page_2_footer_pc.css">
+
+        <script language="javascript" type="text/javascript" src="color.js"></script>
+        <script language="javascript" type="text/javascript" src="cards.js"></script>
+        <script language="javascript" type="text/javascript" src="main.js"></script>
     </head>
 
-    <!-- Page 1 -->
-    <body id="body1" onload="main()">
-        <div id="space1"></div>
+    <!-- PAGE 1 -->
+    <body id="id_body_page1" onload="main()">
 
-        <div id="navdiv">
-            <a href="index.html"><img id="logo" src="img/logo.png"></a>
-            <div class="button">
-                <div class="button_burger">
+        <div id="id_div_space1"></div>
+
+        <div id="id_div_navbar">
+            <a href="index.html"><img id="id_img_navbar_textpicture" src="img/logo.png"></a>
+            <div class="class_div_navbar_button">
+                <div class="class_div_navbar_button_burger">
             </div>
         </div>
 
         </div> <!-- Keep that div tag there -->
 
-        <div id="space2">
+        <div id="id_div_space2">
             <button onclick="colorTheme1()" id="c1">1</button>
             <button onclick="colorTheme2()" id="c2">2</button>
             <button onclick="colorTheme3()" id="c3">3</button>
@@ -34,18 +49,18 @@
             <button onclick="colorTheme6()" id="c6">6</button>
         </div>
 
-        <div id="profilediv">
-            <div id="leftdiv">
-                <p id="hey">Hi, my name is Simon!</p>
+        <div id="id_div_profile_all">
+            <div id="id_div_profile_left">
+                <p id="id_p_profile_left_text">Hi, my name is Simon!</p>
             </div>
-            <div id="rightdiv">
-                <a title="Check Out My GitHub Account" href="https://github.com/simonroedig" target="_blank"><p id="burgermenu"><i class="fa fa-github">&nbsp;</i>GitHub</p></a>
+            <div id="id_div_profile_right">
+                <a title="Check Out My GitHub Account" href="https://github.com/simonroedig" target="_blank"><p id="id_p_profile_right_text"><i class="fa fa-github">&nbsp;</i>GitHub</p></a>
             </div>
-            <img title="25.06.1999" id="simon" src="img/simon.png">
+            <img title="25.06.1999" id="id_img_profile_picture" src="img/simon.png">
         </div>
 
-        <div id="textdiv">
-            <p id="infotext">
+        <div id="id_div_info_text_space">
+            <p id="id_p_info_text">
                 I study <a href="https://www.lmu.de/de/studium/studienangebot/alle-studienfaecher-und-studiengaenge/medieninformatik-bachelor-hauptfach-2942.html" target="_blank
                 "><span0>Media Informatics</span0></a> with application on
                 <a href="https://www.medien.ifi.lmu.de/studierende/semesterplanung/bachelor/mmi/" target="_blank">Human-Computer-Interaction</a> at the
@@ -60,31 +75,38 @@
             </p>
         </div>
 
-        <div id="godowndiv">
-            <a href="#smallFooter"><img id="arrowdown" src="img/arrowdown.png"></a>
+        <div id="id_div_go_down">
+            <a href="#id_div_copyright_space"><img id="id_img_arrowdown" src="img/arrowdown.png"></a>
         </div>
+
     </body>
+    <!-- END PAGE 1 -->
 
 
-    <!-- Page 2 -->
-    <body id="body2">
-        <div id="goupdiv">
-            <a href="#space1" ><img id="arrowup" src="img/arrowup.png"></a>
-            <img id="close" src="img/close.png">
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+    <!-- PAGE 2 -->
+    <body id="id_body_page2">
+
+        <div id="id_div_go_up">
+            <a href="#id_div_space1" ><img id="id_img_arrowup" src="img/arrowup.png"></a>
+            <img id="id_img_close_opencards_icon" src="img/close.png">
         </div>
 
-        <div id="toggleCardsDiv">
-            <img id="toggleCardText" src="img/card_all.png">
-            <div id="toggleCardsDiv2">
-                <div id="toggleCardsDiv3"></div>
+        <div id="id_div_toggle_cardsgroup_space">
+            <img id="id_img_toggle_cardsgroup_text" src="img/card_all.png">
+            <div id="id_div_toggle_cardsgroup_lever_big">
+                <div id="id_div_toggle_cardsgroup_lever_small"></div>
             </div>
-            
         </div>
 
-        <div id="work">
-            <img id="arrowleft" src="img/arrowleft.png">
+        <div id="id_div_all_cards_space">
+            <!-- LEFT ARROW -->
+            <img id="id_img_all_cards_arrow_left" src="img/arrowleft.png">
 
-            <!-- Closed Cards -->
+
+            <!-- CLOSED CARDS -->
             <div class="cards cardsAllForGeneralStyles personalCard card1ForStyle" id="card1">
                 <h>Website</h>
                 <p>I like to design and create websites.</p>
@@ -146,243 +168,60 @@
                 <div class="cardNumber">x/y</div>
             </div>
 
-            <img id="arrowright" src="img/arrowright.png">
 
-            <!-- Open Cards -->
+            <!-- RIGHT ARROW -->
+            <img id="id_img_all_cards_arrow_right" src="img/arrowright.png">
+
+
+            <!-- OPEN CARDS -->
             <div class="opencard" id="opencard1">
-                <h>Website</h>
-                <br>
-                <p>
-                    My website is completely self-written in HTML<img class="htmlcssjs"
-                    src="img/opencards/html.png">, CSS<img class="htmlcssjs"
-                    src="img/opencards/css.png">, and quite some JavaScript<img class="htmlcssjs"
-                    src="img/opencards/js.png">.
-                </p>
-                <p>
-                    It's influenced by the "Brutalism"
-                    design trend, embracing strong outlines, contrasting colors, and bold typography.
-                    With my design I tried to create something unique and frivol, opposing
-                    most modern web design trends.
-                    I started out by hand-sketching some ideas on my tablet, continued by creating a high
-                    fidelity prototype in AdobeXD, and eventually refined and coded my webpage.
-                </p>
-                <br>
-                <p>
-                    I first got in touch with web development in my first semester at the LMU Munich.
-                    There I learned the initial basics of HTML, CSS, and JavaScript. I thoroughly enjoyed
-                    this field and designed and implemented some smaller projects early on (<a href="jsexample/index.html" target="_blank">e.g.</a>).
-                    Over time I gained a lot of advanced skills in this area and teaching and assisting the
-                    subject that comprises of web development one year later further deepend my
-                    knowledge which let me to effortlessly design and
-                    code responsive websites like the one you are on right now.
-                </p>
             </div>
+
             <div class="opencard" id="opencard2">
-                <h>Media Design</h>
-                <p>I initially started back in 2014 by creating short 3D introduction
-                    animations for YouTubers. I uploaded my final projects on my own
-                    YouTube channel which I named "<a href="https://www.youtube.com/c/DiceFX" target="_blank">DiceFX</a>", quickly gained attention,
-                    built a community, and started freelancing by selling
-                    my personalized designs as well as presets for creative software.
-                    Next to motion design I also focused on graphic design by creating
-                    logos, banners, thumbnails, etc. and sold them as well.
-                    I have now ceased creating 3D introductions due to YouTubers decline
-                    in demand but still continue with media design overall. In other projects,
-                    for example, I designed geographic filters for Snapchat, created a new
-                    logo for a small private pub, designed, printed and sold some
-                    posters for a kid's tv show and personally redesigned company logos.
-                    In another project I managed to easily work myself into a new software called Autodesk Maya
-                    and created this <a href="https://www.youtube.com/watch?v=Io0SBxjQDrU" target="_blank">Low-Poly animation</a>, and I'm able to apply my editing skillset to create 
-                    Video-Prototypes like <a href="https://www.youtube.com/watch?v=5G2V6S5ESQc&t=1s" target="_blank">this</a>.
-                    I'm now happy to have advanced skills in creative software
-                    like Adobe's Photoshop, After Effects, Premiere Pro, AdobeXD, and Maxom's Cinema4D
-                    and a profound understanding of design concepts.
-                    Have a look at some of my graphic designs:
-                </p>
-                <div id="mediadesigncarousel">
-                    <img id="arrowleftmedia" src="img/arrowleftW.png">
-                    <img id="mediadesigncarouselimage" src="img/opencards/mediadesign/1.png">
-                    <img id="arrowrightmedia" src="img/arrowrightW.png">
-                </div>
             </div>
+
             <div class="opencard" id="opencard3">
-                <h>"Meet" Prototype</h>
-                <p>
-                "Meet is an app to connect people by joining other people on different activities. It offers
-                users creating either their own event in which others can take part in or having the possibility to
-                participate in events created by other users. Organisation is simplified by an integrated chat function
-                to communicate with newly acquired friends."<br>
-                In my third semester at the LMU Munich six other students and I came up with this idea for a mobile application and
-                created a high fidelity protype while following a user centred design (UCD) process.
-                You can read in my user experience <a href="img/meet report.pdf" target="_blank">report</a> about this design process and the application.
-                Keeping it short, we started by brainstorming and sketching out some ideas and created a design brief.
-                Then we continued with wireframing in the software Miro and started prototyping in AdobeXD.
-                Due to my background with Adobes software and my interest for UX-Design I contributed a lot into this project,
-                came up with most ideas, guided the group as a leader and distributed tasks.<br>
-                We continued with a usability heuristic evaluation, worked through a system checklist, iteratively
-                improved our prototype, and concluded with an usability testing after which we once again refined our protoype.
-                We finished our project with a <a href="https://www.youtube.com/watch?v=ep7bdgp4G1w" target="_blank">short video presentation</a> and a <a href="img/meet portfolio.pdf" target="_blank">portfolio</a>.
-                </p>
             </div>
+
             <div class="opencard" id="opencard4">
-                <h>Teaching</h>
-                <p>
-                    Back in school I was always looking forward for presentations. I enjoyed standing
-                    in front of class and speaking about a subject that I am interested in.
-                    My teacher once told me after a good presentation "You have the skill 
-                    when thoroughly undestanding a topic, you are able to teach it and enlighten others".
-                    He recommended me to pursue this skill in some way after school.
-                    In my third semester at the LMU Munich and after feeling confident with my knowledge in a course
-                    that I'd successfully passed the year before, I decided to apply for a Assistent/Tutor position
-                    in <a href="https://www.medien.ifi.lmu.de/lehre/ws2122/dm/" target="_blank">Digital Media</a>.
-                    The content of this course is digitization, compression techniques with algorithms like huffman coding or LZW,
-                    chroma subsampling, video compression, audio editing, number systems, and webdevelopment with HTML, CSS, and JavaScript.
-                    My tasks where presenting the course content in weekly tutorials as well as creating and grading assignments.
-                    I really like giving tutorials, standing next to a whiteboard in front of students and conveying the subjects' content.
-                    Helping a struggling student or seeing them all understanding a complicated topic after I explained it to them 
-                    and coming up with ideas on how to approach and teach a difficult subject matter where the things that made me enjoy being a Tutor
-                    and continue working as one in my next semesters.
-                </p>
             </div>
+
             <div class="opencard" id="opencard5">
-                <h>"Quarto" Game</h>
-                <p>
-                    Quarto is a board game with 16 stones. Each stone has four attributes. The goal is to place the stone that you
-                    receive from your opponent in a row in which all share at least one common attribute. The opponent gets to choose the stone
-                    you place each turn.<br>
-                    Three fellow students and I programmed a client for that game as part of the course
-                    system programming. We coded in the language C and learned about system programming matters like pipes, sockets, protocols,
-                    client/server, scheduling, processes/threads, etc. I enjoy C a lot. It is low level, contrasting most other modern languages and I 
-                    always feel like I "own" the computer when coding in C. I used Linux for this project of course. In fact I completely switched to Linux 
-                    as my standard OS for 6 months for that project. I enjoy Linux and have it now installed on all my old laptops and on dual boot on my main computer.
-                    Because the server for the Quarto game (it was setup by university) didn't really have a proper GUI and I couldn't find any proper
-                    Quarto game online with a nice User Interface, I decided to unpack my web development skills and code the game as an application for browsers
-                    using Vanilla JavaScript in my spare time. My implementation allows you to play Quarto against the computer by dragging and dropping the stones to the gameboard.
-                    Next to creating a good-looking, intuitive UI, I focused on making the game experience feel real by having the player wait until the computer
-                    takes his turn. Having the drag and drop interaction instead of clicking should also make the game feel more real. The visibility
-                    of system status was also important for me. The user can always see what the computer is currently doing and what to do exactly
-                    when it's the player's turn. I also coded a simple AI which can be activated and lets you only ever "win" in form of a tie.
-                    <br>Check out the game and give it a try:
-                </p>
-                <br>
-                <a href="game_webpage/quarto/index.html" target="_blank"><h1>-> Play Quarto!</h1></a>
             </div>
+
             <div class="opencard" id="opencard6">
-                <h>Music</h>
-                <p>
-                    When I was about 12 years old I taught myself to play the electric guitar, quickly made 
-                    some progress and continued to play daily.
-                    I am now very experienced with string instruments, besides electric guitar I also play western guitar, ukulele,
-                    and classical guitar which I probably enjoy most. I also taught myself the piano when I was around the age of 17.
-                    It really helped me with visualizing the fretboard on guitar and understand why and how chords and scales work on other instruments.
-                    <br>What thrives me most in playing instruments is probably music theory. It is basically the language for music in the same way
-                    math is the language for physics. It explains why music works. Why some chord progressions sound good. Which ones
-                    make you feel sad, happy, lost, or mysterious. How to build chords that 
-                    sound unexpeted and dissonant and still manage to make the chord melt to a minor cadence.
-                    It is really close to physics because a note, in the end, is nothing but an acoustic wave, a vibration that transmisses
-                    a medium like air. And chords are just interferences of multiple waves/notes. And simply by superposing certain notes to a chord
-                    and playing multiple chords in a specific sequence makes one feel a certain feeling. I find that very fascinating. This is music 
-                    and music theory for me and what thrives me to continue playing instruments and further educating myself in that field.<br>
-                    Have a look at me playing:
-                </p>
-                <br>
-                <a href="https://www.youtube.com/playlist?list=PL4JueG28xX-fsfojUC99vGewG34qglxhU" target="_blank"><h1>-> Playlist</h1></a>
             </div>
+
             <div class="opencard" id="opencard7">
-                <h>Chrome Extension</h>
-                <p>
-                    The main platform most students use at the University Of Munich is <a href="https://uni2work.ifi.lmu.de/" target="_blank">Uni2Work</a>.
-                    During pride-season I noticed students talking about the fact that Uni2Work doesn't appear in a pride-theme with the typical rainbow flag
-                    as other websites do during that time.
-                    As Uni2Works' design is merely a rather monotonous green I decided to programm a general browser extension 
-                    for chromium which lets users select different themes for this webpage including a pride-theme.
-                    After some research on how browser extensions work I finished programming "Uni2WorkThemes" and
-                    published the extension in the chrome web store for other students to use.
-                    <br>
-                    Short explanation: The popups' HTML is only displayed when the user is on the active tab *://*.uni2work.ifi.lmu.de/*, here the user
-                    can select the different themes. On every other website the extensions' popup, when clicked, displays "Go to Uni2Work".
-                    By clicking on the different themes a JavaScript file inserts the new CSS within a style-tag into the current HTML-header.
-                    The activated theme is then also stored in the browsers' local storage and retreived from different JavaScript files when
-                    opening and changing the theme in the popup, and when browsing on Uni2Work.
-                    Check out my extension on the chrome web store and see for yourself:
-                </p>
-                <br>
-                <a id="u2w" href="https://chrome.google.com/webstore/detail/uni2workthemes/jainhimpodibbfonbpdnijmiejalmbko" target="_blank"><h1>-> Uni2WorkThemes</h1></a>
             </div>
+
             <div class="opencard" id="opencard8">
-                <h>Concept Development</h>
-                <p>
-                    In a two week practical course a team of five other students and me systematically elaborated an interaction-concept.
-                    Objective was to put the iterative User-Experience design-process into practice and work through its initial convergent and 
-                    divergent phases. We started by conducting field research
-                    in form of multiple In-Context interviews (Contextual Inquiry) with companies in the sustainable-energy sector.
-                    We then sorted and interpreted this collected data via Affinity Diagramming, derived insights from clustered data, and continued
-                    with generating "How-Might-We"-Questions to translate the insights we had into ways we can tackle and solve this problem.
-                    <a id="marinzec" href ="https://xn--kreativittstechniken-jzb.info/" target="_blank">Dr. Marin Zec</a> then helped us in the ideation phase. 
-                    He presented us design-thinking concepts, creative problem-solving ways, and 
-                    guided us through the "Crazy-8", "6-3-5", and "SCAMPER" methods until we eventually had our concept idea which we then elaborated in
-                    storyboards and finally in a video-prototype.
-                    Our concept was a showerhead that indicates the time passed in the shower via a LED-strip which changes colour sequentially
-                    from green, to orange, to red. The time can be set with a compatible mobile app which lets the user set a absolute time for showering
-                    or a dynamic time based on the water temperature and flow rate. For the app-prototype seen in the
-                    final video, we used the software Figma. For the physical LED-strip on the showerhead we used a ESP8266.
-                    This microcontroller board has an integrated Wifi module to create a server that hosts a web page which we used 
-                    to controll the LED-strip remotely. Check out this blog depicting this concepts' progress where you can watch the final
-                    video-prototype as well as further information about the user-research and concept:
-                </p>
-                <br>
-                <a id="showerheadblog" href="https://conceptdevelopmentlmu.wordpress.com/author/cd20222/" target="_blank"><h1>-> Video-Prototype (Blog)</h1></a>
             </div>
+
             <div class="opencard" id="opencard9">
-                <h>Rememory</h>
-                <p>
-                    Rememory is an auditory and visual memory game with balloons developed by a fellow student and me. Each player holds a 
-                    balloon with a dedicated color and note, and stands in a circle around an "instructor" balloon.
-                    This balloon provides a sequence of colors accompanied by a note, corresponding with each color.  
-                    The players goal is to match this sequence by squeezing their balloons as a team in the correct order.
-                    The Instructor balloon then indicates whether this sequence is correct or incorrect and either continues with
-                    a more complex sequence each round or gives the players another try. <br>
-                    My teampartner and me both own a 3D-printer and we iterated through multiple 3d-models until we came up with
-                    an airtight device that can be inserted into the balloons. This device holds all the required hardware that we soldered together. The hardware consists 
-                    of a ESP32 microcontroller from XIAO, a passive buzzer, a pressure sensor, a neopixel jewel led, as well as a slide switch and a 3.7 volt battery.
-                    I programmed the hardware and implemented the game logic in Arduinos' C++. The code is based on a station-accesspoint-architecture with communication
-                    based on HTTP. 
-                    You should really check out my awesome demo video for this project and let the interaction design speak for itself:
-                    (Oh, and the game is not mocked, it works flawlessly and is pretty refined, you can find the code on my GitHub profile)
-                </p>
-                <br>
-                <a id="rememoryVid" href="https://www.youtube.com/watch?v=5G2V6S5ESQc" target="_blank"><h1>-> Video-Prototype</h1></a>
             </div>
+
             <div class="opencard" id="opencard10">
-                <h>ConnectivityControl</h>
-                <p>
-                   In a practical web develelopment course, a team of 16 people and me built "ConnectivityControl", a
-                   framework that allows users to switch between four device connectivity levels:  <span style="color: #ff7675;">Offline</span>,  <span style="color: #fdcb6e;">Access Point mode</span>, <span style="color: #74b9ff;">Local Network mode</span>, and <span style="color: #6fdc6f;">Online</span>.
-                   The team was devided into a hardware-group, middleware-group, and software-group. I was part of the hardware-group and built a smart camera and an
-                   environmental sensing unit using multiple hardware-components, microcontrollers, Raspberry Pi's, Laser-Cutting, 3D-Printing, as well as programming the hardware
-                   and the interface with the middleware-group.
-                   This course taught me a lot about web programming: IoT, WoT, the HTTP and MQTT protocol, Web Analytics, Web Servers, API's, React, Captive Portals.
-                   All in a profoundly practical manner. <br>
-                   Check out my demo of ConnectivityControl as part of the hardware team:
-                </p>
-                <br>
-                <a id="pwpVid" href="https://www.youtube.com/watch?v=a8ukL7uDfS4" target="_blank"><h1>-> ConnectivityControl Demo</h1></a>
             </div>
+            
         </div>
 
-        <div id="bigFooter">
-            <div id="leftRect"></div>
+        <div id="id_div_footer_space">
+            <div id="id_div_footer_left_rectangle"></div>
 
-            <a href="https://www.youtube.com/channel/UCisvFnG8YWMEamSpQ3NiKew" target="_blank" title="My YouTube Channel"><img id="yt" src="img/youtube.png" alt="YouTube"></a>
-            <a href="mailto:simonroedig@web.de" title="Contact Me Via Email"><img id="mail" src="img/mail.gif" alt="Email"></a>
-            <a href="https://www.linkedin.com/in/simonroedig/" target="_blank" title="My LinkedIn Account"><img id="ln" src="img/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://www.youtube.com/channel/UCisvFnG8YWMEamSpQ3NiKew" target="_blank" title="My YouTube Channel"><img id="id_img_footer_youtube" src="img/youtube.png" alt="YouTube"></a>
+            <a href="mailto:simonroedig@web.de" title="Contact Me Via Email"><img id="id_img_footer_mail" src="img/mail.gif" alt="Email"></a>
+            <a href="https://www.linkedin.com/in/simonroedig/" target="_blank" title="My LinkedIn Account"><img id="id_img_footer_linkedin" src="img/linkedin.png" alt="LinkedIn"></a>
 
-            <div id="rightRect"></div>
+            <div id="id_div_footer_right_rectangle"></div>
         </div>
 
-        <div id="smallFooter">
-            <img id="copyrightlogo" src="img/copyright.png">
-            <p id="rights">&nbsp<span id="currentYear">YearJS</span> Simon Rödig - All rights reserved</p>
+        <div id="id_div_copyright_space">
+            <img id="id_img_copyright_icon" src="img/copyright.png">
+            <p id="id_p_copyright_text">&nbsp<span id="id_span_copyright_current_year">YearJS</span> Simon Rödig - All rights reserved</p>
         </div>
+
     </body>
+    <!-- END PAGE 2 -->
+
 </html>

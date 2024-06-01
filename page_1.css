@@ -1,0 +1,75 @@
+#id_div_space1, #id_div_space2 {
+    height: 4vh;
+}
+
+#id_div_space2, #id_div_space1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#c1, #c2, #c3, #c4, #c5, #c6 {
+    margin: 0 0.5vh;
+    border-radius: 50%;
+    height: 2vh;
+    width: 2vh;
+    background-color: var(--scrolldark);
+    border: none;
+    color: white;
+    font-size: 1vh;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+#c1:hover, #c2:hover, #c3:hover, #c4:hover, #c5:hover, #c6:hover {
+    cursor: pointer;
+    opacity: 50%;
+    height: 2.5vh!important;
+    width: 2.5vh!important;
+    transition: 0.2s ease;
+}
+
+#id_div_navbar {
+    background-color: var(--lightgrey);
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 0.5vh solid black;
+    border-bottom: 0.5vh solid black;
+}
+
+#id_div_go_down {
+    background-color: var(--colup);
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 0.5vh solid black;
+    border-bottom: 0.5vh solid black;
+    transition: 1s ease;
+}
+
+#id_img_arrowdown {
+    position: relative;
+    bottom: 0;
+    height: 3.5vh;
+    animation: updown1 2s infinite ease;
+    transition: 0.2s ease;
+}
+
+@keyframes updown1 {
+    0% {bottom: 0.2vh;}
+    50% {bottom: -0.4vh;}
+    100% {bottom: 0.2vh;}
+}
+
+#id_img_arrowdown:hover {
+    opacity: 50%;
+    transition: 0.2s ease;
+}

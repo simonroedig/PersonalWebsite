@@ -1,0 +1,50 @@
+.opencard {
+    display: none;
+    visibility: hidden;
+    color: white;
+    background-color: var(--scrolldark);
+    border: 0.5vh solid black;
+    position: absolute;
+    width: 75vw;
+    height: 85vh;
+    /*cursor: pointer;*/
+    opacity: 0%;
+    animation: open 0.2s ease;
+    transition: 0.2s ease;
+    border-radius: 3vh;
+}
+
+
+@keyframes open {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+#id_img_close_opencards_icon {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    width: 5vh;
+    animation: open2 1s ease;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+@keyframes open2 {
+    0% {opacity: 0%; transform: rotate(0) scale(0.75);}
+    100% {opacity: 100%; transform: rotate(180deg) scale(1.0);;}
+}
+
+#id_img_close_opencards_icon:hover {
+    transform: scale(1.15);
+}
+
+.opencard h {
+    color: white;
+    font-size: 2vh;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    border-bottom: 0.2vh solid white;
+    position: absolute;
+    margin-top: -75vh;
+}
