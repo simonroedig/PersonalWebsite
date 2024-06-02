@@ -283,6 +283,8 @@ function openCardClick() {
     copyrighttext.style.fontWeight = "400";
     copyrighticon.src = "img/copyright_white.png";
 
+    document.body.style.overflow = "hidden";
+
     cardID = this.classList;
 
     for (let i = 0; i < cardID.length; i++) {
@@ -331,6 +333,8 @@ function closeOpenedCardClick() {
     copyrighttext.style.backgroundColor = "white";
     copyrighttext.style.fontWeight = "700";
     copyrighticon.src = "img/copyright_black.png";
+
+    document.body.style.overflow = "auto";
 
     const arrowLeft = document.getElementById("id_img_all_cards_arrow_left");
     const arrowRight = document.getElementById("id_img_all_cards_arrow_right");

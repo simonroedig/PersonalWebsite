@@ -14,10 +14,10 @@
     border-radius: 50%;
     height: 2vh;
     width: 2vh;
-    background-color: var(--scrolldark);
+    background-color: black;
     border: none;
     color: white;
-    font-size: 1vh;
+    font-size: 0.9vh;
     font-family: 'Space Mono', monospace;
     font-weight: 700;
     transition: 0.2s ease-in-out;

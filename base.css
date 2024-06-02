@@ -9,9 +9,10 @@
 
 body  {
     cursor: url('cursor.png'), default;
+    overflow: auto;
 }
 
-utton, a {
+button, a {
     cursor: url('cursor_pointer.png'), pointer;
 }
 

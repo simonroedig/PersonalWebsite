@@ -2,3 +2,11 @@
     width: 2vh;
     vertical-align: -0.30vh;
 }
+
+#opendcard1 {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

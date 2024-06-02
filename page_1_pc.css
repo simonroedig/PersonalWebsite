@@ -96,7 +96,7 @@
     }
 
     #id_div_profile_right p {
-        text-decoration: underline solid black 0.2vh;
+        text-decoration: none;
     }
 
     #id_p_profile_left_text {
@@ -178,6 +178,8 @@
         font-family: 'Space Mono', monospace;
         font-weight: 700;
         margin: 0 5vw 0 5vw;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
     #id_p_info_text a {
