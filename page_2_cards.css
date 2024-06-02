@@ -21,7 +21,7 @@
     #id_img_all_cards_arrow_left {
         position: relative;
         height: 6.5vw;
-        cursor: pointer;
+        cursor: url('cursor_pointer.png'), pointer;
         animation: left1 2s infinite ease-in-out;
         transition: 0.2s ease-in-out;
         left: 0;
@@ -29,7 +29,7 @@
     #id_img_all_cards_arrow_right {
         position: relative;
         height: 6.5vw;
-        cursor: pointer;
+        cursor: url('cursor_pointer.png'), pointer;
         animation: right1 2s infinite ease-in-out;
         transition: 0.2s ease-in-out;
         left: 0;
@@ -75,11 +75,12 @@
         width: 35vh;
         margin: 0 3vh;
         transition: 0.2s ease-in-out;
+        border-radius: 2vh;
     }
     #id_img_all_cards_arrow_left {
         position: relative;
         height: 5vw;
-        cursor: pointer;
+        cursor: url('cursor_pointer.png'), pointer;
         animation: left1 2s infinite ease-in-out;
         transition: 0.2s ease-in-out;
         left: 0;
@@ -87,7 +88,7 @@
     #id_img_all_cards_arrow_right {
         position: relative;
         height: 5vw;
-        cursor: pointer;
+        cursor: url('cursor_pointer.png'), pointer;
         animation: right1 2s infinite ease-in-out;
         transition: 0.2s ease-in-out;
         left: 0;

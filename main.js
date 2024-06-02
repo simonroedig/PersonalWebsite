@@ -29,8 +29,13 @@ var showerCard;
 var rememoryCard;
 var iotCard;
 
+var copyrighttext
+var copyrighticon
 
 function main() {
+    copyrighttext = document.getElementById("id_div_copyright_space");
+    copyrighticon = document.getElementById("id_img_copyright_icon");
+
     // Calculate current age (hover profile picture)
     document.getElementById("id_span_copyright_current_year").innerHTML = new Date().getFullYear();
     document.getElementById("id_img_profile_picture").title = Math.floor((new Date() - new Date("1999-06-25")) / 1000 / 60 / 60 / 24 / 365) + " Years Old";

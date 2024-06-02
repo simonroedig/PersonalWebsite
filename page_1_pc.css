@@ -19,7 +19,7 @@
         align-items: center;
         width: 120px;
         height: 7vh;
-        cursor: pointer;
+        cursor: url('cursor_pointer.png'), pointer;
         transition: all .5s ease;
     }
     .class_div_navbar_button_burger {

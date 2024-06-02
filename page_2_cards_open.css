@@ -1,3 +1,4 @@
+/*
 .opencard {
     display: none;
     visibility: hidden;
@@ -7,13 +8,43 @@
     position: absolute;
     width: 75vw;
     height: 85vh;
-    /*cursor: pointer;*/
+    cursor: url('cursor_pointer.png'), pointer;
     opacity: 0%;
-    animation: open 0.2s ease;
+    animation: open 0.2s ease-in-out;
     transition: 0.2s ease;
     border-radius: 3vh;
 }
+*/
 
+.opencard {
+    display: none;
+    visibility: hidden;
+    color: white;
+    background-color: var(--scrolldark);
+    border-top: 0.5vh solid black;
+    position: absolute;
+    width: 100%;
+    height: 90.5%;
+    /*cursor: url('cursor_pointer.png'), pointer;*/
+    opacity: 0%;
+    animation: open 0.2s ease-in-out;
+    transition: 0.2s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-size: 2vh;
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    padding: 0 10vw;
+    text-align: center;
+}
+
+.opencard p a {
+    color: white;
+}
 
 @keyframes open {
     0% {opacity: 0%;}
@@ -27,7 +58,7 @@
     width: 5vh;
     animation: appearAndScale 1s ease, rotateInfinite 4s linear infinite;
     transition: 0.2s ease;
-    cursor: pointer;
+    cursor: url('cursor_pointer.png'), pointer;
 }
 
 @keyframes appearAndScale {

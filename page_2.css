@@ -18,6 +18,7 @@
     height: 3.5vh;
     animation: uparrowanim 2s infinite ease-in-out;
     transition: 0.2s ease-in-out;
+    cursor: url('cursor_pointer.png'), pointer;
 }
 
 @media (hover: hover) {
@@ -51,7 +52,7 @@
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
-    cursor: pointer;
+    cursor: url('cursor_pointer.png'), pointer;
     transition: 0.2s ease-in-out;
 }
 
@@ -71,7 +72,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    cursor: pointer;
+    cursor: url('cursor_pointer.png'), pointer;
     transition: 0.3s ease-in-out;
     z-index: -2;
 }
@@ -88,7 +89,7 @@
 
 #id_img_toggle_cardsgroup_text {
     width: 25vh;
-    cursor: pointer;
+    cursor: url('cursor_pointer.png'), pointer;
     margin-bottom: 0.5vh;
     transition: 0.2s ease-in-out;
 }
@@ -105,12 +106,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 700;
 }
 
 #id_p_copyright_text {
     font-size: 1.2vh;
     font-family: 'Space Mono', monospace;
-    font-weight: 700;
 }
 
 #id_img_copyright_icon {

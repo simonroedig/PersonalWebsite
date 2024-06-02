@@ -278,6 +278,11 @@ function rightArrowCardsClick() {
 }
 
 function openCardClick() {
+    copyrighttext.style.color = "white";
+    copyrighttext.style.backgroundColor = rootStyle.getPropertyValue("--scrolldark");
+    copyrighttext.style.fontWeight = "400";
+    copyrighticon.src = "img/copyright_white.png";
+
     cardID = this.classList;
 
     for (let i = 0; i < cardID.length; i++) {
@@ -322,6 +327,11 @@ function openCardClick() {
 }
 
 function closeOpenedCardClick() {
+    copyrighttext.style.color = "black";
+    copyrighttext.style.backgroundColor = "white";
+    copyrighttext.style.fontWeight = "700";
+    copyrighticon.src = "img/copyright_black.png";
+
     const arrowLeft = document.getElementById("id_img_all_cards_arrow_left");
     const arrowRight = document.getElementById("id_img_all_cards_arrow_right");
     const arrowUp = document.getElementById("id_img_arrowup");

@@ -11,7 +11,7 @@
         align-items: center;
         width: 120px;
         height: 7vh;
-        cursor: pointer;
+        cursor: url('cursor_pointer.png'), pointer;
         transition: all .5s ease-in-out;
     }
     .class_div_navbar_button_burger {
@@ -143,7 +143,7 @@
     #id_p_info_text {
         text-align: center;
         color: black;
-        font-size: 1.2vh;
+        font-size: 1.3vmax;
         font-family: 'Space Mono', monospace;
         font-weight: 700;
         margin: 0 5vw 0 5vw;

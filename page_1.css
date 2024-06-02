@@ -24,7 +24,7 @@
 }
 
 #c1:hover, #c2:hover, #c3:hover, #c4:hover, #c5:hover, #c6:hover {
-    cursor: pointer;
+    cursor: url('cursor_pointer.png'), pointer;
     opacity: 50%;
     height: 2.5vh!important;
     width: 2.5vh!important;

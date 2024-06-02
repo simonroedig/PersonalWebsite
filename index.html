@@ -21,6 +21,8 @@
         <link rel="stylesheet" href="page_2_footer_mobile.css">
         <link rel="stylesheet" href="page_2_footer_pc.css">
 
+        <link rel="stylesheet" href="card_webdev.css">
+
         <script language="javascript" type="text/javascript" src="color.js"></script>
         <script language="javascript" type="text/javascript" src="cards.js"></script>
         <script language="javascript" type="text/javascript" src="main.js"></script>
@@ -40,8 +42,8 @@
 
         </div> <!-- Keep that div tag there -->
 
-        <div id="id_div_space2">
-            <button onclick="colorTheme1()" id="c1">1</button>
+        <div id="id_div_space2" class="custom-pointer">
+            <button onclick="colorTheme1()" id="c1" class="custom-pointer">1</button>
             <button onclick="colorTheme2()" id="c2">2</button>
             <button onclick="colorTheme3()" id="c3">3</button>
             <button onclick="colorTheme4()" id="c4">4</button>
@@ -61,15 +63,13 @@
 
         <div id="id_div_info_text_space">
             <p id="id_p_info_text">
-                I study <a href="https://www.lmu.de/de/studium/studienangebot/alle-studienfaecher-und-studiengaenge/medieninformatik-bachelor-hauptfach-2942.html" target="_blank
-                "><span0>Media Informatics</span0></a> with application on
-                <a href="https://www.medien.ifi.lmu.de/studierende/semesterplanung/bachelor/mmi/" target="_blank">Human-Computer-Interaction</a> at the
+                I study <a href="https://www.lmu.de/de/studium/studienangebot/alle-studienfaecher-und-studiengaenge/mensch-computer-interaktion-master-hauptfach-4517.html" target="_blank
+                ">Human-Computer-Interaction</a> at the
                 <a href="https://www.google.com/search?q=LMU+Munich" target="_blank">
                 LMU Munich</a>.<br>
-                I focus on web development and design, physical and digital prototyping, UX/UI, as well as concept and product development.
-
-                <br>I would describe myself as a creative, curious, analytical, and detail-oriented developer and designer committed to understanding 
-                and realizing the holistic development process, from ideation, concept creation, prototyping, user studies, to both frontend 
+                I focus on UX/UI, usability, concept, and product engineering, physical and digital prototyping, as well as web development and design.
+                <br>I would describe myself as a creative, curious, analytical, and detail-oriented developer and designer committed to
+                realizing the holistic development process, from ideation, concept creation, prototyping, user studies, to both frontend 
                 and backend implementation, as well as testing and deployment. I combine the creative knowledge of a designer with the critical thinking 
                 of a developer, enabling me to collaborate more effectively and bring concepts to life. Scroll down to explore my cards that represent my work and topics I'm interested in.
             </p>
@@ -110,8 +110,8 @@
 
             <!-- CLOSED CARDS -->
             <div class="cards cardsAllForGeneralStyles personalCard card1ForStyle" id="card1">
-                <h>Website</h>
-                <p>I like to design and create websites.</p>
+                <h>Webdevelopment</h>
+                <p>I Like to Design and Create Webpages- And Applications.</p>
                 <img src="img/cards/webdev.png">
                 <div class="cardNumber">x/y</div>
             </div>
@@ -177,6 +177,32 @@
 
             <!-- OPEN CARDS -->
             <div class="opencard" id="opencard1">
+                <h>Webdevelopment</h>
+                <br>
+                <p>
+                    My website is completely self-written in HTML<img class="htmlcssjs"
+                    src="img/opencards/html.png">, CSS<img class="htmlcssjs"
+                    src="img/opencards/css.png">, and quite some JavaScript<img class="htmlcssjs"
+                    src="img/opencards/js.png">.
+                </p>
+                <p>
+                    It's influenced by the "Brutalism"
+                    design trend, embracing strong outlines, contrasting colors, and bold typography.
+                    With my design I tried to create something unique and frivol, opposing
+                    most modern web design trends.
+                    I started out by hand-sketching some ideas on my tablet, continued by creating a high
+                    fidelity prototype in AdobeXD, and eventually refined and coded my webpage.
+                </p>
+                <br>
+                <p>
+                    I first got in touch with web development in my first semester at the LMU Munich.
+                    There I learned the initial basics of HTML, CSS, and JavaScript. I thoroughly enjoyed
+                    this field and designed and implemented some smaller projects early on (<a href="jsexample/index.html" target="_blank">e.g.</a>).
+                    Over time I gained a lot of advanced skills in this area and teaching and assisting the
+                    subject that comprises of web development one year later further deepend my
+                    knowledge which let me to effortlessly design and
+                    code responsive websites like the one you are on right now.
+                </p>
             </div>
 
             <div class="opencard" id="opencard2">
@@ -219,7 +245,7 @@
         </div>
 
         <div id="id_div_copyright_space">
-            <img id="id_img_copyright_icon" src="img/copyright.png">
+            <img id="id_img_copyright_icon" src="img/copyright_black.png">
             <p id="id_p_copyright_text">&nbsp<span id="id_span_copyright_current_year">YearJS</span> Simon Rödig - All rights reserved</p>
         </div>
 

@@ -7,6 +7,14 @@
     box-sizing: border-box;
 }
 
+body  {
+    cursor: url('cursor.png'), default;
+}
+
+utton, a {
+    cursor: url('cursor_pointer.png'), pointer;
+}
+
 :root {
     --colleft: #333333;
     --colright: #333333;
