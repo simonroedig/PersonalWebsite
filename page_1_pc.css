@@ -144,7 +144,7 @@
         /* border: 0.5vh solid black; */
         box-shadow: 0 0 0 0.4vh black;
         transition: .5s ease;
-        animation: rotateAnimation2 5s ease-in-out infinite;
+        animation: rotateAnimation2 10s ease-in-out infinite;
     }
 
     @keyframes rotateAnimation2 {

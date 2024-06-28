@@ -1,3 +1,6 @@
+var cursorPointer = "url('cursor_pointer.png'), pointer";
+var cursorDefault = "url('cursor.png'), default";
+
 function toggleCards() {
     if (toggleCardState === 3) {
         toggleCardState = 0;
@@ -203,10 +206,10 @@ function leftArrowCardsClick() {
     }
     if (rightClickedCards === 0) {
         arrowLeft.style.opacity = "0%";
-        arrowLeft.style.cursor = "default";
+        arrowLeft.style.cursor = cursorDefault;
     } else {
         arrowRight.style.opacity = "100%";
-        arrowRight.style.cursor = "pointer";
+        arrowRight.style.cursor = cursorPointer;
     }
 }
 
@@ -232,7 +235,7 @@ function rightArrowCardsClick() {
         cardElements[3].style.display = "inline-flex";
         if (rightClickedCards === ammountOfAllCards - 3) {
             arrowRight.style.opacity = "0%";
-            arrowRight.style.cursor = "default";
+            arrowRight.style.cursor = cursorDefault;
         }
     }
     if (twoCard.matches && (2 + rightClickedCards) < ammountOfAllCards && !oneCard.matches) {
@@ -251,7 +254,7 @@ function rightArrowCardsClick() {
         cardElements[2].style.display = "inline-flex";
         if (rightClickedCards === ammountOfAllCards - 2) {
             arrowRight.style.opacity = "0%";
-            arrowRight.style.cursor = "default";
+            arrowRight.style.cursor = cursorDefault;
         }
     }
     if (oneCard.matches && (1 + rightClickedCards) < ammountOfAllCards) {
@@ -268,12 +271,12 @@ function rightArrowCardsClick() {
         cardElements[1].style.display = "inline-flex";
         if (rightClickedCards === ammountOfAllCards - 1) {
             arrowRight.style.opacity = "0%";
-            arrowRight.style.cursor = "default";
+            arrowRight.style.cursor = cursorDefault;
         }
     }
     if (rightClickedCards !== 0) {
         arrowLeft.style.opacity = "100%";
-        arrowLeft.style.cursor = "pointer";
+        arrowLeft.style.cursor = cursorPointer;
     }
 }
 
