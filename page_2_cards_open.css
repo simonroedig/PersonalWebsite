@@ -19,8 +19,8 @@
 .opencard {
     display: none;
     visibility: hidden;
-    color: white;
-    background-color: var(--scrolldark);
+    color: rgb(0, 0, 0);
+    background-color: var(--bg);
     border-top: 0.5vh solid black;
     position: absolute;
     width: 100%;
@@ -44,7 +44,7 @@
 }
 
 .opencard_inside_wrapper {
-    color: white;
+    color: rgb(0, 0, 0);
     position: absolute;
     width: 100%;
     height: 90.5%;
@@ -66,7 +66,7 @@
 }
 
 .opencard p a {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 @keyframes open {
@@ -109,9 +109,27 @@
 }
 
 .opencard h {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 2vh;
     font-family: 'Space Mono', monospace;
     font-weight: 700;
-    border-bottom: 0.2vh solid white;
+    border-bottom: 0.4vh solid rgb(0, 0, 0);
+}
+
+/* Scrollbar styling for elements with the 'opencard' class */
+.opencard_inside_wrapper::-webkit-scrollbar {
+    width: 0.7vw; /* Example of a different width */
+}
+
+.opencard_inside_wrapper::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+.opencard_inside_wrapper::-webkit-scrollbar-thumb {
+    background: var(--scrollbrighter);
+    border-radius: 5px; /* Different border radius for the opencard class */
+}
+
+.opencard_inside_wrapper::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbrightest);
 }

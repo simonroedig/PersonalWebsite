@@ -28,7 +28,6 @@ var copyrighticon
 
 function main() {
     copyrighttext = document.getElementById("id_div_copyright_space");
-    copyrighticon = document.getElementById("id_img_copyright_icon");
 
     // Calculate current age (hover profile picture)
     document.getElementById("id_span_copyright_current_year").innerHTML = new Date().getFullYear();
@@ -85,6 +84,7 @@ function burgerMenuClick() {
     const button = document.querySelector(".class_div_navbar_button");
     const rightDiv = document.getElementById("id_div_profile_right");
     const burgerMenu = document.getElementById("id_p_profile_right_text");
+    const burgerMenuWrapper = document.getElementById("id_p_profile_right_text_wrapper");
     const burgerButton = document.querySelector(".class_div_navbar_button_burger");
 
     if (burgerMenuClicked) {
@@ -93,6 +93,10 @@ function burgerMenuClick() {
         burgerMenu.style.opacity = "0%";
         burgerMenu.style.visibility = "hidden";
         burgerMenu.style.display = "none";
+
+        burgerMenuWrapper.style.opacity = "0%";
+        burgerMenuWrapper.style.visibility = "hidden";
+        burgerMenuWrapper.style.display = "none";
         burgerButton.style.background = rootStyle.getPropertyValue("--colright");
     } else {
         button.classList.add("clicked");
@@ -100,6 +104,10 @@ function burgerMenuClick() {
         burgerMenu.style.opacity = "100%";
         burgerMenu.style.visibility = "visible";
         burgerMenu.style.display = "inline";
+
+        burgerMenuWrapper.style.opacity = "100%";
+        burgerMenuWrapper.style.visibility = "visible";
+        burgerMenuWrapper.style.display = "inline";
         burgerButton.style.background = rootStyle.getPropertyValue("--colright2");
     }
 

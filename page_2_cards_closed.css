@@ -59,36 +59,60 @@
 }
 
 .card3ForStyle {
-    background-image: url("img/cards/meetbg.png");
+    /*background-image: url("img/cards/meetbg.png");*/
+    background-color: var(--cardmeet);
+    box-shadow: 6px 6px 0px 0px var(--cardmeet), 4px 4px 0px 0px rgb(255, 255, 255) inset;
+    color: black;
 }
 
 .card4ForStyle {
-    background-image: url("img/cards/teachingbg.png");
+    /*background-image: url("img/cards/teachingbg.png");*/
+    background-color: var(--cardteaching);
+    box-shadow: 6px 6px 0px 0px var(--cardteaching), 4px 4px 0px 0px rgb(255, 255, 255) inset;
+    color: black;
 }
 
 .card5ForStyle {
-    background-image: url("img/cards/quartobg.png");
+    /*background-image: url("img/cards/quartobg.png");*/
+    background-color: var(--cardquarto);
+    box-shadow: 6px 6px 0px 0px var(--cardquarto), 4px 4px 0px 0px rgb(255, 255, 255) inset;
+    color: black;
 }
 
 .card6ForStyle {
-    background-image: url("img/cards/musicbg.png");
+    /*background-image: url("img/cards/musicbg.png");*/
+    background-color: var(--cardmusic);
+    box-shadow: 6px 6px 0px 0px var(--cardmusic), 4px 4px 0px 0px rgb(255, 255, 255) inset;
+    color: black;
 }
 
 .card7ForStyle {
-    background-image: url("img/cards/chromeextensionbg.png");
+    /*background-image: url("img/cards/chromeextensionbg.png");*/
+    background-color: var(--cardchromeextension);
+    box-shadow: 6px 6px 0px 0px var(--cardchromeextension), 4px 4px 0px 0px rgb(255, 255, 255) inset;
+    color: black;
 }
 
 .card8ForStyle {
     /* or no background */
-    background-image: url("img/cards/conceptbg.png");
+    /*background-image: url("img/cards/conceptbg.png");*/
+    background-color: var(--cardshower);
+    box-shadow: 6px 6px 0px 0px var(--cardshower), 4px 4px 0px 0px rgb(255, 255, 255) inset;
+    color: black;
 }
 
 .card9ForStyle {
-    background-image: url("img/cards/rememorybg.png");
+    /*background-image: url("img/cards/rememorybg.png");*/
+    background-color: var(--cardrememory);
+    box-shadow: 6px 6px 0px 0px var(--cardrememory), 4px 4px 0px 0px rgb(255, 255, 255) inset;
+    color: black;
 }
 
 .card10ForStyle {
-    background-image: url("img/cards/pwpbg.png");
+    /*background-image: url("img/cards/pwpbg.png");*/
+    background-color: var(--cardiot);
+    box-shadow: 6px 6px 0px 0px var(--cardiot), 4px 4px 0px 0px rgb(255, 255, 255) inset;
+    color: black;
 }
 
 .cardsAllForGeneralStyles h {

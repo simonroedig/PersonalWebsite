@@ -20,7 +20,7 @@
         width: 120px;
         height: 7vh;
         cursor: url('cursor_pointer.png'), pointer;
-        transition: all .5s ease;
+        transition: all .3s ease;
     }
     .class_div_navbar_button_burger {
         width: 30px;
@@ -28,7 +28,7 @@
         background: var(--colright);
         border: 8px solid black;
         border-radius: 100%;
-        transition: all .5s ease;
+        transition: all .3s ease;
     }
 
     @media (hover: hover) {
@@ -36,7 +36,7 @@
             border: 8px solid var(--lightgrey);
             width: 40px;
             height: 40px;
-            transition: all .5s ease;
+            transition: all .3s ease;
         }
     }
 
@@ -46,13 +46,13 @@
         background: rgb(112, 112, 112);
         border: 5px solid black;
         border-radius: 100%;
-        transition: all .5s ease;
+        transition: all .3s ease;
     }
 
     @media (hover: hover) {
         .class_div_navbar_button.clicked:hover .class_div_navbar_button_burger {
             border: 3px solid black;
-            transition: all .5s ease;
+            transition: all .3s ease;
         }
     }
 
@@ -88,7 +88,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: 1s ease-in-out;
+        transition: 0.3s ease-in-out;
     }
 
     #id_div_profile_right a {

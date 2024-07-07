@@ -35,6 +35,14 @@ button, a {
 
     --cardwebdev: #acc8df;
     --cardmediadesign: #e393f3;
+    --cardmeet: #c9e5d2;
+    --cardteaching: #db5971;
+    --cardquarto: #598cc2;
+    --cardmusic: #d7b174;
+    --cardchromeextension: #71ba6a;
+    --cardshower: #b8d9ea;
+    --cardrememory: #4dc5ac;
+    --cardiot: #d8c2b0;
 }
 
 ::-webkit-scrollbar {
@@ -47,7 +55,7 @@ button, a {
 
 ::-webkit-scrollbar-thumb {
     background: var(--scrollbrighter);
-    border-radius: 50px;  /* Adjust this value to your liking */
+    border-radius: 5px;  /* Adjust this value to your liking */
 }
 
 ::-webkit-scrollbar-thumb:hover {

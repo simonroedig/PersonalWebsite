@@ -2,6 +2,10 @@
     height: 2vh;
 }
 
+#id_div_space1{
+    border-top: 0.5vh solid black;
+}
+
 #id_div_space2, #id_div_space1 {
     display: flex;
     flex-direction: row;
@@ -30,7 +34,7 @@
     align-items: center;
     border-top: 0.5vh solid black;
     border-bottom: 0.5vh solid black;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 #id_img_arrowdown {
@@ -57,8 +61,20 @@
 #id_p_profile_left_text_wrapper {
     background-color: var(--darkgrey);
     padding: 10px 8px 10px 18px;
-    border-radius: 10px;
+    border-radius: 2vh;
+
+    border: 0.5vh solid black;
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+}
+
+#id_p_profile_right_text_wrapper {
+    background-color: var(--darkgrey);
+    padding: 10px;
+    border-radius: 2vh;
     border: 0.5vh solid black;
     box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
 
+    opacity: 0%;
+    visibility: hidden;
+    display: none;
 }

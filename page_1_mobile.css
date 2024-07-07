@@ -12,7 +12,7 @@
         width: 120px;
         height: 7vh;
         cursor: url('cursor_pointer.png'), pointer;
-        transition: all .5s ease-in-out;
+        transition: all .3s ease;
     }
     .class_div_navbar_button_burger {
         width: 17px;
@@ -20,7 +20,7 @@
         background: rgb(112, 112, 112);
         border: 5px solid black;
         border-radius: 100%;
-        transition: all .5s ease-in-out;
+        transition: all .3s ease;
     }
 
     .class_div_navbar_button.clicked .class_div_navbar_button_burger {
@@ -29,7 +29,7 @@
         background: rgb(112, 112, 112);
         border: 2px solid black;
         border-radius: 100%;
-        transition: all .5s ease-in-out;
+        transition: all .3s ease;
     }
 
     #id_div_profile_all {
@@ -62,7 +62,7 @@
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        transition: 1s ease-in-out;
+        transition: 0.3s ease-in-out;
     }
 
     #id_p_profile_left_text {

@@ -1,6 +1,21 @@
 var cursorPointer = "url('cursor_pointer.png'), pointer";
 var cursorDefault = "url('cursor.png'), default";
 
+let a_card_is_open = false;
+
+const cardColors = {
+    card1: "--cardwebdev",
+    card2: "--cardmediadesign",
+    card3: "--cardmeet",
+    card4: "--cardteaching",
+    card5: "--cardquarto",
+    card6: "--cardmusic",
+    card7: "--cardchromeextension",
+    card8: "--cardshower",
+    card9: "--cardrememory",
+    card10: "--cardiot"
+};
+
 function getCSSVariableValue(variableName) {
     return getComputedStyle(document.documentElement).getPropertyValue(variableName).trim();
 }
@@ -16,7 +31,7 @@ function toggleCards() {
     
     if (toggleCardState === 0) {
         toggler.style.marginLeft = "0%";
-        toggler.style.width = "2vh";
+        toggler.style.width = "3vh";
         toggler.style.borderRadius = "25px 25px 25px 25px";
         toggleImage.src = "img/card_all.png"
     } else if (toggleCardState === 1) {
@@ -25,8 +40,8 @@ function toggleCards() {
         toggler.style.borderRadius = "25px 25px 25px 25px";
         toggleImage.src = "img/card_personal.png"
     } else if (toggleCardState === 2) {
-        toggler.style.marginLeft = "37%";
-        toggler.style.width = "4vh";
+        toggler.style.marginLeft = "31.5%";
+        toggler.style.width = "6vh";
         toggleImage.src = "img/card_uni.png"
         toggler.style.borderRadius = "25px 25px 25px 25px";
     } else if (toggleCardState === 3) {
@@ -285,10 +300,7 @@ function rightArrowCardsClick() {
 }
 
 function openCardClick() {
-    copyrighttext.style.color = "white";
-    copyrighttext.style.backgroundColor = rootStyle.getPropertyValue("--scrolldark");
-    copyrighttext.style.fontWeight = "400";
-    copyrighticon.src = "img/copyright_white.png";
+    a_card_is_open = true;
 
     document.body.style.overflow = "hidden";
 
@@ -302,6 +314,9 @@ function openCardClick() {
         }
     }
     cardID = cardID.replace(new RegExp("ForStyle", "g"), "");
+
+    const goUp = document.getElementById('id_div_go_up');
+    goUp.style.backgroundColor = getCSSVariableValue(cardColors[cardID]);
 
     openCardID = "open" + cardID;
 
@@ -333,13 +348,14 @@ function openCardClick() {
     closeOpenedCardButton.style.display = "inline";
     closeOpenedCardButton.style.visibility = "visible";
     closeOpenedCardButton.style.opacity = "100%";
+
+    copyrighttext.style.marginLeft = "-0.7vw";
 }
 
 function closeOpenedCardClick() {
-    copyrighttext.style.color = "black";
-    copyrighttext.style.backgroundColor = rootStyle.getPropertyValue("--bg");
-    copyrighttext.style.fontWeight = "700";
-    copyrighticon.src = "img/copyright_black.png";
+    a_card_is_open = false;
+    const goUp = document.getElementById('id_div_go_up');
+    goUp.style.backgroundColor = '';
 
     document.body.style.overflow = "auto";
 
@@ -374,27 +390,29 @@ function closeOpenedCardClick() {
     closeOpenedCardButton.style.opacity = "0%";
     arrowUp.style.display = "inline";
     arrowUp.style.visibility = "visible";
+
+    copyrighttext.style.marginLeft = "";
 }
 
 
 document.addEventListener("DOMContentLoaded", function() {
     const goUp = document.getElementById('id_div_go_up');
-    const card1 = document.getElementById('card1');
-    const card2 = document.getElementById('card2');
 
-
-    card1.addEventListener('mouseenter', function() {
-        goUp.style.backgroundColor = getCSSVariableValue("--cardwebdev");
-    });
-    card1.addEventListener('mouseleave', function() {
-        goUp.style.backgroundColor = '';
-    });
-
-    card2.addEventListener('mouseenter', function() {
-        goUp.style.backgroundColor = getCSSVariableValue("--cardmediadesign");
-    });
-    card2.addEventListener('mouseleave', function() {
-        goUp.style.backgroundColor = '';
-    });
+    for (let i = 1; i <= Object.keys(cardColors).length; i++) {
+        const card = document.getElementById(`card${i}`);
+        if (card) {
+            card.addEventListener('mouseenter', function() {
+                goUp.style.backgroundColor = getCSSVariableValue(cardColors[`card${i}`]);
+            });
+            console.log(a_card_is_open);
+            card.addEventListener('mouseleave', function() {
+                if (!a_card_is_open) {
+                    goUp.style.backgroundColor = '';
+                }
+            });
+            
+        }
+    }
 });
+
 
