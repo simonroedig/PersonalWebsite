@@ -16,6 +16,7 @@ var colors = {
     '--colup': '#2EB086',
     '--colbot': '#EEE6CE'
 };
+
 var toggleCardState = 0;
 
 var websiteCard;

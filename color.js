@@ -19,6 +19,7 @@ function colorTheme1NoStore() {
         '--colup': '#2EB086',
         '--colbot': '#EEE6CE'
     };
+
     Object.entries(colors).forEach(([property, value]) => {
         root.style.setProperty(property, value);
     });
@@ -45,6 +46,14 @@ function colorTheme1() {
         '--colright': '#B8405E',
         '--colup': '#2EB086',
         '--colbot': '#EEE6CE'
+    };
+
+    // https://medium.com/@sepidy/how-can-i-design-in-the-neo-brutalism-style-d85c458042de
+    colors = {
+        '--colleft': '#BAFCA2',
+        '--colright': '#FFDB58',
+        '--colup': '#C4A1FF',
+        '--colbot': '#FFA07A'
     };
     Object.entries(colors).forEach(([property, value]) => {
         root.style.setProperty(property, value);
