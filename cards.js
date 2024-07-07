@@ -1,6 +1,10 @@
 var cursorPointer = "url('cursor_pointer.png'), pointer";
 var cursorDefault = "url('cursor.png'), default";
 
+function getCSSVariableValue(variableName) {
+    return getComputedStyle(document.documentElement).getPropertyValue(variableName).trim();
+}
+
 function toggleCards() {
     if (toggleCardState === 3) {
         toggleCardState = 0;
@@ -333,7 +337,7 @@ function openCardClick() {
 
 function closeOpenedCardClick() {
     copyrighttext.style.color = "black";
-    copyrighttext.style.backgroundColor = "white";
+    copyrighttext.style.backgroundColor = rootStyle.getPropertyValue("--bg");
     copyrighttext.style.fontWeight = "700";
     copyrighticon.src = "img/copyright_black.png";
 
@@ -371,3 +375,26 @@ function closeOpenedCardClick() {
     arrowUp.style.display = "inline";
     arrowUp.style.visibility = "visible";
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const goUp = document.getElementById('id_div_go_up');
+    const card1 = document.getElementById('card1');
+    const card2 = document.getElementById('card2');
+
+
+    card1.addEventListener('mouseenter', function() {
+        goUp.style.backgroundColor = getCSSVariableValue("--cardwebdev");
+    });
+    card1.addEventListener('mouseleave', function() {
+        goUp.style.backgroundColor = '';
+    });
+
+    card2.addEventListener('mouseenter', function() {
+        goUp.style.backgroundColor = getCSSVariableValue("--cardmediadesign");
+    });
+    card2.addEventListener('mouseleave', function() {
+        goUp.style.backgroundColor = '';
+    });
+});
+

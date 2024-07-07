@@ -10,13 +10,6 @@ var cardID;
 var openCardID;
 var rightClickedCards = 0;
 
-var colors = {
-    '--colleft': '#313552',
-    '--colright': '#B8405E',
-    '--colup': '#2EB086',
-    '--colbot': '#EEE6CE'
-};
-
 var toggleCardState = 0;
 
 var websiteCard;
@@ -40,22 +33,6 @@ function main() {
     // Calculate current age (hover profile picture)
     document.getElementById("id_span_copyright_current_year").innerHTML = new Date().getFullYear();
     document.getElementById("id_img_profile_picture").title = Math.floor((new Date() - new Date("1999-06-25")) / 1000 / 60 / 60 / 24 / 365) + " Years Old";
-
-    // Color Themes
-    colorTheme1NoStore();
-    if (localStorage.getItem('localStorageSavedColorTheme') == "colorTheme1") {
-        colorTheme1();
-    } else if (localStorage.getItem('localStorageSavedColorTheme') == "colorTheme2") {
-        colorTheme2();
-    } else if (localStorage.getItem('localStorageSavedColorTheme') == "colorTheme3") {
-        colorTheme3();
-    } else if (localStorage.getItem('localStorageSavedColorTheme') == "colorTheme4") {
-        colorTheme4();
-    } else if (localStorage.getItem('localStorageSavedColorTheme') == "colorTheme5") {
-        colorTheme5();
-    } else if (localStorage.getItem('localStorageSavedColorTheme') == "colorTheme6") {
-        colorTheme6();
-    }
 
     websiteCard = document.getElementById("card1");
     mediaDesignCard = document.getElementById("card2");
@@ -104,7 +81,30 @@ function main() {
 }
 
 
+function burgerMenuClick() {
+    const button = document.querySelector(".class_div_navbar_button");
+    const rightDiv = document.getElementById("id_div_profile_right");
+    const burgerMenu = document.getElementById("id_p_profile_right_text");
+    const burgerButton = document.querySelector(".class_div_navbar_button_burger");
 
+    if (burgerMenuClicked) {
+        button.classList.remove("clicked");
+        rightDiv.style.backgroundColor = rootStyle.getPropertyValue("--colright");
+        burgerMenu.style.opacity = "0%";
+        burgerMenu.style.visibility = "hidden";
+        burgerMenu.style.display = "none";
+        burgerButton.style.background = rootStyle.getPropertyValue("--colright");
+    } else {
+        button.classList.add("clicked");
+        rightDiv.style.backgroundColor = rootStyle.getPropertyValue("--colright2");
+        burgerMenu.style.opacity = "100%";
+        burgerMenu.style.visibility = "visible";
+        burgerMenu.style.display = "inline";
+        burgerButton.style.background = rootStyle.getPropertyValue("--colright2");
+    }
+
+    burgerMenuClicked = !burgerMenuClicked;
+}
 
 
 

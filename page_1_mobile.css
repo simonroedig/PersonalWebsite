@@ -66,7 +66,7 @@
     }
 
     #id_p_profile_left_text {
-        color: white;
+        color: rgb(0, 0, 0);
         font-size: 2vh;
         font-family: 'Space Mono', monospace;
         font-weight: 700;
@@ -110,8 +110,8 @@
         position: absolute;
         border-radius: 50%;
         height: 25vh;
-        /* border: 0.5vh solid black; */
-        box-shadow: 0 0 0 0.4vh black;
+        border: 0.5vh solid black;
+        box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1); 
         transition: .5s ease-in-out;
         animation: rotateAnimation2 10s ease-in-out infinite;
     }
@@ -134,7 +134,7 @@
     }
 
     #id_div_info_text_space {
-        height: 38vh;
+        height: 42vh;
         display: flex;
         align-items: center;
         justify-content: center;

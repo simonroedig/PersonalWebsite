@@ -10,6 +10,7 @@
 body  {
     cursor: url('cursor.png'), default;
     overflow: auto;
+    background-color: #fdf2e9;
 }
 
 button, a {
@@ -17,17 +18,23 @@ button, a {
 }
 
 :root {
-    --colleft: #333333;
-    --colright: #333333;
-    --colup: #333333;
-    --colbot: #333333;
-
     --lightgrey: #e4e4e4;
-    --darkgrey: #b6b6b6;
+    --darkgrey: #ffffff;
 
     --scrolldark: #333333;
     --scrollbrighter: #575757;
     --scrollbrightest: #919191;
+
+    --bg: #fdf2e9;
+
+    --colleft: #BAFCA2;
+    --colright: #FFDB58;
+    --colright2: #69D2E7;
+    --colup: #C4A1FF;
+    --colbot: #FFA07A;
+
+    --cardwebdev: #acc8df;
+    --cardmediadesign: #e393f3;
 }
 
 ::-webkit-scrollbar {

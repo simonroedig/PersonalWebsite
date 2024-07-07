@@ -5,7 +5,7 @@
     text-align: center;
     transform: scale(1);
     cursor: url('cursor_pointer.png'), pointer;
-    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1); 
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1), 4px 4px 0px 0px rgb(255, 255, 255) inset;
 
 }
 
@@ -19,10 +19,6 @@
     }
 }
 
-.card1ForStyle {
-    background-image: url("img/cards/webdevbg.png");
-    
-}
 @keyframes updown2 {
     0% {transform: translateY(-0.4vh);}
     50% {transform: translateY(0.2vh);}
@@ -47,8 +43,19 @@
     }
 }
 
+.card1ForStyle {
+    /* background-image: url("img/cards/webdevbg.png"); */
+    background-color: var(--cardwebdev);
+    box-shadow: 6px 6px 0px 0px var(--cardwebdev), 4px 4px 0px 0px rgb(255, 255, 255) inset;
+    color: black;
+}
+
+
 .card2ForStyle {
-    background-image: url("img/cards/mediadesignbg.png");
+    /*background-image: url("img/cards/mediadesignbg.png"); */
+    background-color: var(--cardmediadesign);
+    box-shadow: 6px 6px 0px 0px var(--cardmediadesign), 4px 4px 0px 0px rgb(255, 255, 255) inset;
+    color: black;
 }
 
 .card3ForStyle {
@@ -85,35 +92,40 @@
 }
 
 .cardsAllForGeneralStyles h {
-    color: white;
-    font-size: 2vh;
+    color: rgb(0, 0, 0);
+    font-size: 2.2vh;
     font-family: 'Space Mono', monospace;
     font-weight: 700;
     margin-top: auto;
-    border-bottom: 0.2vh solid white;
+    border-bottom: 0.4vh solid rgb(0, 0, 0);
 }
 
 .cardsAllForGeneralStyles p {
-    color: white;
+    color: rgb(0, 0, 0);
     margin: 2vh;
     font-size: 2vh;
     font-family: 'Space Mono', monospace;
-    font-weight: 400;
+    font-weight: 700;
     margin-top: auto;
     margin-bottom: auto;
 }
 
 .cardsAllForGeneralStyles img {
-    width: 100%;
-    border-top: 0.5vh solid black;
+    width: 90%;
+    border: 0.5vh solid black;
+    border-radius: 2vh;
     margin-top: auto;
+
+    box-shadow: 6px 6px 0px 0px #000000, 4px 4px 0px 0px rgb(255, 255, 255) inset;
+
 }
 
 .cardNumber {
     font-size: 1.5vh;
     font-family: 'Space Mono', monospace;
-    font-weight: 400;
-    color: white;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
     width: 100%;
     background-image: none;
+    margin: 10px 0 5px 0;
 }
