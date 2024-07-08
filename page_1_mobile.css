@@ -93,7 +93,7 @@
         font-family: 'Space Mono', monospace;
         font-weight: 700;
         opacity: 0%;
-        transition: 0.2s ease-in-out;
+        transition: 0.3s ease-in-out;
         margin: 2vh;
     }
 
@@ -108,8 +108,8 @@
 
     #id_img_profile_picture {
         position: absolute;
-        border-radius: 50%;
-        height: 25vh;
+        border-radius: 3vh;
+        height: 20vh;
         border: 0.5vh solid black;
         box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1); 
         transition: .5s ease-in-out;
@@ -127,9 +127,9 @@
 
     @media (hover: hover) {
         #id_img_profile_picture:hover {
-            height: 28vh;
+            height: 23vh;
             transition: .5s ease;
-            border-radius: 3vh;
+            border-radius: 0vh;
         }
     }
 

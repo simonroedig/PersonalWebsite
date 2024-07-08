@@ -19,11 +19,76 @@
     height: 7vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-
     transition: 1s ease-in-out;
 }
+
+#id_img_navbar_textpicture_wrapper {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.class_div_navbar_button {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    transition: all .3s ease;
+}
+
+.class_div_navbar_button_burger {
+    width: 9vh;
+    height: 4vh;
+    background: var(--colright);
+    border: 0.5vh solid black;
+    border-radius: 2vh;
+    transition: all .3s ease;
+    cursor: url('cursor_pointer.png'), pointer;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+
+}
+
+.class_div_navbar_button_burger {
+    /* Initial styles for the button */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Changed from center to flex-start */
+}
+
+.class_div_navbar_button_burger.clicked .class_div_navbar_button_burger_small {
+    margin-left: calc(100% - 3vh); /* Adjust based on the actual width of the parent */
+    margin-right: 4px;
+    transition: all .3s ease;
+}
+
+@media (hover: hover) {
+    .class_div_navbar_button_burger:hover {
+        width: 8vh;
+    }
+
+    .class_div_navbar_button_burger:hover .class_div_navbar_button_burger_small {
+        margin-left: 50%; /* Adjust as needed */
+        margin-right: -50%; /* Adjust as needed */
+        transform: translateX(-50%); /* Centering the element */
+        transition: all .3s ease;
+    }
+}
+
+.class_div_navbar_button_burger_small {
+    width: 2.5vh;
+    height: 2.5vh;
+    margin-left: 4px;
+    margin-top: 0.6px;
+    background: black;
+    border: 0.5vh solid black;
+    border-radius: 1.3vh;
+    transition: all .3s ease;
+}
+
 #id_div_go_down {
     background-color: var(--colup);
     height: 7vh;

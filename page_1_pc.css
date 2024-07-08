@@ -12,50 +12,6 @@
         }
     }
 
-    .class_div_navbar_button {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 120px;
-        height: 7vh;
-        cursor: url('cursor_pointer.png'), pointer;
-        transition: all .3s ease;
-    }
-    .class_div_navbar_button_burger {
-        width: 30px;
-        height: 30px;
-        background: var(--colright);
-        border: 8px solid black;
-        border-radius: 100%;
-        transition: all .3s ease;
-    }
-
-    @media (hover: hover) {
-        .class_div_navbar_button:hover .class_div_navbar_button_burger {
-            border: 8px solid var(--lightgrey);
-            width: 40px;
-            height: 40px;
-            transition: all .3s ease;
-        }
-    }
-
-    .class_div_navbar_button.clicked .class_div_navbar_button_burger {
-        width: 30px;
-        height: 30px;
-        background: rgb(112, 112, 112);
-        border: 5px solid black;
-        border-radius: 100%;
-        transition: all .3s ease;
-    }
-
-    @media (hover: hover) {
-        .class_div_navbar_button.clicked:hover .class_div_navbar_button_burger {
-            border: 3px solid black;
-            transition: all .3s ease;
-        }
-    }
-
     #id_div_profile_all {
         position: relative;
         display: flex;
@@ -127,7 +83,7 @@
         font-family: 'Space Mono', monospace;
         font-weight: 700;
         opacity: 0%;
-        transition: 0.2s ease-in-out;
+        transition: 0.3s ease-in-out;
     }
 
     @media (hover: hover) {
@@ -139,10 +95,10 @@
 
     #id_img_profile_picture {
         position: absolute;
-        border-radius: 50%;
-        height: 35vh;
+        border-radius: 3vh;
+        height: 30vh;
         border: 0.5vh solid black; 
-        box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1); 
+        box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
         transition: .5s ease;
         animation: rotateAnimation2 10s ease-in-out infinite;
     }
@@ -158,9 +114,9 @@
 
     @media (hover: hover) {
         #id_img_profile_picture:hover {
-            height: 38vh;
+            height: 33vh;
             transition: .5s ease;
-            border-radius: 3vh;
+            border-radius: 0vh;
         }
     }
    

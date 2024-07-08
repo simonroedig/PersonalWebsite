@@ -81,7 +81,7 @@ function main() {
 
 
 function burgerMenuClick() {
-    const button = document.querySelector(".class_div_navbar_button");
+    const button = document.querySelector(".class_div_navbar_button_burger");
     const rightDiv = document.getElementById("id_div_profile_right");
     const burgerMenu = document.getElementById("id_p_profile_right_text");
     const burgerMenuWrapper = document.getElementById("id_p_profile_right_text_wrapper");
