@@ -80,6 +80,8 @@ function toggleCards() {
         showerCard.id = "card8";
         rememoryCard.id = "card9";
         iotCard.id = "card10";
+        bmwCard.id = "card11";
+        rohdeCard.id = "card12";
     }
 
     // PERSONAL CARDS
@@ -108,6 +110,8 @@ function toggleCards() {
         showerCard.id = "ignore";
         rememoryCard.id = "ignore";
         iotCard.id = "ignore";
+        bmwCard.id = "ignore";
+        rohdeCard.id = "ignore";
     }
 
     // UNI CARDS
@@ -136,6 +140,8 @@ function toggleCards() {
         quartoCard.id = "ignore";
         musicCard.id = "ignore";
         chromeCard.id = "ignore";
+        bmwCard.id = "ignore";
+        rohdeCard.id = "ignore";
     }
 
     // WORK CARDS
@@ -163,6 +169,8 @@ function toggleCards() {
         showerCard.id = "card8";
         rememoryCard.id = "card9";
         iotCard.id = "card10";
+        bmwCard.id = "card11";
+        rohdeCard.id = "card12";
     }
 
     

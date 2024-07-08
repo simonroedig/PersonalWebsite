@@ -22,9 +22,11 @@ var chromeCard;
 var showerCard;
 var rememoryCard;
 var iotCard;
+var bmwCard;
+var rohdeCard;
 
-var copyrighttext
-var copyrighticon
+var copyrighttext;
+var copyrighticon;
 
 function main() {
     copyrighttext = document.getElementById("id_div_copyright_space");
@@ -43,6 +45,8 @@ function main() {
     showerCard = document.getElementById("card8");
     rememoryCard = document.getElementById("card9");
     iotCard = document.getElementById("card10");
+    bmwCard = document.getElementById("card11");
+    rohdeCard = document.getElementById("card12");
 
     // Display X/Y on closed cards
     ammountOfAllCards = document.getElementsByClassName("cards").length;
