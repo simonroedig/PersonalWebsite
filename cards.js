@@ -13,7 +13,9 @@ const cardColors = {
     card7: "--cardchromeextension",
     card8: "--cardshower",
     card9: "--cardrememory",
-    card10: "--cardiot"
+    card10: "--cardiot",
+    card11: "--cardbmw",
+    card12: "--cardrohde",
 };
 
 function getCSSVariableValue(variableName) {

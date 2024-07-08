@@ -115,6 +115,25 @@
     color: black;
 }
 
+.card11ForStyle {
+    background-color: var(--cardbmw);
+    box-shadow: 6px 6px 0px 0px var(--cardbmw), 4px 4px 0px 0px rgb(255, 255, 255) inset;
+    color: black;
+}
+
+.card12ForStyle {
+    background-color: var(--cardrohde);
+    box-shadow: 6px 6px 0px 0px var(--cardrohde), 4px 4px 0px 0px rgb(255, 255, 255) inset;
+    color: rgb(255, 255, 255) !important;
+}
+
+#id_img_bmwicon {
+    width: 30px;
+    box-shadow: none;
+    border: none;
+    margin-bottom: -5px;
+}
+
 .cardsAllForGeneralStyles h {
     color: rgb(0, 0, 0);
     font-size: 2.2vh;
@@ -139,9 +158,7 @@
     border: 0.5vh solid black;
     border-radius: 2vh;
     margin-top: auto;
-
     box-shadow: 6px 6px 0px 0px #000000, 4px 4px 0px 0px rgb(255, 255, 255) inset;
-
 }
 
 .cardNumber {

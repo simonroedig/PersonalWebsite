@@ -43,6 +43,8 @@ button, a {
     --cardshower: #b8d9ea;
     --cardrememory: #4dc5ac;
     --cardiot: #d8c2b0;
+    --cardbmw: #accdef;
+    --cardrohde: #b5b9bc;
 }
 
 ::-webkit-scrollbar {
