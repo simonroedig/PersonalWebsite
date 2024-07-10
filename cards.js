@@ -180,6 +180,9 @@ function toggleCards() {
     }
 
     
+    sortCards();
+    cardReset();
+
     ammountOfAllCards = document.getElementsByClassName("cards").length;
     var ammountOfAllCardNumber = document.getElementsByClassName("cardNumber").length;
     var j = 0;
@@ -190,10 +193,53 @@ function toggleCards() {
             j++;
         }
     }
+}
 
-    cardReset()
+function sortCards() {
+    // Get the container div
+    const container = document.getElementById('id_div_closed_cards_space_wrapper');
+    
+    // Get all card elements
+    const cards = Array.from(container.getElementsByClassName('cardsAllForGeneralStyles'));
 
+    const arrowLeft = document.getElementById("id_img_all_cards_arrow_left");
+    const arrowRight = document.getElementById("id_img_all_cards_arrow_right");
 
+    // Separate cards into those to be sorted and those to be ignored
+    const sortableCards = [];
+    const ignoredCards = [];
+
+    cards.forEach(card => {
+        if (card.id === 'ignore') {
+            ignoredCards.push(card);
+        } else {
+            sortableCards.push(card);
+        }
+    });
+
+    // Sort the sortable cards by their id (e.g., card1, card2, etc.)
+    sortableCards.sort((a, b) => {
+        const aId = parseInt(a.id.replace('card', ''), 10);
+        const bId = parseInt(b.id.replace('card', ''), 10);
+        return aId - bId;
+    });
+
+    // Clear the container
+    container.innerHTML = '';
+
+    container.appendChild(arrowLeft);
+
+    // Append the sorted cards first
+    sortableCards.forEach(card => {
+        container.appendChild(card);
+    });
+
+    // Append the ignored cards at the end
+    ignoredCards.forEach(card => {
+        container.appendChild(card);
+    });
+
+    container.appendChild(arrowRight);
 }
 
 function cardReset() {
@@ -207,7 +253,6 @@ function cardReset() {
             realCardsList.push(card);
         }
     });
-
 
     rightClickedCards = 0;
 
@@ -424,7 +469,6 @@ function openCardClick() {
     closeOpenedCardButton.style.display = "inline";
     closeOpenedCardButton.style.visibility = "visible";
     closeOpenedCardButton.style.opacity = "100%";
-
     copyrighttext.style.marginLeft = "-0.7vw";
 }
 

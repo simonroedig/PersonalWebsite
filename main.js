@@ -83,6 +83,10 @@ function main() {
     }
     rightArrowCardsClick();
     leftArrowCardsClick();
+
+    oneCard.addEventListener('change', cardReset);
+    twoCard.addEventListener('change', cardReset);
+    threeCard.addEventListener('change', cardReset);
 }
 
 

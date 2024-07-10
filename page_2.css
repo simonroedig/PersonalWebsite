@@ -37,7 +37,6 @@
 #id_div_toggle_cardsgroup_space {
     height: 20vh;
     width: 100%;
-    border-bottom: 0.5vh solid black;
     display: flex;
     justify-content: flex-end;
     align-items: center;
