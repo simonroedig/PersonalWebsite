@@ -23,12 +23,21 @@ function getCSSVariableValue(variableName) {
     return getComputedStyle(document.documentElement).getPropertyValue(variableName).trim();
 }
 
-function toggleCards() {
+function toggleCards(fromStartup = false) {
+    if (typeof fromStartup === 'object' && fromStartup instanceof Event) {
+        fromStartup = false; // Reset to default if it's an Event object
+    }
+    
     if (toggleCardState === 3) {
         toggleCardState = 0;
     } else {
         toggleCardState++;
     }
+
+    if (fromStartup) {
+        toggleCardState = 0;
+    }
+
     var toggler = document.getElementById("id_div_toggle_cardsgroup_lever_small");
     var toggleImage = document.getElementById("id_img_toggle_cardsgroup_text");
     
@@ -71,8 +80,8 @@ function toggleCards() {
             card.style.display = "inline-flex";
         });
 
-        websiteCard.id = "card1";
-        mediaDesignCard.id = "card2";
+        websiteCard.id = "card2";
+        mediaDesignCard.id = "card1";
         meetCard.id = "card3";
         teachingCard.id = "card4";
         quartoCard.id = "card5";
