@@ -16,6 +16,7 @@ const cardColors = {
     card10: "--cardiot",
     card11: "--cardbmw",
     card12: "--cardrohde",
+    card13: "--cardlivanova"
 };
 
 function getCSSVariableValue(variableName) {
@@ -56,7 +57,7 @@ function toggleCards() {
     var allCards = document.querySelectorAll(".cardsAllForGeneralStyles");
     var personalCard = document.querySelectorAll(".personalCard");
     var uniCard = document.querySelectorAll(".uniCard");
-    var workCard = document.querySelectorAll(".cardsAllForGeneralStyles");
+    var workCard = document.querySelectorAll(".workCard");
 
     
     rightClickedCards = 0;
@@ -82,6 +83,7 @@ function toggleCards() {
         iotCard.id = "card10";
         bmwCard.id = "card11";
         rohdeCard.id = "card12";
+        livaCard.id = "card13";
     }
 
     // PERSONAL CARDS
@@ -112,6 +114,7 @@ function toggleCards() {
         iotCard.id = "ignore";
         bmwCard.id = "ignore";
         rohdeCard.id = "ignore";
+        livaCard.id = "ignore";
     }
 
     // UNI CARDS
@@ -130,18 +133,19 @@ function toggleCards() {
         });
 
         meetCard.id = "card1";
-        teachingCard.id = "card2";
-        showerCard.id = "card3";
-        rememoryCard.id = "card4";
-        iotCard.id = "card5";
+        showerCard.id = "card2";
+        rememoryCard.id = "card3";
+        iotCard.id = "card4";
 
         websiteCard.id = "ignore";
+        teachingCard.id = "ignore";
         mediaDesignCard.id = "ignore";
         quartoCard.id = "ignore";
         musicCard.id = "ignore";
         chromeCard.id = "ignore";
         bmwCard.id = "ignore";
         rohdeCard.id = "ignore";
+        livaCard.id = "ignore";
     }
 
     // WORK CARDS
@@ -159,18 +163,20 @@ function toggleCards() {
             card.style.display = "inline-flex";
         });
 
-        websiteCard.id = "card1";
-        mediaDesignCard.id = "card2";
-        meetCard.id = "card3";
+        bmwCard.id = "card1";
+        rohdeCard.id = "card2";
+        livaCard.id = "card3";
         teachingCard.id = "card4";
-        quartoCard.id = "card5";
-        musicCard.id = "card6";
-        chromeCard.id = "card7";
-        showerCard.id = "card8";
-        rememoryCard.id = "card9";
-        iotCard.id = "card10";
-        bmwCard.id = "card11";
-        rohdeCard.id = "card12";
+
+        websiteCard.id = "ignore";
+        mediaDesignCard.id = "ignore";
+        meetCard.id = "ignore";
+        quartoCard.id = "ignore";
+        musicCard.id = "ignore";
+        chromeCard.id = "ignore";
+        showerCard.id = "ignore";
+        rememoryCard.id = "ignore";
+        iotCard.id = "ignore";
     }
 
     
@@ -184,20 +190,76 @@ function toggleCards() {
             j++;
         }
     }
-    // Call rightArrowCardsClick a few times
-    for (let i = 0; i < 10; i++) {
-        rightArrowCardsClick();
-    }
 
-    // Call leftArrowCardsClick a few times
-    for (let i = 0; i < 10; i++) {
-        leftArrowCardsClick();
+    cardReset()
+
+
+}
+
+function cardReset() {
+    const arrowLeft = document.getElementById("id_img_all_cards_arrow_left");
+    const arrowRight = document.getElementById("id_img_all_cards_arrow_right");
+
+    var realCardsList = [];
+    var allCards = document.querySelectorAll(".cardsAllForGeneralStyles");
+    allCards.forEach(function(card) {
+        if(card.id !== "ignore") {
+            realCardsList.push(card);
+        }
+    });
+
+
+    rightClickedCards = 0;
+
+    if (threeCard.matches) {
+        // the first three cards are visible from realCardsList
+        // all other cards are hidden
+        for (var i = 0; i < realCardsList.length; i++) {
+            if (i < 3) {
+                realCardsList[i].style.visibility = "visible";
+                realCardsList[i].style.display = "inline-flex";
+            } else {
+                realCardsList[i].style.visibility = "hidden";
+                realCardsList[i].style.display = "none";
+            }
+        }
     }
+    if (twoCard.matches && !oneCard.matches) {
+        // the first two cards are visible from realCardsList
+        // all other cards are hidden
+        for (var i = 0; i < realCardsList.length; i++) {
+            if (i < 2) {
+                realCardsList[i].style.visibility = "visible";
+                realCardsList[i].style.display = "inline-flex";
+            } else {
+                realCardsList[i].style.visibility = "hidden";
+                realCardsList[i].style.display = "none";
+            }
+        }
+    }
+    if (oneCard.matches) {
+        // the first card is visible from realCardsList
+        // all other cards are hidden
+        for (var i = 0; i < realCardsList.length; i++) {
+            if (i < 1) {
+                realCardsList[i].style.visibility = "visible";
+                realCardsList[i].style.display = "inline-flex";
+            } else {
+                realCardsList[i].style.visibility = "hidden";
+                realCardsList[i].style.display = "none";
+            }
+        }
+    }
+    arrowLeft.style.opacity = "0%";
+    arrowLeft.style.cursor = cursorDefault;
+
+    arrowRight.style.opacity = "100%";
+    arrowRight.style.cursor = cursorPointer;
 }
 
 function leftArrowCardsClick() {
     const arrowLeft = document.getElementById("id_img_all_cards_arrow_left");
-    const arrowRight = document.getElementById("id_img_all_cards_arrow_right");
+    const arrowRight = document.getElementById("id_img_all_cards_arrow_right");    
 
     var cardElements = [
         document.getElementById("card" + rightClickedCards),
@@ -254,6 +316,10 @@ function rightArrowCardsClick() {
             document.getElementById("card" + (2 + rightClickedCards)),
             document.getElementById("card" + (3 + rightClickedCards))
         ];
+
+        console.log(cardElements);
+
+
         cardElements[0].style.visibility = "hidden";
         cardElements[0].style.display = "none";
         cardElements[1].style.visibility = "visible";
@@ -414,7 +480,6 @@ document.addEventListener("DOMContentLoaded", function() {
             card.addEventListener('mouseenter', function() {
                 goUp.style.backgroundColor = getCSSVariableValue(cardColors[`card${i}`]);
             });
-            console.log(a_card_is_open);
             card.addEventListener('mouseleave', function() {
                 if (!a_card_is_open) {
                     goUp.style.backgroundColor = '';
