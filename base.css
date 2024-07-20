@@ -17,6 +17,10 @@ button, a {
     cursor: url('cursor_pointer.png'), pointer;
 }
 
+p {
+    margin-bottom: 0;
+}
+
 :root {
     --lightgrey: #e4e4e4;
     --darkgrey: #ffffff;

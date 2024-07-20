@@ -89,6 +89,36 @@ function main() {
     threeCard.addEventListener('change', cardReset);
 
     toggleCards(true);
+
+
+    // Touch swipe for cards
+    let touchstartX = 0;
+    let touchendX = 0;
+    const swipeThreshold = 50; // Minimum horizontal distance in pixels to be considered a swipe
+
+    function checkDirection() {
+        const horizontalSwipe = Math.abs(touchendX - touchstartX);
+        if (horizontalSwipe > swipeThreshold) {
+            if (touchendX < touchstartX) {
+                rightArrowCardsClick();
+            }
+            if (touchendX > touchstartX) {
+                leftArrowCardsClick();
+            }
+        }
+    }
+
+    // Get the specific div by its ID
+    const cardsSpace = document.getElementById('id_div_all_cards_space');
+
+    cardsSpace.addEventListener('touchstart', e => {
+        touchstartX = e.changedTouches[0].screenX;
+    });
+
+    cardsSpace.addEventListener('touchend', e => {
+        touchendX = e.changedTouches[0].screenX;
+        checkDirection();
+    });
 }
 
 

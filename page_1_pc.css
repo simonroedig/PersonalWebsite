@@ -123,8 +123,9 @@
     #id_div_info_text_space {
         height: 32vh;
         display: flex;
-        align-items: center;
+        align-items: safe center;
         justify-content: center;
+        overflow-y: auto;
     }
 
     #id_p_info_text {

@@ -5,30 +5,60 @@
     }
 
     .class_div_navbar_button {
-        position: relative;
+        width: 30vw;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 120px;
         height: 7vh;
-        cursor: url('cursor_pointer.png'), pointer;
         transition: all .3s ease;
     }
+    
     .class_div_navbar_button_burger {
-        width: 17px;
-        height: 17px;
-        background: rgb(112, 112, 112);
-        border: 5px solid black;
-        border-radius: 100%;
+        width: 6vh;
+        height: 3vh;
+        background: var(--colright);
+        border: 0.5vh solid black;
+        border-radius: 2vh;
+        transition: all .3s ease;
+        cursor: url('cursor_pointer.png'), pointer;
+        box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+    
+    }
+    
+    .class_div_navbar_button_burger {
+        /* Initial styles for the button */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Changed from center to flex-start */
+    }
+    
+    .class_div_navbar_button_burger.clicked .class_div_navbar_button_burger_small {
+        margin-left: calc(100% - 2vh); /* Adjust based on the actual width of the parent */
+        margin-right: 0px;
         transition: all .3s ease;
     }
-
-    .class_div_navbar_button.clicked .class_div_navbar_button_burger {
-        width: 17px;
-        height: 17px;
-        background: rgb(112, 112, 112);
-        border: 2px solid black;
-        border-radius: 100%;
+    
+    @media (hover: hover) {
+        .class_div_navbar_button_burger:hover {
+            width: 5vh;
+        }
+    
+        .class_div_navbar_button_burger:hover .class_div_navbar_button_burger_small {
+            margin-left: 50%; /* Adjust as needed */
+            margin-right: -50%; /* Adjust as needed */
+            transform: translateX(-50%); /* Centering the element */
+            transition: all .3s ease;
+        }
+    }
+    
+    .class_div_navbar_button_burger_small {
+        width: 1.5vh;
+        height: 1.5vh;
+        margin-left: 4px;
+        margin-top: 0.6px;
+        background: black;
+        border: 0.5vh solid black;
+        border-radius: 1.3vh;
         transition: all .3s ease;
     }
 
@@ -67,10 +97,10 @@
 
     #id_p_profile_left_text {
         color: rgb(0, 0, 0);
-        font-size: 2vh;
+        font-size: 1.5vh;
         font-family: 'Space Mono', monospace;
         font-weight: 700;
-        margin: 2vh;
+        margin: 0vh;
         width: 22ch;
         animation: typing 2s steps(22);
         white-space: nowrap;
@@ -88,13 +118,38 @@
         visibility: hidden;
         display: none;
         color: black;
-        font-size: 2vh;
+        font-size: 1.5vh;
         text-decoration: none;
         font-family: 'Space Mono', monospace;
         font-weight: 700;
         opacity: 0%;
         transition: 0.3s ease-in-out;
-        margin: 2vh;
+        margin: 0vh;
+    }
+
+    #id_p_profile_left_text_wrapper {
+        background-color: var(--darkgrey);
+        padding: 7px 8px 7px 18px;
+        border-radius: 2vh;
+    
+        border: 0.5vh solid black;
+        box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+        margin-top: 2vh;
+
+    }
+    
+    #id_p_profile_right_text_wrapper {
+        background-color: var(--darkgrey);
+        padding: 3px;
+        border-radius: 2vh;
+        border: 0.5vh solid black;
+        box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+    
+        opacity: 0%;
+        visibility: hidden;
+        display: none;
+        margin-bottom: 15px;
+
     }
 
     #id_div_profile_right a {
@@ -136,8 +191,9 @@
     #id_div_info_text_space {
         height: 42vh;
         display: flex;
-        align-items: center;
+        align-items: safe center;
         justify-content: center;
+        overflow-y: auto;
     }
 
     #id_p_info_text {

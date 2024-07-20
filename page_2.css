@@ -126,7 +126,7 @@
     align-items: center;
     font-weight: 700;
     background-color: var(--bg);
-    border-bottom: 0.5vh solid black;
+    /*border-bottom: 0.5vh solid black;*/
 }
 
 #id_p_copyright_text {

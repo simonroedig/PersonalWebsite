@@ -1,10 +1,11 @@
 #id_div_space1, #id_div_space2 {
     height: 2vh;
 }
-
+/*
 #id_div_space1{
     border-top: 0.5vh solid black;
 }
+*/
 
 #id_div_space2, #id_div_space1 {
     display: flex;
