@@ -39,8 +39,8 @@
         height: 1.5vh;
         width: 17vw;
         background-color: black;
-        border-top-right-radius: 5vh;
-        border-bottom-right-radius: 5vh;
+        border-top-right-radius: 100vh;
+        border-bottom-right-radius: 100vh;
         animation: widthAnimation 5s infinite ease-in-out;
     }
 
@@ -48,8 +48,8 @@
         height: 1.5vh;
         width: 17vw;
         background-color: black;
-        border-top-left-radius: 5vh;
-        border-bottom-left-radius: 5vh;
+        border-top-left-radius: 100vh;
+        border-bottom-left-radius: 100vh;
         animation: widthAnimation 5s infinite ease-in-out;
     }
 

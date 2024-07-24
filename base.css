@@ -62,7 +62,7 @@ p {
 
 ::-webkit-scrollbar-thumb {
     background: var(--scrollbrighter);
-    border-radius: 5px;  /* Adjust this value to your liking */
+    border-radius: 100vh;  /* Adjust this value to your liking */
 }
 
 ::-webkit-scrollbar-thumb:hover {
