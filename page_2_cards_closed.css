@@ -133,6 +133,12 @@
     color: rgb(255, 255, 255) !important;
 }
 
+.card14ForStyle {
+    background-color: var(--cardchordsync);
+    box-shadow: 6px 6px 0px 0px var(--cardchordsync), 4px 4px 0px 0px rgb(255, 255, 255) inset;
+    color: rgb(255, 255, 255) !important;
+}
+
 #id_img_bmwicon {
     width: 30px;
     box-shadow: none;

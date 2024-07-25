@@ -127,6 +127,12 @@
     background: var(--scrollbrightest);
 }
 
+/* webdev card */
+.htmlcssjs {
+    width: 2vh;
+    vertical-align: -0.30vh;
+}
+
 /* HEADLINE */
 .opencard_headline {
     color: rgb(0, 0, 0);
@@ -148,6 +154,7 @@
     justify-content: safe center;
     align-items: center;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .opencard_mediadiv_3 {
     display: flex;

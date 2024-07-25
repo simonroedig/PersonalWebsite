@@ -25,6 +25,7 @@ var iotCard;
 var bmwCard;
 var rohdeCard;
 var livaCard;
+var chordSyncCard;
 
 var copyrighttext;
 var copyrighticon;
@@ -49,6 +50,7 @@ function main() {
     bmwCard = document.getElementById("card11");
     rohdeCard = document.getElementById("card12");
     livaCard = document.getElementById("card13");
+    chordSyncCard = document.getElementById("card14");
 
     // Display X/Y on closed cards
     ammountOfAllCards = document.getElementsByClassName("cards").length;
