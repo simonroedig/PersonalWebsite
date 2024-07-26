@@ -202,7 +202,14 @@
     height: calc(30vw * 9 / 16);
     width: 30vw;
     margin: 2vw;
-
+}
+.opencard_iframe_size_0_larger {
+    border: 0.5vh solid black;
+    border-radius: 2vh;
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+    height: calc(30vw * 9 / 16);
+    width: 30vw;
+    margin: 2vw;
 }
 .opencard_iframe_size_1 {
     border: 0.5vh solid black;
@@ -232,6 +239,11 @@
     .opencard_iframe_size_0 {
         height: calc(50vw * 9 / 16);
         width: 40vw;
+        margin: 8vw 2vw;
+    }
+    .opencard_iframe_size_0_larger {
+        height: calc(80vw * 9 / 16);
+        width: 80vw;
         margin: 8vw 2vw;
     }
     .opencard_iframe_size_1 {
