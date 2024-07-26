@@ -172,6 +172,13 @@
     height: calc(30vw * 9 / 16);
     margin: 2vw;
 }
+.opencard_img_size_0_larger {
+    border: 0.5vh solid black;
+    border-radius: 2vh;
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+    height: calc(50vw * 9 / 16);
+    margin: 2vw;
+}
 .opencard_img_size_1 {
     border: 0.5vh solid black;
     border-radius: 2vh;
@@ -233,8 +240,14 @@
         margin: 8vw;
     }
 
+
+
     .opencard_img_size_0 {
         height: calc(50vw * 9 / 16);
+        margin: 8vw 2vw;
+    }
+    .opencard_img_size_0_larger {
+        height: calc(90vw * 9 / 16);
         margin: 8vw 2vw;
     }
     .opencard_img_size_1 {

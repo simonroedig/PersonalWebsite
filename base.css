@@ -5,6 +5,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 body  {
@@ -45,12 +49,13 @@ p {
     --cardmusic: #d7b174;
     --cardchromeextension: #71ba6a;
     --cardshower: #b8d9ea;
-    --cardrememory: #4dc5ac;
+    --cardrememory: #5ad0b9;
     --cardiot: #d8c2b0;
     --cardbmw: #accdef;
     --cardrohde: #b5b9bc;
     --cardlivanova: #c57ad5;
-    --cardchordsync: #a9f3bb;
+    --cardchordsync: #a3e6eb;
+    --cardsbin: #d4d4d4;
 }
 
 ::-webkit-scrollbar {

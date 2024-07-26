@@ -17,7 +17,8 @@ const cardColors = {
     card11: "--cardbmw",
     card12: "--cardrohde",
     card13: "--cardlivanova",
-    card14: "--cardchordsync"
+    card14: "--cardchordsync",
+    card15: "--cardsbin"
 };
 
 function getCSSVariableValue(variableName) {
@@ -95,6 +96,7 @@ function toggleCards(fromStartup = false) {
         rohdeCard.id = "card12";
         livaCard.id = "card13";
         chordSyncCard.id = "card14";
+        sbinCard.id = "card15";
     }
 
     // PERSONAL CARDS
@@ -127,6 +129,7 @@ function toggleCards(fromStartup = false) {
         rohdeCard.id = "ignore";
         livaCard.id = "ignore";
         chordSyncCard.id = "ignore";
+        sbinCard.id = "ignore";
     }
 
     // UNI CARDS
@@ -149,6 +152,7 @@ function toggleCards(fromStartup = false) {
         rememoryCard.id = "card3";
         iotCard.id = "card4";
         chordSyncCard.id = "card5";
+        sbinCard.id = "card6";
 
         websiteCard.id = "ignore";
         teachingCard.id = "ignore";
@@ -191,6 +195,7 @@ function toggleCards(fromStartup = false) {
         rememoryCard.id = "ignore";
         iotCard.id = "ignore";
         chordSyncCard.id = "ignore";
+        sbinCard.id = "ignore";
     }
 
     

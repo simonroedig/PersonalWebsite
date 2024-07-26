@@ -26,6 +26,7 @@ var bmwCard;
 var rohdeCard;
 var livaCard;
 var chordSyncCard;
+var sbinCard;
 
 var copyrighttext;
 var copyrighticon;
@@ -51,7 +52,8 @@ function main() {
     rohdeCard = document.getElementById("card12");
     livaCard = document.getElementById("card13");
     chordSyncCard = document.getElementById("card14");
-
+    sbinCard = document.getElementById("card15");
+    
     // Display X/Y on closed cards
     ammountOfAllCards = document.getElementsByClassName("cards").length;
     var ammountOfAllCardNumber = document.getElementsByClassName("cardNumber").length;
