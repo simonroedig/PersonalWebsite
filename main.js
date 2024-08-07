@@ -50,9 +50,11 @@ function main() {
     iotCard = document.getElementById("card10");
     bmwCard = document.getElementById("card11");
     rohdeCard = document.getElementById("card12");
-    livaCard = document.getElementById("card13");
+    bshCard = document.getElementById("card13");
     chordSyncCard = document.getElementById("card14");
     sbinCard = document.getElementById("card15");
+    songTreasureCard = document.getElementById("card16");
+    pulsellCard = document.getElementById("card17");
     
     // Display X/Y on closed cards
     ammountOfAllCards = document.getElementsByClassName("cards").length;

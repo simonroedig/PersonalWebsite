@@ -53,9 +53,11 @@ p {
     --cardiot: #d8c2b0;
     --cardbmw: #accdef;
     --cardrohde: #b5b9bc;
-    --cardlivanova: #c57ad5;
+    --cardbsh: #f4724a;
     --cardchordsync: #a3e6eb;
     --cardsbin: #d4d4d4;
+    --cardsongtreasure: #d1c38d;
+    --cardpulsell: #dcc4e4;
 }
 
 ::-webkit-scrollbar {

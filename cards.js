@@ -3,6 +3,8 @@ var cursorDefault = "url('cursor.png'), default";
 
 let a_card_is_open = false;
 
+var cardAmmountInCategory = 0;
+
 const cardColors = {
     card1: "--cardwebdev",
     card2: "--cardmediadesign",
@@ -16,9 +18,11 @@ const cardColors = {
     card10: "--cardiot",
     card11: "--cardbmw",
     card12: "--cardrohde",
-    card13: "--cardlivanova",
+    card13: "--cardbsh",
     card14: "--cardchordsync",
-    card15: "--cardsbin"
+    card15: "--cardsbin",
+    card16: "--cardsongtreasure",
+    card17: "--cardpulsell"
 };
 
 function getCSSVariableValue(variableName) {
@@ -94,9 +98,11 @@ function toggleCards(fromStartup = false) {
         iotCard.id = "card10";
         bmwCard.id = "card11";
         rohdeCard.id = "card12";
-        livaCard.id = "card13";
+        bshCard.id = "card13";
         chordSyncCard.id = "card14";
         sbinCard.id = "card15";
+        songTreasureCard.id = "card16";
+        pulsellCard.id = "card17";
     }
 
     // PERSONAL CARDS
@@ -127,9 +133,11 @@ function toggleCards(fromStartup = false) {
         iotCard.id = "ignore";
         bmwCard.id = "ignore";
         rohdeCard.id = "ignore";
-        livaCard.id = "ignore";
+        bshCard.id = "ignore";
         chordSyncCard.id = "ignore";
         sbinCard.id = "ignore";
+        songTreasureCard.id = "ignore";
+        pulsellCard.id = "ignore";
     }
 
     // UNI CARDS
@@ -153,6 +161,8 @@ function toggleCards(fromStartup = false) {
         iotCard.id = "card4";
         chordSyncCard.id = "card5";
         sbinCard.id = "card6";
+        songTreasureCard.id = "card7";
+        pulsellCard.id = "card8";
 
         websiteCard.id = "ignore";
         teachingCard.id = "ignore";
@@ -162,7 +172,7 @@ function toggleCards(fromStartup = false) {
         chromeCard.id = "ignore";
         bmwCard.id = "ignore";
         rohdeCard.id = "ignore";
-        livaCard.id = "ignore";
+        bshCard.id = "ignore";
     }
 
     // WORK CARDS
@@ -182,7 +192,7 @@ function toggleCards(fromStartup = false) {
 
         bmwCard.id = "card1";
         rohdeCard.id = "card2";
-        livaCard.id = "card3";
+        bshCard.id = "card3";
         teachingCard.id = "card4";
 
         websiteCard.id = "ignore";
@@ -196,6 +206,8 @@ function toggleCards(fromStartup = false) {
         iotCard.id = "ignore";
         chordSyncCard.id = "ignore";
         sbinCard.id = "ignore";
+        songTreasureCard.id = "ignore";
+        pulsellCard.id = "ignore";
     }
 
     
@@ -212,6 +224,8 @@ function toggleCards(fromStartup = false) {
             j++;
         }
     }
+
+    cardAmmountInCategory = calcCardAmmountInCategory();
 }
 
 function sortCards() {
@@ -259,6 +273,15 @@ function sortCards() {
     });
 
     container.appendChild(arrowRight);
+}
+
+function calcCardAmmountInCategory() {
+    const wrapper = document.getElementById('id_div_closed_cards_space_wrapper');
+    const allCards = wrapper.getElementsByClassName('cardsAllForGeneralStyles');
+    const ammountOfCardsInCategory = Array.from(allCards).filter(card => {
+        return card.id !== 'ignore';
+    });
+    return ammountOfCardsInCategory.length;
 }
 
 function cardReset() {
@@ -341,6 +364,15 @@ function leftArrowCardsClick() {
         cardElements[2].style.display = "inline-flex";
         cardElements[3].style.visibility = "hidden";
         cardElements[3].style.display = "none";
+
+        if (cardAmmountInCategory === 4) {
+            arrowLeft.style.opacity = "0%";
+            arrowLeft.style.cursor = cursorDefault;
+            arrowRight.style.opacity = "100%";
+            arrowRight.style.cursor = cursorPointer;
+            --rightClickedCards;
+            return;
+        }
         --rightClickedCards;
     }
     if (twoCard.matches && !oneCard.matches) {

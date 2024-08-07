@@ -128,8 +128,8 @@
 }
 
 .card13ForStyle {
-    background-color: var(--cardlivanova);
-    box-shadow: 6px 6px 0px 0px var(--cardlivanova), 4px 4px 0px 0px rgb(255, 255, 255) inset;
+    background-color: var(--cardbsh);
+    box-shadow: 6px 6px 0px 0px var(--cardbsh), 4px 4px 0px 0px rgb(255, 255, 255) inset;
     color: rgb(255, 255, 255) !important;
 }
 
@@ -142,6 +142,18 @@
 .card15ForStyle {
     background-color: var(--cardsbin);
     box-shadow: 6px 6px 0px 0px var(--cardsbin), 4px 4px 0px 0px rgb(255, 255, 255) inset;
+    color: rgb(255, 255, 255) !important;
+}
+
+.card16ForStyle {
+    background-color: var(--cardsongtreasure);
+    box-shadow: 6px 6px 0px 0px var(--cardsongtreasure), 4px 4px 0px 0px rgb(255, 255, 255) inset;
+    color: rgb(255, 255, 255) !important;
+}
+
+.card17ForStyle {
+    background-color: var(--cardpulsell);
+    box-shadow: 6px 6px 0px 0px var(--cardpulsell), 4px 4px 0px 0px rgb(255, 255, 255) inset;
     color: rgb(255, 255, 255) !important;
 }
 
