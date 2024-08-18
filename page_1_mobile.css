@@ -102,7 +102,6 @@
         font-weight: 700;
         margin: 0vh;
         width: 22ch;
-        animation: typing 2s steps(22);
         white-space: nowrap;
         overflow: hidden;
         transition: 1s ease-in-out;

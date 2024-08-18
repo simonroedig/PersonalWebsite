@@ -76,3 +76,29 @@ p {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--scrollbrightest);
 }
+
+#id_div_preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Default style for horizontal (landscape) orientation */
+#id_img_preloader {
+    width: 10vw;
+}
+
+/* Media query for vertical (portrait) orientation */
+@media (orientation: portrait) {
+    #id_img_preloader {
+        width: auto; /* Reset width */
+        height: 20vw;
+    }
+}
