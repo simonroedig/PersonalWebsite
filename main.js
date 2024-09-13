@@ -27,6 +27,7 @@ var rohdeCard;
 var livaCard;
 var chordSyncCard;
 var sbinCard;
+var wackerCard;
 
 var copyrighttext;
 var copyrighticon;
@@ -55,6 +56,7 @@ function main() {
     sbinCard = document.getElementById("card15");
     songTreasureCard = document.getElementById("card16");
     pulsellCard = document.getElementById("card17");
+    wackerCard = document.getElementById("card18");
     
     // Display X/Y on closed cards
     ammountOfAllCards = document.getElementsByClassName("cards").length;

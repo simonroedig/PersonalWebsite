@@ -167,7 +167,7 @@
         border: 0.5vh solid black;
         box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1); 
         transition: .5s ease-in-out;
-        animation: rotateAnimation2 10s ease-in-out infinite;
+        /*animation: rotateAnimation2 10s ease-in-out infinite;*/
     }
 
     @keyframes rotateAnimation2 {

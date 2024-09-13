@@ -271,3 +271,10 @@
         margin: 8vw;
     }
 }
+
+.opencard_disclaimer {
+    /*italian*/
+    font-size: 1.5vh !important;
+    font-family: 'Space Mono', monospace; 
+    font-weight: 600 !important;
+}

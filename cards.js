@@ -22,7 +22,8 @@ const cardColors = {
     card14: "--cardchordsync",
     card15: "--cardsbin",
     card16: "--cardsongtreasure",
-    card17: "--cardpulsell"
+    card17: "--cardpulsell",
+    card18: "--cardwacker",
 };
 
 function getCSSVariableValue(variableName) {
@@ -86,23 +87,27 @@ function toggleCards(fromStartup = false) {
             card.style.display = "inline-flex";
         });
 
-        websiteCard.id = "card2";
-        mediaDesignCard.id = "card1";
-        meetCard.id = "card3";
-        teachingCard.id = "card4";
-        quartoCard.id = "card5";
-        musicCard.id = "card6";
-        chromeCard.id = "card7";
-        showerCard.id = "card8";
+        websiteCard.id = "card1";
+        mediaDesignCard.id = "card2";
+        quartoCard.id = "card3";
+        chromeCard.id = "card4";
+        musicCard.id = "card5";
+
+        chordSyncCard.id = "card6";
+        iotCard.id = "card7";
+        pulsellCard.id = "card8";
         rememoryCard.id = "card9";
-        iotCard.id = "card10";
-        bmwCard.id = "card11";
-        rohdeCard.id = "card12";
-        bshCard.id = "card13";
-        chordSyncCard.id = "card14";
-        sbinCard.id = "card15";
-        songTreasureCard.id = "card16";
-        pulsellCard.id = "card17";
+        sbinCard.id = "card10";
+        songTreasureCard.id = "card11";
+        showerCard.id = "card12";
+        meetCard.id = "card13";        
+
+        bmwCard.id = "card14";
+        rohdeCard.id = "card15";
+        bshCard.id = "card16";
+        teachingCard.id = "card17";
+        wackerCard.id = "card18";
+
     }
 
     // PERSONAL CARDS
@@ -123,8 +128,8 @@ function toggleCards(fromStartup = false) {
         websiteCard.id = "card1";
         mediaDesignCard.id = "card2";
         quartoCard.id = "card3";
-        musicCard.id = "card4";
-        chromeCard.id = "card5";
+        chromeCard.id = "card4";
+        musicCard.id = "card5";
 
         meetCard.id = "ignore";
         teachingCard.id = "ignore";
@@ -138,6 +143,7 @@ function toggleCards(fromStartup = false) {
         sbinCard.id = "ignore";
         songTreasureCard.id = "ignore";
         pulsellCard.id = "ignore";
+        wackerCard.id = "ignore";
     }
 
     // UNI CARDS
@@ -155,14 +161,14 @@ function toggleCards(fromStartup = false) {
             card.style.display = "inline-flex";
         });
 
-        meetCard.id = "card1";
-        showerCard.id = "card2";
-        rememoryCard.id = "card3";
-        iotCard.id = "card4";
-        chordSyncCard.id = "card5";
-        sbinCard.id = "card6";
-        songTreasureCard.id = "card7";
-        pulsellCard.id = "card8";
+        chordSyncCard.id = "card1";
+        iotCard.id = "card2";
+        pulsellCard.id = "card3";
+        rememoryCard.id = "card4";
+        sbinCard.id = "card5";
+        songTreasureCard.id = "card6";
+        showerCard.id = "card7";
+        meetCard.id = "card8";        
 
         websiteCard.id = "ignore";
         teachingCard.id = "ignore";
@@ -173,6 +179,7 @@ function toggleCards(fromStartup = false) {
         bmwCard.id = "ignore";
         rohdeCard.id = "ignore";
         bshCard.id = "ignore";
+        wackerCard.id = "ignore";
     }
 
     // WORK CARDS
@@ -190,10 +197,11 @@ function toggleCards(fromStartup = false) {
             card.style.display = "inline-flex";
         });
 
-        bmwCard.id = "card1";
+        bmwCard.id = "card3";
         rohdeCard.id = "card2";
-        bshCard.id = "card3";
+        bshCard.id = "card1";
         teachingCard.id = "card4";
+        wackerCard.id = "card5";
 
         websiteCard.id = "ignore";
         mediaDesignCard.id = "ignore";
