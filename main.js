@@ -33,17 +33,6 @@ var copyrighttext;
 var copyrighticon;
 
 function main() {
-    // Check if there's a card to open from URL
-    /*
-    const cardParam = getQueryParam('card');
-    if (cardParam) {
-        openCardClick();
-        history.replaceState({ cardID: cardParam }, null, "?card=" + cardParam);
-    } else {
-        history.replaceState({}, null, window.location.pathname);
-    }
-    */
-
     copyrighttext = document.getElementById("id_div_copyright_space");
 
     // Calculate current age (hover profile picture)
@@ -89,17 +78,7 @@ function main() {
 
     document.getElementById("id_div_toggle_cardsgroup_space_wrapper").addEventListener("click", toggleCards);
 
-    //
-    window.onpopstate = function (event) {
-        if (event.state && event.state.cardID) {
-            openCardClick();
-        } else {
-            if (a_card_is_open) {
-                closeOpenedCardClick();
-            }
-        }
-    };
-    //
+    
 
     var cardElements = document.getElementsByClassName("cards");
     for (var i = 0; i < ammountOfAllCards; i++) {
@@ -185,11 +164,6 @@ function burgerMenuClick() {
     }
 
     burgerMenuClicked = !burgerMenuClicked;
-}
-
-function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
 }
 
 

@@ -479,26 +479,31 @@ function rightArrowCardsClick() {
     }
 }
 
-function openCardClick() {
+function openCardClick(event) {
     a_card_is_open = true;
-
     document.body.style.overflow = "hidden";
 
-    cardID = this.classList;
+    const cardElement = event.currentTarget;
+    // Access the class list
+    const classList = cardElement.classList;
+    // Find the class that starts with 'card' and ends with 'ForStyle'
+    const targetClass = [...classList].find(cls => cls.startsWith('card') && cls.endsWith('ForStyle'));
+    // Extract the card ID from the class name (e.g., 'card12ForStyle' => 'card12')
+    const cardID = targetClass ? targetClass.slice(0, targetClass.indexOf('ForStyle')) : null;
 
-    for (let i = 0; i < cardID.length; i++) {
-        const className = cardID[i];
-    
-        if (className.endsWith("ForStyle")) {
-            cardID = className;
-        }
-    }
-    cardID = cardID.replace(new RegExp("ForStyle", "g"), "");
+    console.log(cardElement);
+    console.log(cardID);
 
     // Push new state into history
-    history.pushState({ cardID: cardID }, null, "?card=" + cardID);
+    //history.pushState({ cardID: cardID }, null, "?card=" + cardID);
     //
 
+    openCardByID(cardID);
+}
+
+function openCardByID(cardID) {
+    // href the user to #cardID
+    location.href = "#" + cardID;
     const goUp = document.getElementById('id_div_go_up');
     goUp.style.backgroundColor = getCSSVariableValue(cardColors[cardID]);
 
@@ -538,6 +543,14 @@ function openCardClick() {
 
 
 function closeOpenedCardClick() {
+    //history.back();
+    closeOpenedCard();
+    // remove all strings after # from the url 
+    location.href = location.href.split('#')[0] + '#id_div_copyright_space';
+}
+
+
+function closeOpenedCard() {
     // Stop all videos from playing
     const videos = document.querySelectorAll('iframe')
     videos.forEach(i => {
@@ -546,9 +559,7 @@ function closeOpenedCardClick() {
         i.src = source
     })
 
-    history.back();
-
-
+    
     a_card_is_open = false;
     const goUp = document.getElementById('id_div_go_up');
     goUp.style.backgroundColor = '';
@@ -590,7 +601,6 @@ function closeOpenedCardClick() {
     copyrighttext.style.marginLeft = "";
 }
 
-
 document.addEventListener("DOMContentLoaded", function() {
     const goUp = document.getElementById('id_div_go_up');
 
@@ -608,6 +618,21 @@ document.addEventListener("DOMContentLoaded", function() {
             
         }
     }
+
+
+    if (window.location.href.includes('#card')) {
+        const cardID = window.location.href.split('#')[1];
+        openCardByID(cardID);
+    }
+
+    window.addEventListener('hashchange', function() {
+        // Get the current hash value
+        const currentHash = window.location.hash;
+        if (currentHash === '#id_div_copyright_space') {
+            closeOpenedCard();
+        }
+    });
+
 });
 
 
