@@ -495,6 +495,10 @@ function openCardClick() {
     }
     cardID = cardID.replace(new RegExp("ForStyle", "g"), "");
 
+    // Push new state into history
+    history.pushState({ cardID: cardID }, null, "?card=" + cardID);
+    //
+
     const goUp = document.getElementById('id_div_go_up');
     goUp.style.backgroundColor = getCSSVariableValue(cardColors[cardID]);
 
@@ -539,6 +543,8 @@ function closeOpenedCardClick() {
         i.src = ''
         i.src = source
     })
+
+    history.back();
 
 
     a_card_is_open = false;
