@@ -535,6 +535,8 @@ function openCardClick() {
     copyrighttext.style.marginLeft = "-0.7vw";
 }
 
+
+
 function closeOpenedCardClick() {
     // Stop all videos from playing
     const videos = document.querySelectorAll('iframe')
