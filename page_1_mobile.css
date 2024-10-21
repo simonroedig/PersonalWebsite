@@ -105,11 +105,15 @@
         white-space: nowrap;
         overflow: hidden;
         transition: 1s ease-in-out;
+        animation: typing 2s steps(22) forwards; /* Animation applied here */
     }
 
     @keyframes typing {
         from {
-            width: 0
+            width: 0;
+        }
+        to {
+            width: 22ch; /* Full width to match text length */
         }
     }
 

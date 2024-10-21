@@ -129,6 +129,25 @@ function main() {
         touchendX = e.changedTouches[0].screenX;
         checkDirection();
     });
+
+
+     // Get the div element by ID
+     document.getElementById("id_img_arrowdown").addEventListener("click", function() {
+        // Scroll to the bottom of the page
+        window.scrollTo({
+            top: document.body.scrollHeight, // Scroll to the maximum height of the body
+            behavior: 'smooth' // Smooth scrolling animation
+        });
+    });
+
+    // Get the div element by ID
+    document.getElementById("id_img_arrowup").addEventListener("click", function() {
+        // Scroll to the bottom of the page
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Smooth scrolling animation
+        });
+    });
 }
 
 

@@ -503,7 +503,7 @@ function openCardClick(event) {
 
 function openCardByID(cardID) {
     // href the user to #cardID
-    location.href = "#" + cardID;
+    // location.href = "#" + cardID;
     const goUp = document.getElementById('id_div_go_up');
     goUp.style.backgroundColor = getCSSVariableValue(cardColors[cardID]);
 
@@ -546,7 +546,8 @@ function closeOpenedCardClick() {
     //history.back();
     closeOpenedCard();
     // remove all strings after # from the url 
-    location.href = location.href.split('#')[0] + '#id_div_copyright_space';
+    // location.href = location.href.split('#')[0] + '#id_div_copyright_space';
+    // history.replaceState(null, '', location.href.split('#')[0]);
 }
 
 
@@ -619,6 +620,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    /*
+
 
     if (window.location.href.includes('#card')) {
         const cardID = window.location.href.split('#')[1];
@@ -632,6 +635,8 @@ document.addEventListener("DOMContentLoaded", function() {
             closeOpenedCard();
         }
     });
+
+    */
 
 });
 

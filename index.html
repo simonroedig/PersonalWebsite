@@ -27,6 +27,7 @@
 
         <script>
             // Preloader
+            /*
             document.onreadystatechange = function () {
                 if (document.readyState !== "complete") {
                     document.querySelector("body").style.visibility = "hidden";
@@ -37,14 +38,32 @@
                     document.getElementById("id_p_profile_left_text").style.animation = "typing 2s steps(22)";
                 }
             };
+            <div id="id_div_preloader">
+                <div id="id_div_preloader_wrapper">
+                    <img id="id_img_preloader" src="preloader.gif">
+                </div>
+            </div>
+            */
+            window.addEventListener("load", function() {
+
+                if (document.readyState === "loading") {
+                    document.querySelector("body").style.visibility = "hidden";
+                    document.querySelector("#id_div_preloader").style.visibility = "visible";
+                } else if (document.readyState === "complete") {
+                    document.querySelector("#id_div_preloader").style.display = "none";
+                    document.querySelector("body").style.visibility = "visible";
+                }
+            });
         </script>
     </head>
 
     <!-- PRELOADER -->
+    <!--Insert the html preloader here from the above script tag, if wanted-->
     <div id="id_div_preloader">
-        <img id="id_img_preloader" src="preloader.gif">
+        <div id="id_div_preloader_wrapper">
+            <img id="id_img_preloader" src="preloader.gif">
+        </div>
     </div>
-
     <!-- PAGE 1 -->
     <body id="id_body_page1" onload="main()">
 
@@ -95,7 +114,7 @@
         </div>
 
         <div id="id_div_go_down">
-            <a href="#id_div_copyright_space"><img id="id_img_arrowdown" src="img/arrowdown.png"></a>
+            <a><img id="id_img_arrowdown" src="img/arrowdown.png"></a>
         </div>
 
     </body>
@@ -109,7 +128,7 @@
     <body id="id_body_page2">
 
         <div id="id_div_go_up">
-            <a href="#id_div_space1" ><img id="id_img_arrowup" src="img/arrowup.png"></a>
+            <a><img id="id_img_arrowup" src="img/arrowup.png"></a>
             <img id="id_img_close_opencards_icon" src="img/close.png">
         </div>
 
@@ -636,7 +655,7 @@
             <!-- BMW -->
             <div class="opencard" id="opencard11">
                 <div class="opencard_inside_wrapper">
-                    <h class="opencard_headline">UX & Prototyping</h>
+                    <h class="opencard_headline">BMW: UX & Prototyping</h>
                     <br>
                     <p class="opencard_disclaimer">
                         * Disclaimer: Due to contractual obligations with BMW and the public availability of my website, I am unable to disclose specific details 
@@ -672,7 +691,7 @@
             <!-- Rohde -->
             <div class="opencard" id="opencard12">
                 <div class="opencard_inside_wrapper">
-                    <h class="opencard_headline">Full-Stack Softwaredevelopment</h>
+                    <h class="opencard_headline">Rohde & Schwarz: Full-Stack Softwaredevelopment</h>
                     <br>
                     <p class="opencard_disclaimer">
                         * Disclaimer: Due to contractual obligations with Rohde & Schwarz and the public availability of my website, I am unable to disclose specific details 
@@ -704,7 +723,7 @@
             <!-- BSH -->
             <div class="opencard" id="opencard13">
                 <div class="opencard_inside_wrapper">
-                    <h class="opencard_headline">User Interaction & Usability</h>
+                    <h class="opencard_headline">B/S/H/: User Interaction & Usability</h>
                     <br>
                     <p class="opencard_disclaimer">
                         * Disclaimer: Due to contractual obligations with BSH and the public availability of my website, I am unable to disclose specific details 

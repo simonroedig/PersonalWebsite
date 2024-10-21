@@ -1,0 +1,3 @@
+ALL: 1920px x 1080px
+BG ->     Gauß: 15% + Opacity: Low
+
