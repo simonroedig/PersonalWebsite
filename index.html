@@ -57,6 +57,7 @@
         </script>
     </head>
 
+    <body onload="main()">
     <!-- PRELOADER -->
     <!--Insert the html preloader here from the above script tag, if wanted-->
     <div id="id_div_preloader">
@@ -65,7 +66,7 @@
         </div>
     </div>
     <!-- PAGE 1 -->
-    <body id="id_body_page1" onload="main()">
+    <div id="id_body_page1">
 
         <div id="id_div_space1"></div>
 
@@ -79,7 +80,7 @@
             </div>
         </div>
 
-        </div> <!-- Keep that div tag there -->
+        <!--</div>  Keep that div tag there -->
 
         <div id="id_div_space2" class="custom-pointer">
 
@@ -117,7 +118,7 @@
             <a><img id="id_img_arrowdown" src="img/arrowdown.png"></a>
         </div>
 
-    </body>
+    </div>
     <!-- END PAGE 1 -->
 
 
@@ -125,7 +126,7 @@
 
 
     <!-- PAGE 2 -->
-    <body id="id_body_page2">
+    <div id="id_body_page2">
 
         <div id="id_div_go_up">
             <a><img id="id_img_arrowup" src="img/arrowup.png"></a>
@@ -968,7 +969,8 @@
             <p id="id_p_copyright_text">&nbsp<span id="id_span_copyright_current_year">YearJS</span> Simon Rödig - All rights reserved</p>
         </div>
 
-    </body>
+    </div>
     <!-- END PAGE 2 -->
+    </body>
 
 </html>
