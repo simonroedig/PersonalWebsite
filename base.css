@@ -92,11 +92,11 @@ p {
 }
 
 #id_div_preloader_wrapper {
-    padding: 0.2vw 1vw;
+    padding: 0.2vw 1.4vw;
     background-color: var(--bg);
-    border-radius: 40px;
+    border-radius: 4vh;
     border: 0.5vh solid black;
-    box-shadow: 0 0 1vw 0.5vw rgb(61, 61, 61);
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
 }
 /* Default style for horizontal (landscape) orientation */
 #id_img_preloader {
