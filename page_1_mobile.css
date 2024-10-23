@@ -202,7 +202,7 @@
     #id_p_info_text {
         text-align: center;
         color: black;
-        font-size: 1.3vmax;
+        font-size: 1.3svh;
         font-family: 'Space Mono', monospace;
         font-weight: 700;
         margin: 2svh 5vw 2svh 5vw;

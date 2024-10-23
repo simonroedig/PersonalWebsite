@@ -58,11 +58,9 @@
 #id_img_toggle_cardsgroup_text_wrapper{
     background-color: var(--darkgrey);
     border-radius: 2svh;
-
     border: 0.5svh solid black;
-    padding-bottom: -5px;
     box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
-    margin-bottom: 30px;
+    margin-bottom: 4svh;
     transition: 0.2s ease-in-out;
 
 }
