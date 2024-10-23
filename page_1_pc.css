@@ -1,7 +1,7 @@
 @media only screen and (min-width: 1200px) {
 
     #id_img_navbar_textpicture {
-        height: 6vh;
+        height: 6svh;
         transition: 0.2s ease-in-out;
     }
 
@@ -16,18 +16,18 @@
         position: relative;
         display: flex;
         flex-direction: row;
-        height: 50vh;
+        height: 50svh;
         /*background-color: black;*/
         align-items: center;
         justify-content: center;
     }
 
     #id_div_profile_left {
-        height: 50vh;
+        height: 50svh;
         width: 50vw;
         background-color: var(--colleft);
-        border-top: 0.5vh solid black;
-        border-bottom: 0.5vh solid black;
+        border-top: 0.5svh solid black;
+        border-bottom: 0.5svh solid black;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -35,12 +35,12 @@
     }
 
     #id_div_profile_right {
-        height: 50vh;
+        height: 50svh;
         width: 50vw;
         background-color: var(--colright);
-        border-top: 0.5vh solid black;
-        border-bottom: 0.5vh solid black;
-        border-left: 0.5vh solid black;
+        border-top: 0.5svh solid black;
+        border-bottom: 0.5svh solid black;
+        border-left: 0.5svh solid black;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -61,7 +61,7 @@
         overflow: hidden;
 
         color: rgb(0, 0, 0);
-        font-size: 2vh;
+        font-size: 2svh;
         font-family: 'Space Mono', monospace;
         font-weight: 700;
         transition: 1s ease-in-out;
@@ -81,7 +81,7 @@
         visibility: hidden;
         display: none;
         color: black;
-        font-size: 2vh;
+        font-size: 2svh;
         text-decoration: none;
         font-family: 'Space Mono', monospace;
         font-weight: 700;
@@ -91,16 +91,16 @@
 
     @media (hover: hover) {
         #id_p_profile_right_text:hover {
-            font-size: 2.3vh;
+            font-size: 2.3svh;
             transition: 0.2s ease-in-out;
         }
     }
 
     #id_img_profile_picture {
         position: absolute;
-        border-radius: 3vh;
-        height: 30vh;
-        border: 0.5vh solid black; 
+        border-radius: 3svh;
+        height: 30svh;
+        border: 0.5svh solid black; 
         box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
         transition: .5s ease;
         /*animation: rotateAnimation2 10s ease-in-out infinite;*/
@@ -117,14 +117,14 @@
 
     @media (hover: hover) {
         #id_img_profile_picture:hover {
-            height: 33vh;
+            height: 33svh;
             transition: .5s ease;
-            border-radius: 0vh;
+            border-radius: 0svh;
         }
     }
    
     #id_div_info_text_space {
-        height: 32vh;
+        height: 32svh;
         display: flex;
         align-items: safe center;
         justify-content: center;
@@ -134,7 +134,7 @@
     #id_p_info_text {
         text-align: center;
         color: black;
-        font-size: 2vh;
+        font-size: 2svh;
         font-family: 'Space Mono', monospace;
         font-weight: 700;
         margin: 0 5vw 0 5vw;
@@ -145,12 +145,12 @@
     #id_p_info_text a {
         text-decoration: none;
         color: black;
-        text-decoration: underline solid black 0.2vh;
+        text-decoration: underline solid black 0.2svh;
     }
 
     
     #id_p_info_text a:hover {
-        text-decoration: underline solid black 0.3vh;
+        text-decoration: underline solid black 0.3svh;
     }
 
 }

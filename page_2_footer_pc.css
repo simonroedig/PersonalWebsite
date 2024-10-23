@@ -1,6 +1,6 @@
 @media only screen and (min-width: 1000px) {
     #id_img_footer_youtube {
-        height: 10vh;
+        height: 10svh;
         transition: 0.2s ease-in-out;
     }
 
@@ -12,7 +12,7 @@
     }
 
     #id_img_footer_mail {
-        height: 10vh;
+        height: 10svh;
         transition: 0.2s ease-in-out;
     }
 
@@ -24,7 +24,7 @@
     }
 
     #id_img_footer_linkedin {
-        height: 7.5vh;
+        height: 7.5svh;
         transition: 0.2s ease-in-out;
     }
 
@@ -36,21 +36,21 @@
     }
 
     #id_div_footer_left_rectangle {
-        height: 2.4vh;
+        height: 2.4svh;
         width: 30vw;
         background-color: rgb(0, 0, 0);
-        border-top: 0.5vh solid black;
-        border-top-right-radius: 100vh;
-        border-bottom-right-radius: 100vh;
+        border-top: 0.5svh solid black;
+        border-top-right-radius: 100svh;
+        border-bottom-right-radius: 100svh;
         animation: widthAnimation 5s infinite ease-in-out;
     }
 
     #id_div_footer_right_rectangle {
-        height: 2.4vh;
+        height: 2.4svh;
         width: 30vw;
         background-color: rgb(0, 0, 0);
-        border-top-left-radius: 100vh;
-        border-bottom-left-radius: 100vh;
+        border-top-left-radius: 100svh;
+        border-bottom-left-radius: 100svh;
         animation: widthAnimation 5s infinite ease-in-out;
     }
 

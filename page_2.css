@@ -1,21 +1,21 @@
 
 #id_div_go_up {
     background-color: var(--colbot);
-    height: 7vh;
+    height: 7svh;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border-top: 0.5vh solid black;
-    border-bottom: 0.5vh solid black;
+    border-top: 0.5svh solid black;
+    border-bottom: 0.5svh solid black;
     transition: 0.3s ease-in-out;
 }
 
 #id_img_arrowup {
     position: relative;
     bottom: 0;
-    height: 3.5vh;
+    height: 3.5svh;
     animation: uparrowanim 2s infinite ease-in-out;
     transition: 0.2s ease-in-out;
     cursor: url('cursor_pointer.png'), pointer;
@@ -23,19 +23,19 @@
 
 @media (hover: hover) {
     #id_img_arrowup:hover {
-        height: 3vh;
+        height: 3svh;
         transition: 0.2s ease-in-out;
     }
 }
 
 @keyframes uparrowanim {
-    0% {bottom: -0.4vh;}
-    50% {bottom: 0.6vh;}
-    100% {bottom: -0.4vh;}
+    0% {bottom: -0.4svh;}
+    50% {bottom: 0.6svh;}
+    100% {bottom: -0.4svh;}
 }
 
 #id_div_toggle_cardsgroup_space {
-    height: 20vh;
+    height: 20svh;
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -45,7 +45,7 @@
 }
 
 #id_div_toggle_cardsgroup_space_wrapper {
-    height: 20vh;
+    height: 20svh;
     width: 20vw;
     display: flex;
     justify-content: flex-end;
@@ -57,9 +57,9 @@
 
 #id_img_toggle_cardsgroup_text_wrapper{
     background-color: var(--darkgrey);
-    border-radius: 2vh;
+    border-radius: 2svh;
 
-    border: 0.5vh solid black;
+    border: 0.5svh solid black;
     padding-bottom: -5px;
     box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
     margin-bottom: 30px;
@@ -69,21 +69,21 @@
 
 @media (hover: hover) {
     #id_div_toggle_cardsgroup_space_wrapper:hover #id_img_toggle_cardsgroup_text_wrapper {
-        border-radius: 3vh;
+        border-radius: 3svh;
         transition: 0.2s ease-in-out;
     }
 
     #id_div_toggle_cardsgroup_space_wrapper:hover #id_div_toggle_cardsgroup_lever_small {
-        height: 3.5vh;
+        height: 3.5svh;
 
     }
 }
 
 #id_div_toggle_cardsgroup_lever_big {
-    height: 1vh;
+    height: 1svh;
     border-radius: 10px;
-    width: 16vh;
-    margin-bottom: 3vh;
+    width: 16svh;
+    margin-bottom: 3svh;
     background-color: rgb(0, 0, 0);
 
     display: flex;
@@ -95,10 +95,10 @@
 }
 
 #id_div_toggle_cardsgroup_lever_small {
-    height: 3vh;
-    width: 3vh;
+    height: 3svh;
+    width: 3svh;
     background-color: white;
-    border: 0.5vh solid black;
+    border: 0.5svh solid black;
     margin-left: 0%;
     margin-bottom: 0%;
     transition: 0.3s ease-in-out;
@@ -107,35 +107,35 @@
 }
 
 #id_img_toggle_cardsgroup_text {
-    width: 25vh;
+    width: 25svh;
     cursor: url('cursor_pointer.png'), pointer;
     transition: 0.2s ease-in-out;
 }
 
 #id_div_footer_space {
-    height: 20vh;
+    height: 20svh;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 #id_div_copyright_space {
-    height: 3vh;
+    height: 3svh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 700;
     background-color: var(--bg);
-    /*border-bottom: 0.5vh solid black;*/
+    /*border-bottom: 0.5svh solid black;*/
 }
 
 #id_p_copyright_text {
-    font-size: 1.2vh;
+    font-size: 1.2svh;
     font-family: 'Space Mono', monospace;
 }
 
 #id_img_copyright_icon {
-    width: 1vh;
+    width: 1svh;
     animation: rotateAnimation 4s ease-in-out infinite;
 }
 

@@ -1,9 +1,9 @@
 #id_div_space1, #id_div_space2 {
-    height: 2vh;
+    height: 2svh;
 }
 /*
 #id_div_space1{
-    border-top: 0.5vh solid black;
+    border-top: 0.5svh solid black;
 }
 */
 
@@ -17,7 +17,7 @@
 
 #id_div_navbar {
     background-color: var(--bg);
-    height: 7vh;
+    height: 7svh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -37,16 +37,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 7vh;
+    height: 7svh;
     transition: all .3s ease;
 }
 
 .class_div_navbar_button_burger {
-    width: 9vh;
-    height: 4vh;
+    width: 9svh;
+    height: 4svh;
     background: var(--colright);
-    border: 0.5vh solid black;
-    border-radius: 2vh;
+    border: 0.5svh solid black;
+    border-radius: 2svh;
     transition: all .3s ease;
     cursor: url('cursor_pointer.png'), pointer;
     box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
@@ -61,14 +61,14 @@
 }
 
 .class_div_navbar_button_burger.clicked .class_div_navbar_button_burger_small {
-    margin-left: calc(100% - 3vh); /* Adjust based on the actual width of the parent */
+    margin-left: calc(100% - 3svh); /* Adjust based on the actual width of the parent */
     margin-right: 4px;
     transition: all .3s ease;
 }
 
 @media (hover: hover) {
     .class_div_navbar_button_burger:hover {
-        width: 8vh;
+        width: 8svh;
     }
 
     .class_div_navbar_button_burger:hover .class_div_navbar_button_burger_small {
@@ -80,46 +80,46 @@
 }
 
 .class_div_navbar_button_burger_small {
-    width: 2.5vh;
-    height: 2.5vh;
+    width: 2.5svh;
+    height: 2.5svh;
     margin-left: 4px;
     margin-top: 0.6px;
     background: black;
-    border: 0.5vh solid black;
-    border-radius: 1.3vh;
+    border: 0.5svh solid black;
+    border-radius: 1.3svh;
     transition: all .3s ease;
 }
 
 #id_div_go_down {
     background-color: var(--colup);
-    height: 7vh;
+    height: 7svh;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border-top: 0.5vh solid black;
-    border-bottom: 0.5vh solid black;
+    border-top: 0.5svh solid black;
+    border-bottom: 0.5svh solid black;
     transition: 0.3s ease-in-out;
 }
 
 #id_img_arrowdown {
     position: relative;
     bottom: 0;
-    height: 3.5vh;
+    height: 3.5svh;
     animation: downarrowanim 2s infinite ease-in-out;
     transition: 0.2s ease-in-out;
 }
 
 @keyframes downarrowanim {
-    0% {bottom: 0.2vh;}
-    50% {bottom: -0.9vh;}
-    100% {bottom: 0.2vh;}
+    0% {bottom: 0.2svh;}
+    50% {bottom: -0.9svh;}
+    100% {bottom: 0.2svh;}
 }
 
 @media (hover: hover) {
     #id_img_arrowdown:hover {
-        height: 3vh;
+        height: 3svh;
         transition: 0.2s ease-in-out;
     }
 }
@@ -127,17 +127,17 @@
 #id_p_profile_left_text_wrapper {
     background-color: var(--darkgrey);
     padding: 10px 8px 10px 18px;
-    border-radius: 2vh;
+    border-radius: 2svh;
 
-    border: 0.5vh solid black;
+    border: 0.5svh solid black;
     box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
 }
 
 #id_p_profile_right_text_wrapper {
     background-color: var(--darkgrey);
     padding: 10px;
-    border-radius: 2vh;
-    border: 0.5vh solid black;
+    border-radius: 2svh;
+    border: 0.5svh solid black;
     box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
 
     opacity: 0%;
