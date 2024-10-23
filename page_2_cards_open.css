@@ -21,10 +21,13 @@
     visibility: hidden;
     color: rgb(0, 0, 0);
     background-color: var(--bg);
-    border-top: 0.25svh solid black;
+    /*border-top: 0.25svh solid black;*/
+    border: 0.5vh solid black;
+    box-shadow: 6px 6px 0px 0px black, 4px 4px 0px 0px rgb(255, 255, 255) inset;
+    border-radius: 2svh;
     position: absolute;
-    width: 100%;
-    height: 90.5%;
+    width: 90%;
+    height: 80%;
     animation: open 0.2s ease-in-out;
     transition: 0.2s ease;
 
@@ -47,7 +50,7 @@
     color: rgb(0, 0, 0);
     position: absolute;
     width: 100%;
-    height: 90.5%;
+    height: 85%;
     animation: open 0.2s ease-in-out;
     transition: 0.2s ease;
 
@@ -267,7 +270,7 @@
         margin: 8vw;
     }
     .opencard_img_size_2 {
-        width: 85vw;
+        width: 80vw;
         margin: 8vw;
     }
 }
