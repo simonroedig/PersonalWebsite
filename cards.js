@@ -538,6 +538,11 @@ function openCardByID(cardID) {
     closeOpenedCardButton.style.visibility = "visible";
     closeOpenedCardButton.style.opacity = "100%";
     copyrighttext.style.marginLeft = "-0.7vw";
+
+    const bg = document.getElementById("id_div_closed_cards_space_wrapper");
+    bg.style.backgroundColor = getCSSVariableValue(cardColors[cardID]);
+    document.getElementById("id_div_copyright_space").style.backgroundColor = getCSSVariableValue("--darkgrey");
+    document.body.style.backgroundColor = getCSSVariableValue("--darkgrey");
 }
 
 
@@ -600,6 +605,11 @@ function closeOpenedCard() {
     arrowUp.style.visibility = "visible";
 
     copyrighttext.style.marginLeft = "";
+
+    const bg = document.getElementById("id_div_closed_cards_space_wrapper");
+    bg.style.backgroundColor = getCSSVariableValue("--colbg");
+    document.getElementById("id_div_copyright_space").style.backgroundColor = getCSSVariableValue("--colbg");
+    document.body.style.backgroundColor = getCSSVariableValue("--colbg");
 }
 
 document.addEventListener("DOMContentLoaded", function() {

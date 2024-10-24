@@ -14,7 +14,7 @@
 body  {
     cursor: url('cursor.png'), default;
     overflow: auto;
-    background-color: #fdf2e9;
+    background-color: var(--bg);
 }
 
 button, a {
@@ -92,7 +92,7 @@ p {
 }
 
 #id_div_preloader_wrapper {
-    padding: 0.2vw 1.4vw;
+    padding: 0vw 1.8vw;
     background-color: var(--bg);
     border-radius: 4vh;
     border: 0.5vh solid black;
