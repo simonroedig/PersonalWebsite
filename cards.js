@@ -549,13 +549,17 @@ function closeOpenedCardClick() {
 
 function closeOpenedCard() {
     // Stop all videos from playing
+    /*
+    Do not use these out commented lines of code, because they are not working properly
+    as soon as i deleted them, the issues that the hostory gets flooded with the webpage, and thus the user can't leave my webpage anymore (basically), 
+    as there are so many entries of the same website, disappears.
     const videos = document.querySelectorAll('iframe')
     videos.forEach(i => {
         const source = i.src
         i.src = ''
         i.src = source
     })
-
+    */
     
     a_card_is_open = false;
     const goUp = document.getElementById('id_div_go_up');
