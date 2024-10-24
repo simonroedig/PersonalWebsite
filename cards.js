@@ -353,6 +353,9 @@ function cardReset() {
 }
 
 function leftArrowCardsClick() {
+    if (a_card_is_open) {
+        return;
+    }
     const arrowLeft = document.getElementById("id_img_all_cards_arrow_left");
     const arrowRight = document.getElementById("id_img_all_cards_arrow_right");    
 
@@ -409,6 +412,9 @@ function leftArrowCardsClick() {
 }
 
 function rightArrowCardsClick() {
+    if (a_card_is_open) {
+        return;
+    }
     const arrowLeft = document.getElementById("id_img_all_cards_arrow_left");
     const arrowRight = document.getElementById("id_img_all_cards_arrow_right");
 
@@ -494,16 +500,10 @@ function openCardClick(event) {
     console.log(cardElement);
     console.log(cardID);
 
-    // Push new state into history
-    //history.pushState({ cardID: cardID }, null, "?card=" + cardID);
-    //
-
     openCardByID(cardID);
 }
 
 function openCardByID(cardID) {
-    // href the user to #cardID
-    // location.href = "#" + cardID;
     const goUp = document.getElementById('id_div_go_up');
     goUp.style.backgroundColor = getCSSVariableValue(cardColors[cardID]);
 
@@ -543,11 +543,7 @@ function openCardByID(cardID) {
 
 
 function closeOpenedCardClick() {
-    //history.back();
     closeOpenedCard();
-    // remove all strings after # from the url 
-    // location.href = location.href.split('#')[0] + '#id_div_copyright_space';
-    // history.replaceState(null, '', location.href.split('#')[0]);
 }
 
 
@@ -619,25 +615,6 @@ document.addEventListener("DOMContentLoaded", function() {
             
         }
     }
-
-    /*
-
-
-    if (window.location.href.includes('#card')) {
-        const cardID = window.location.href.split('#')[1];
-        openCardByID(cardID);
-    }
-
-    window.addEventListener('hashchange', function() {
-        // Get the current hash value
-        const currentHash = window.location.hash;
-        if (currentHash === '#id_div_copyright_space') {
-            closeOpenedCard();
-        }
-    });
-
-    */
-
 });
 
 

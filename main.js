@@ -33,6 +33,10 @@ var copyrighttext;
 var copyrighticon;
 
 function main() {
+    window.onpopstate = function(event) {
+        console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+     };
+     
     copyrighttext = document.getElementById("id_div_copyright_space");
 
     // Calculate current age (hover profile picture)
