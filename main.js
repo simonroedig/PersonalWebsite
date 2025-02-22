@@ -148,6 +148,14 @@ function main() {
             behavior: 'smooth' // Smooth scrolling animation
         });
     });
+
+
+
+
+    document.getElementById("id_div_toggle_cardsgroup_space").addEventListener("click", closeOpenedCardClick);
+    document.getElementById("id_div_footer_space").addEventListener("click", closeOpenedCardClick);
+    document.getElementById("id_div_copyright_space").addEventListener("click", closeOpenedCardClick);
+
 }
 
 
@@ -184,6 +192,4 @@ function burgerMenuClick() {
 
     burgerMenuClicked = !burgerMenuClicked;
 }
-
-
 
