@@ -150,11 +150,32 @@ function main() {
     });
 
 
-
-
-    document.getElementById("id_div_toggle_cardsgroup_space").addEventListener("click", closeOpenedCardClick);
-    document.getElementById("id_div_footer_space").addEventListener("click", closeOpenedCardClick);
     document.getElementById("id_div_copyright_space").addEventListener("click", closeOpenedCardClick);
+    document.getElementById("id_div_toggle_cardsgroup_space").addEventListener("click", closeOpenedCardClick);
+
+
+    document.getElementById("id_div_footer_space").addEventListener("click", function(event) {
+        if (event.target === this) {
+            closeOpenedCardClick();
+
+        }
+    });
+
+    document.getElementById("id_div_closed_cards_space_wrapper").addEventListener("click", function(event) {
+        if (event.target === this) {
+            closeOpenedCardClick();
+
+        }
+    });
+
+
+
+    document.getElementById("id_div_go_up").addEventListener("click", function(event) {
+        if (event.target === this) {
+            closeOpenedCardClick();
+
+        }
+    });
 
 }
 
