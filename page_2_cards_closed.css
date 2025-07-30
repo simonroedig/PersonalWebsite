@@ -206,3 +206,11 @@
     background-image: none;
     margin: 10px 0 5px 0;
 }
+
+.cardDate {
+    font-size: 1svh !important;
+    position: absolute;
+    bottom: 0.7svh;
+    right: -0.8svh;
+    font-family: 'Space Mono', monospace;
+}

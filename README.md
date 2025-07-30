@@ -1,1 +1,1 @@
-Started backing up personal website on GitHub, new version, WIP
+https://www.simonroedig.com/
