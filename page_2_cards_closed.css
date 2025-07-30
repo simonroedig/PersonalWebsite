@@ -210,7 +210,8 @@
 .cardDate {
     font-size: 1svh !important;
     position: absolute;
-    bottom: 0.7svh;
-    right: -0.8svh;
+    top: -2.3svh;
+    left: 13svh;
     font-family: 'Space Mono', monospace;
+    font-style: italic;
 }
