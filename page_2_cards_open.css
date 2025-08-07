@@ -27,7 +27,7 @@
     border-radius: 2svh;
     position: absolute;
     width: 90%;
-    height: 80%;
+    height: 85svh;
     animation: open 0.2s ease-in-out;
     transition: 0.2s ease;
 

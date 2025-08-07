@@ -26,6 +26,23 @@
         <script language="javascript" type="text/javascript" src="main.js"></script>
 
         <script>
+            // Initialize burger menu and year immediately when DOM is ready
+            document.addEventListener('DOMContentLoaded', function() {
+                // Initialize burger menu right away
+                const burgerButton = document.querySelector(".class_div_navbar_button");
+                if (burgerButton) {
+                    burgerButton.addEventListener("click", burgerMenuClick);
+                }
+                
+                // Set current year immediately
+                const yearSpan = document.getElementById("id_span_copyright_current_year");
+                if (yearSpan) {
+                    yearSpan.innerHTML = new Date().getFullYear();
+                }
+            });
+        </script>
+
+        <script>
             // Preloader
             /*
             <div id="id_div_preloader">
@@ -46,6 +63,7 @@
                 }
             });
             */
+            // hide the id_div_closed_cards_space_wrapper
         </script>
     </head>
 
@@ -133,8 +151,15 @@
 
         <div id="id_div_all_cards_space">
 
+            <!-- CARDS PRELOADER -->
+            <div id="id_div_cards_preloader">
+                <div id="id_div_cards_preloader_wrapper">
+                    <img id="id_img_cards_preloader" src="preloader.gif">
+                </div>
+            </div>
+
             <!-- CLOSED CARDS -->
-            <div id="id_div_closed_cards_space_wrapper">
+            <div id="id_div_closed_cards_space_wrapper" style="display: none;">
                 <!-- LEFT ARROW -->
                 <img id="id_img_all_cards_arrow_left" src="img/arrowleft.png">
 

@@ -35,8 +35,10 @@ var copyrighticon;
 function main() {
     copyrighttext = document.getElementById("id_div_copyright_space");
 
+    // Initialize cards preloader
+    initializeCardsPreloader();
+
     // Calculate current age (hover profile picture)
-    document.getElementById("id_span_copyright_current_year").innerHTML = new Date().getFullYear();
     document.getElementById("id_img_profile_picture").title = Math.floor((new Date() - new Date("1999-06-25")) / 1000 / 60 / 60 / 24 / 365) + " Years Old";
 
     websiteCard = document.getElementById("card1");
@@ -71,7 +73,6 @@ function main() {
     }
 
     // Event Listeners
-    document.querySelector(".class_div_navbar_button").addEventListener("click", burgerMenuClick);
     document.getElementById("id_img_all_cards_arrow_left").addEventListener("click", leftArrowCardsClick);
     document.getElementById("id_img_all_cards_arrow_right").addEventListener("click", rightArrowCardsClick);
     document.getElementById("id_img_close_opencards_icon").addEventListener("click", closeOpenedCardClick);
@@ -213,4 +214,55 @@ function burgerMenuClick() {
 
     burgerMenuClicked = !burgerMenuClicked;
 }
+
+function initializeCardsPreloader() {
+    const preloader = document.getElementById('id_div_cards_preloader');
+    const cardsWrapper = document.getElementById('id_div_closed_cards_space_wrapper');
+    
+    if (!preloader || !cardsWrapper) return;
+    
+    // Get all card images
+    const cardImages = document.querySelectorAll('.cards img');
+    let loadedImages = 0;
+    const totalImages = cardImages.length;
+    
+    // If no images to load, show cards immediately
+    if (totalImages === 0) {
+        showCards();
+        return;
+    }
+    
+    // Function to show cards and hide preloader
+    function showCards() {
+        preloader.style.display = 'none';
+        cardsWrapper.style.display = 'flex';
+    }
+    
+    // Check if all images are already loaded
+    function checkAllImagesLoaded() {
+        loadedImages++;
+        if (loadedImages >= totalImages) {
+            showCards();
+        }
+    }
+    
+    // Add event listeners to all card images
+    cardImages.forEach(img => {
+        if (img.complete) {
+            checkAllImagesLoaded();
+        } else {
+            img.addEventListener('load', checkAllImagesLoaded);
+            img.addEventListener('error', checkAllImagesLoaded); // Handle error cases too
+        }
+    });
+    
+    // Fallback: if images take too long, show cards after 3 seconds
+    setTimeout(() => {
+        if (preloader.style.display !== 'none') {
+            showCards();
+        }
+    }, 3000);
+}
+
+
 
