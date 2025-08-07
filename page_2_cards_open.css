@@ -44,6 +44,7 @@
     direction: ltr; 
     padding-top: 30px;
     padding-bottom: 30px;
+    z-index: 10000;
 }
 
 .opencard_inside_wrapper {

@@ -3,6 +3,34 @@ var cursorDefault = "url('cursor.png'), default";
 
 let a_card_is_open = false;
 
+// Card ID to URL slug mapping
+const cardSlugs = {
+    'card1': 'webdevelopment',
+    'card2': 'media-design',
+    'card3': 'meet-prototype',
+    'card4': 'teaching',
+    'card5': 'quarto-game',
+    'card6': 'music',
+    'card7': 'chrome-extension',
+    'card8': 'ecoshower',
+    'card9': 'rememory',
+    'card10': 'connectivitycontrol',
+    'card11': 'bmw',
+    'card12': 'rohde-schwarz',
+    'card13': 'bsh',
+    'card14': 'chordsync',
+    'card15': 'sbin',
+    'card16': 'songtreasure',
+    'card17': 'pulsell',
+    'card18': 'wacker-polysilicon'
+};
+
+// URL slug to card ID mapping
+const slugToCard = {};
+Object.keys(cardSlugs).forEach(cardId => {
+    slugToCard[cardSlugs[cardId]] = cardId;
+});
+
 var cardAmmountInCategory = 0;
 
 const cardColors = {
@@ -508,6 +536,9 @@ function openCardByID(cardID) {
     goUp.style.backgroundColor = getCSSVariableValue(cardColors[cardID]);
 
     openCardID = "open" + cardID;
+    
+    // Update URL with card slug
+    updateURLForCard(cardID);
 
     cardsOneToNine = document.getElementById("opencard" + cardID.slice(-1));
     if (cardID.length === 5) {
@@ -567,6 +598,9 @@ function closeOpenedCard() {
     */
     
     a_card_is_open = false;
+    
+    // Reset URL to default
+    resetURL();
     const goUp = document.getElementById('id_div_go_up');
     goUp.style.backgroundColor = '';
 
@@ -630,6 +664,52 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     
+});
+
+// URL handling functions
+function updateURLForCard(cardID) {
+    const slug = cardSlugs[cardID];
+    if (slug) {
+        const newURL = window.location.pathname + '#' + slug;
+        window.history.pushState({ card: cardID }, '', newURL);
+    }
+}
+
+function resetURL() {
+    const newURL = window.location.pathname;
+    window.history.pushState({}, '', newURL);
+}
+
+function openCardFromURL() {
+    const hash = window.location.hash.substring(1); // Remove the #
+    if (hash && slugToCard[hash]) {
+        const cardID = slugToCard[hash];
+        // Wait a bit for the page to load, then open the card
+        setTimeout(() => {
+            if (!a_card_is_open) {
+                openCardByID(cardID);
+                a_card_is_open = true;
+                document.body.style.overflow = "hidden";
+            }
+        }, 1000);
+    }
+}
+
+// Listen for URL changes
+window.addEventListener('popstate', function(event) {
+    if (a_card_is_open) {
+        closeOpenedCard();
+    }
+    if (event.state && event.state.card) {
+        setTimeout(() => {
+            openCardFromURL();
+        }, 100);
+    }
+});
+
+// Initialize URL handling when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    openCardFromURL();
 });
 
 
