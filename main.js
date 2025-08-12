@@ -28,6 +28,7 @@ var livaCard;
 var chordSyncCard;
 var sbinCard;
 var wackerCard;
+var noiseCard;
 
 var copyrighttext;
 var copyrighticon;
@@ -59,6 +60,7 @@ function main() {
     songTreasureCard = document.getElementById("card16");
     pulsellCard = document.getElementById("card17");
     wackerCard = document.getElementById("card18");
+    noiseCard = document.getElementById("card19");
     
     // Display X/Y on closed cards
     ammountOfAllCards = document.getElementsByClassName("cards").length;

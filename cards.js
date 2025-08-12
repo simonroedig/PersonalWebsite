@@ -22,7 +22,8 @@ const cardSlugs = {
     'card15': 'sbin',
     'card16': 'songtreasure',
     'card17': 'pulsell',
-    'card18': 'wacker-polysilicon'
+    'card18': 'wacker-polysilicon',
+    'card19': 'noise-scape'
 };
 
 // URL slug to card ID mapping
@@ -52,6 +53,7 @@ const cardColors = {
     card16: "--cardsongtreasure",
     card17: "--cardpulsell",
     card18: "--cardwacker",
+    card19: "--noisescape"
 };
 
 function getCSSVariableValue(variableName) {
@@ -124,17 +126,18 @@ function toggleCards(fromStartup = false) {
         chordSyncCard.id = "card6";
         iotCard.id = "card7";
         pulsellCard.id = "card8";
-        rememoryCard.id = "card9";
-        sbinCard.id = "card10";
-        songTreasureCard.id = "card11";
-        showerCard.id = "card12";
-        meetCard.id = "card13";        
+        noiseCard.id = "card9";
+        rememoryCard.id = "card10";
+        sbinCard.id = "card11";
+        songTreasureCard.id = "card12";
+        showerCard.id = "card13";
+        meetCard.id = "card14";        
 
-        bmwCard.id = "card14";
-        rohdeCard.id = "card15";
-        bshCard.id = "card16";
-        teachingCard.id = "card17";
-        wackerCard.id = "card18";
+        bmwCard.id = "card15";
+        rohdeCard.id = "card16";
+        bshCard.id = "card17";
+        teachingCard.id = "card18";
+        wackerCard.id = "card19";
 
     }
 
@@ -172,6 +175,7 @@ function toggleCards(fromStartup = false) {
         songTreasureCard.id = "ignore";
         pulsellCard.id = "ignore";
         wackerCard.id = "ignore";
+        noiseCard.id = "ignore";
     }
 
     // UNI CARDS
@@ -193,10 +197,11 @@ function toggleCards(fromStartup = false) {
         iotCard.id = "card2";
         pulsellCard.id = "card3";
         rememoryCard.id = "card4";
-        sbinCard.id = "card5";
-        songTreasureCard.id = "card6";
-        showerCard.id = "card7";
-        meetCard.id = "card8";        
+        noiseCard.id = "card5";
+        sbinCard.id = "card6";
+        songTreasureCard.id = "card7";
+        showerCard.id = "card8";
+        meetCard.id = "card9";        
 
         websiteCard.id = "ignore";
         teachingCard.id = "ignore";
@@ -244,6 +249,7 @@ function toggleCards(fromStartup = false) {
         sbinCard.id = "ignore";
         songTreasureCard.id = "ignore";
         pulsellCard.id = "ignore";
+        noiseCard.id = "ignore";
     }
 
     
