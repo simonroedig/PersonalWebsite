@@ -23,7 +23,8 @@ const cardSlugs = {
     'card16': 'songtreasure',
     'card17': 'pulsell',
     'card18': 'wacker-polysilicon',
-    'card19': 'noise-scape'
+    'card19': 'noise-scape',
+    'card20': 'scent-connect'
 };
 
 // URL slug to card ID mapping
@@ -53,7 +54,8 @@ const cardColors = {
     card16: "--cardsongtreasure",
     card17: "--cardpulsell",
     card18: "--cardwacker",
-    card19: "--noisescape"
+    card19: "--noisescape",
+    card20: "--scentconnect"
 };
 
 function getCSSVariableValue(variableName) {
@@ -116,28 +118,40 @@ function toggleCards(fromStartup = false) {
             card.style.visibility = "visible";
             card.style.display = "inline-flex";
         });
-
-        websiteCard.id = "card1";
-        mediaDesignCard.id = "card2";
-        quartoCard.id = "card3";
-        chromeCard.id = "card4";
-        musicCard.id = "card5";
-
-        chordSyncCard.id = "card6";
-        iotCard.id = "card7";
-        pulsellCard.id = "card8";
-        noiseCard.id = "card9";
-        rememoryCard.id = "card10";
-        sbinCard.id = "card11";
-        songTreasureCard.id = "card12";
-        showerCard.id = "card13";
-        meetCard.id = "card14";        
-
-        bmwCard.id = "card15";
-        rohdeCard.id = "card16";
-        bshCard.id = "card17";
-        teachingCard.id = "card18";
-        wackerCard.id = "card19";
+        
+        // set IDs
+        websiteCard.id = "ignore";
+        mediaDesignCard.id = "ignore";
+        quartoCard.id = "ignore";
+        chromeCard.id = "ignore";
+        musicCard.id = "ignore";
+        
+        chordSyncCard.id = "card1";
+        iotCard.id = "card4";
+        pulsellCard.id = "card3";
+        noiseCard.id = "card2";
+        rememoryCard.id = "ignore";
+        sbinCard.id = "ignore";
+        songTreasureCard.id = "card5";
+        showerCard.id = "ignore";
+        meetCard.id = "ignore";
+        scentCard.id = "ignore";        
+        
+        bmwCard.id = "ignore";
+        rohdeCard.id = "ignore";
+        bshCard.id = "ignore";
+        teachingCard.id = "ignore";
+        wackerCard.id = "ignore";
+        
+        // hide ignored cards
+        allCards.forEach(function(card) {
+            if (card.id === "ignore") {
+                card.classList.remove('cards');
+                card.style.visibility = "hidden";
+                card.style.display = "none";
+            }
+        });
+        
 
     }
 
@@ -176,6 +190,7 @@ function toggleCards(fromStartup = false) {
         pulsellCard.id = "ignore";
         wackerCard.id = "ignore";
         noiseCard.id = "ignore";
+        scentCard.id = "ignore";
     }
 
     // UNI CARDS
@@ -201,14 +216,15 @@ function toggleCards(fromStartup = false) {
         sbinCard.id = "card6";
         songTreasureCard.id = "card7";
         showerCard.id = "card8";
-        meetCard.id = "card9";        
+        meetCard.id = "card9";    
+        scentCard.id = "card10"; 
+        quartoCard.id = "ignore";
+        chromeCard.id = "ignore";       
 
         websiteCard.id = "ignore";
         teachingCard.id = "ignore";
         mediaDesignCard.id = "ignore";
-        quartoCard.id = "ignore";
         musicCard.id = "ignore";
-        chromeCard.id = "ignore";
         bmwCard.id = "ignore";
         rohdeCard.id = "ignore";
         bshCard.id = "ignore";
@@ -250,6 +266,7 @@ function toggleCards(fromStartup = false) {
         songTreasureCard.id = "ignore";
         pulsellCard.id = "ignore";
         noiseCard.id = "ignore";
+        scentCard.id = "ignore";
     }
 
     

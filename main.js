@@ -61,6 +61,7 @@ function main() {
     pulsellCard = document.getElementById("card17");
     wackerCard = document.getElementById("card18");
     noiseCard = document.getElementById("card19");
+    scentCard = document.getElementById("card20");
     
     // Display X/Y on closed cards
     ammountOfAllCards = document.getElementsByClassName("cards").length;

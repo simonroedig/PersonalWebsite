@@ -63,11 +63,12 @@ p {
     --cardrohde: #b5b9bc;
     --cardbsh: #f4724a;
     --cardchordsync: #a3e6eb;
-    --cardsbin: #d4d4d4;
-    --cardsongtreasure: #d1c38d;
+    --cardsbin: #f0c289;
+    --cardsongtreasure: #d4d4d4;
     --cardpulsell: #dcc4e4;
     --cardwacker: #beeba3;
     --noisescape: #FFFCA3;
+    --scentconnect: #DF5996;
 }
 
 ::-webkit-scrollbar {

@@ -166,7 +166,7 @@
 
                 <div class="cards cardsAllForGeneralStyles personalCard card1ForStyle" id="card1">
                     <h>Webdevelopment</h>
-                    <p>I Like to Design and Create Webpages- And Applications.</p>
+                    <p>Some Words About My Website.</p>
                     <img src="img/cards/webdev.jpg">
                     <div class="cardNumber">x/y</div>
                     <p class="cardDate">03/2023</p>
@@ -307,6 +307,14 @@
                     <img src="img\cards\noisescape.jpg">
                     <div class="cardNumber">x/y</div>
                     <p class="cardDate">08/2025</p>
+                </div>
+
+                <div class="cards cardsAllForGeneralStyles uniCard card20ForStyle" id="card20">
+                    <h>ScentConnect</h>
+                    <p>Reverse Engineered Air-Fresheners to Connect Peoples' Parfume.</p>
+                    <img src="img\cards\scentconnect.jpg">
+                    <div class="cardNumber">x/y</div>
+                    <p class="cardDate">03/2025</p>
                 </div>
 
 
@@ -1037,6 +1045,60 @@
                     <a class="opencard_external_link" href="https://github.com/simonroedig/NoiseScape" target="_blank"><h>➜ NoiseScape on Github</h></a>
                 </div>
             </div>
+
+
+            <!-- ScentConenct -->
+            <div class="opencard" id="opencard20">
+                <div class="opencard_inside_wrapper">
+                    <h class="opencard_headline">ScentConnect</h>
+
+                    <div class="opencard_mediadiv_1">
+                        <img class="opencard_img_size_1" src="img\opencards\scent\scentscreen.jpg">
+                    </div>
+
+                    <p>
+                        In a Practical Experience Design Workshop, my colleagues and I developed <strong>Scent Connect</strong> — 
+                        a pair of interconnected devices that release each other’s perfume through a movement trigger 
+                        on the other person’s device.
+                    </p>
+                    <br>
+                    <br>
+                    <p>
+                        <strong>How it works:</strong><br><br>
+                        <em>Motion Detection:</em> When Person A moves in their space, a sensor detects the motion and sends a signal to Person B’s device, and vice versa. Movement from either side triggers the scent dispersal for the other person.<br><br>
+                        <em>Scent Activation:</em> Person B’s Scent Connect then releases their favorite fragrance of Person A, instantly creating a sensory link between them. The same happens in reverse when Person B moves.<br><br>
+                        <em>LED Feedback:</em><br>
+                        <div style="padding-left: 15px;">
+                            <strong>Person A’s device:</strong><br>
+                            – White: Movement detected at Person A’s location.<br>
+                            – Green: Signal successfully sent to Person B’s device.<br>
+                            – Red: Error – scent could not be dispensed.<br><br>
+                            <strong>Person B’s device:</strong><br>
+                            – Partner’s color (e.g., Blue/Purple): Device activated, releasing Person A’s scent.<br>
+                        </div>
+                    </p>
+                    <br>
+                    <br>
+                    <p>
+                        To build this system, we reverse-engineered a standard air freshener from a drugstore. 
+                        We identified the gearwheel mechanism’s control algorithm and replaced it with a custom setup: 
+                        a microcontroller, a DC motor, and a motion sensor to trigger the release on command. 
+                        An on/off switch and indicator light allow manual control, while the LED system shows status updates 
+                        when each device triggers and releases the perfume. The control logic was programmed in MicroPython 
+                        and the devices communicate over Wi-Fi.
+                    </p>
+                    <br>
+                    
+                    Check out my GitHub repository for more details.
+                    <br>
+                    
+                    
+                    
+                    <a class="opencard_external_link" href="https://github.com/simonroedig/ScentConnect" target="_blank"><h>➜ ScentConnect on Github</h></a>
+                </div>
+            </div>
+
+
         </div>
 
         <div id="id_div_footer_space">
