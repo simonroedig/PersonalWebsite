@@ -22,11 +22,11 @@
         <link rel="stylesheet" href="page_2_footer_mobile.css">
         <link rel="stylesheet" href="page_2_footer_pc.css">
 
-        <script language="javascript" type="text/javascript" src="cards.js"></script>
-        <script language="javascript" type="text/javascript" src="main.js"></script>
+        <script language="javascript" type="text/javascript" src="cards.js" defer></script>
+        <script language="javascript" type="text/javascript" src="main.js" defer></script>
 
         <script>
-            // Initialize burger menu and year immediately when DOM is ready
+            // Initialize burger menu, year, and main app on DOM ready (faster than window onload)
             document.addEventListener('DOMContentLoaded', function() {
                 // Initialize burger menu right away
                 const burgerButton = document.querySelector(".class_div_navbar_button");
@@ -38,6 +38,11 @@
                 const yearSpan = document.getElementById("id_span_copyright_current_year");
                 if (yearSpan) {
                     yearSpan.innerHTML = new Date().getFullYear();
+                }
+
+                // Start app logic without waiting for all images
+                if (typeof main === 'function') {
+                    main();
                 }
             });
         </script>
@@ -71,7 +76,7 @@
     <!--Insert the html preloader here from the above script tag, if wanted-->
 
     <!-- PAGE 1 -->
-    <body id="id_body_page1" onload="main()">
+    <body id="id_body_page1">
 
         <div id="id_div_space1"></div>
 

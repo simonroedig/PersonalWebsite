@@ -36,6 +36,9 @@ var copyrighticon;
 function main() {
     copyrighttext = document.getElementById("id_div_copyright_space");
 
+    // Defer heavy media in open cards so they don't block initial load
+    initializeLazyMedia();
+
     // Initialize cards preloader
     initializeCardsPreloader();
 
@@ -224,10 +227,21 @@ function initializeCardsPreloader() {
     
     if (!preloader || !cardsWrapper) return;
     
-    // Get all card images
+    // Get all card images (closed cards only) and enable lazy loading
     const cardImages = document.querySelectorAll('.cards img');
+    cardImages.forEach(img => {
+        if (!img.hasAttribute('loading')) {
+            img.setAttribute('loading', 'lazy');
+        }
+        if (!img.hasAttribute('decoding')) {
+            img.setAttribute('decoding', 'async');
+        }
+    });
     let loadedImages = 0;
     const totalImages = cardImages.length;
+    const minimumImagesToShow = Math.min(3, Math.max(1, totalImages));
+    const startTime = performance.now();
+    let hasShown = false;
     
     // If no images to load, show cards immediately
     if (totalImages === 0) {
@@ -237,6 +251,8 @@ function initializeCardsPreloader() {
     
     // Function to show cards and hide preloader
     function showCards() {
+        if (hasShown) return;
+        hasShown = true;
         preloader.style.display = 'none';
         cardsWrapper.style.display = 'flex';
     }
@@ -244,9 +260,8 @@ function initializeCardsPreloader() {
     // Check if all images are already loaded
     function checkAllImagesLoaded() {
         loadedImages++;
-        if (loadedImages >= totalImages) {
-            showCards();
-        }
+        // Reveal early as soon as a couple of thumbnails are ready
+        if (loadedImages >= minimumImagesToShow) showCards();
     }
     
     // Add event listeners to all card images
@@ -259,12 +274,36 @@ function initializeCardsPreloader() {
         }
     });
     
-    // Fallback: if images take too long, show cards after 3 seconds
+    // Time-based early reveal: show after ~300ms regardless
     setTimeout(() => {
-        if (preloader.style.display !== 'none') {
-            showCards();
+        if (!hasShown) showCards();
+    }, 300);
+
+    // Hard fallback: if something stalls, force show after 2s
+    setTimeout(() => {
+        if (!hasShown) showCards();
+    }, 2000);
+}
+
+// Mark open-card media for lazy behavior and defer iframe loading until card open
+function initializeLazyMedia() {
+    // Lazy-load images inside open cards
+    const openCardImages = document.querySelectorAll('.opencard img');
+    openCardImages.forEach(img => {
+        if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+        if (!img.hasAttribute('decoding')) img.setAttribute('decoding', 'async');
+        if (!img.hasAttribute('fetchpriority')) img.setAttribute('fetchpriority', 'low');
+    });
+
+    // Defer iframe src by moving to data-src and add lazy
+    const openCardIframes = document.querySelectorAll('.opencard iframe');
+    openCardIframes.forEach(iframe => {
+        if (!iframe.hasAttribute('loading')) iframe.setAttribute('loading', 'lazy');
+        if (iframe.hasAttribute('src') && !iframe.getAttribute('data-src')) {
+            iframe.setAttribute('data-src', iframe.getAttribute('src'));
+            iframe.removeAttribute('src');
         }
-    }, 3000);
+    });
 }
 
 

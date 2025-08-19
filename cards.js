@@ -597,6 +597,21 @@ function openCardByID(cardID) {
     bg.style.backgroundColor = getCSSVariableValue(cardColors[cardID]);
     document.getElementById("id_div_copyright_space").style.backgroundColor = getCSSVariableValue("--darkgrey");
     document.body.style.backgroundColor = getCSSVariableValue("--darkgrey");
+
+    // Activate deferred media inside the opened card (restore iframe src)
+    try {
+        const openCardElement = document.getElementById("open" + cardID);
+        if (openCardElement) {
+            const deferredIframes = openCardElement.querySelectorAll('iframe[data-src]');
+            deferredIframes.forEach(iframe => {
+                if (!iframe.getAttribute('src')) {
+                    iframe.setAttribute('src', iframe.getAttribute('data-src'));
+                }
+            });
+        }
+    } catch (e) {
+        // no-op
+    }
 }
 
 
