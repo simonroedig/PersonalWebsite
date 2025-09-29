@@ -183,11 +183,19 @@
     height: calc(50vw * 9 / 16);
     margin: 2vw;
 }
+
 .opencard_img_size_1 {
     border: 0.5svh solid black;
     border-radius: 2svh;
     box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
     width: 30vw;
+    margin: 2vw;
+}
+.opencard_img_size_1_small {
+    border: 0.5svh solid black;
+    border-radius: 2svh;
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+    width: 10vw;
     margin: 2vw;
 }
 .opencard_img_size_2 {
@@ -273,6 +281,13 @@
     .opencard_img_size_2 {
         width: 80vw;
         margin: 8vw;
+    }
+    .opencard_img_size_1_small {
+        border: 0.5svh solid black;
+        border-radius: 2svh;
+        box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+        width: 40vw;
+        margin: 2vw;
     }
 }
 
