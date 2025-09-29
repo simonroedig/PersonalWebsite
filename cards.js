@@ -734,6 +734,11 @@ function openCardFromURL() {
                 openCardByID(cardID);
                 a_card_is_open = true;
                 document.body.style.overflow = "hidden";
+                // Scroll to bottom to show the opened card
+                window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: 'smooth'
+                });
             }
         }, 1000);
     }
