@@ -29,6 +29,8 @@ var chordSyncCard;
 var sbinCard;
 var wackerCard;
 var noiseCard;
+var scentCard;
+var doggyMatchCard;
 
 var copyrighttext;
 var copyrighticon;
@@ -65,6 +67,7 @@ function main() {
     wackerCard = document.getElementById("card18");
     noiseCard = document.getElementById("card19");
     scentCard = document.getElementById("card20");
+    doggyMatchCard = document.getElementById("card21");
     
     // Display X/Y on closed cards
     ammountOfAllCards = document.getElementsByClassName("cards").length;
