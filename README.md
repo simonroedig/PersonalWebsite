@@ -9,4 +9,4 @@ of a developer, enabling me to collaborate more effectively and bring concepts t
 [![Website](https://img.shields.io/badge/Website-%23c5f8ab.svg?logo=About.me&logoColor=black)](https://www.simonroedig.com/) 
 [![Email](https://img.shields.io/badge/Email-%23bfa5f9.svg?logo=gmail&logoColor=white)](mailto:mail@simonroedig.com) 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/simonroedig) 
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?logo=youtube&logoColor=white)](https://youtube.com/@simonroedig)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/channel/UCisvFnG8YWMEamSpQ3NiKew)
