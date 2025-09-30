@@ -4,6 +4,6 @@ Hi, I'm Simon Rödig! 👋<br>I'm a UX/UI designer and developer with a passion 
 
 ## 🌐 Socials:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/simonroedig)  
-[![Website](https://img.shields.io/badge/Website-000000?logo=About.me&logoColor=white)](https://www.simonroedig.com/)  
-[![Mail](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:mail@simonroedig.com)  
+[![Website](https://img.shields.io/badge/Website-%23FFB400.svg?logo=About.me&logoColor=black)](https://www.simonroedig.com/)  
+[![Email](https://img.shields.io/badge/Email-%230096FF.svg?logo=gmail&logoColor=white)](mailto:mail@simonroedig.com)  
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?logo=youtube&logoColor=white)](https://youtube.com/@simonroedig)
