@@ -25,7 +25,8 @@ const cardSlugs = {
     'card18': 'wacker-polysilicon',
     'card19': 'noise-scape',
     'card20': 'scent-connect',
-    'card21': 'doggy-match'
+    'card21': 'doggy-match',
+    'card22': 'dartai'
 };
 
 // URL slug to card ID mapping
@@ -57,7 +58,8 @@ const cardColors = {
     card18: "--cardwacker",
     card19: "--noisescape",
     card20: "--scentconnect"
-    ,card21: "--doggymatch"
+    ,card21: "--doggymatch",
+    card22: "--dartai"
 };
 
 function getCSSVariableValue(variableName) {
@@ -139,12 +141,14 @@ function toggleCards(fromStartup = false) {
         meetCard.id = "ignore";
         scentCard.id = "ignore";        
         doggyMatchCard.id = "ignore";
+        dartAICard.id = "ignore";
 
         bmwCard.id = "ignore";
         rohdeCard.id = "ignore";
         bshCard.id = "ignore";
         teachingCard.id = "ignore";
         wackerCard.id = "ignore";
+
         
         // hide ignored cards
         allCards.forEach(function(card) {
@@ -175,10 +179,11 @@ function toggleCards(fromStartup = false) {
 
         websiteCard.id = "card1";
         mediaDesignCard.id = "card2";
-        quartoCard.id = "card3";
-        chromeCard.id = "card4";
-        musicCard.id = "card5";
-        doggyMatchCard.id = "card6";
+        quartoCard.id = "card5";
+        chromeCard.id = "card6";
+        musicCard.id = "card7";
+        doggyMatchCard.id = "card3";
+        dartAICard.id = "card4";
 
         meetCard.id = "ignore";
         teachingCard.id = "ignore";
@@ -225,6 +230,7 @@ function toggleCards(fromStartup = false) {
         quartoCard.id = "ignore";
         chromeCard.id = "ignore";       
         doggyMatchCard.id = "ignore";
+        dartAICard.id = "ignore";
 
         websiteCard.id = "ignore";
         teachingCard.id = "ignore";
@@ -273,6 +279,7 @@ function toggleCards(fromStartup = false) {
         noiseCard.id = "ignore";
         scentCard.id = "ignore";
         doggyMatchCard.id = "ignore";
+        dartAICard.id = "ignore";
     }
 
     

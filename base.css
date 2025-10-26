@@ -54,7 +54,7 @@ p {
     --cardmeet: #c9e5d2;
     --cardteaching: #db5971;
     --cardquarto: #598cc2;
-    --cardmusic: #c1645e;
+    --cardmusic: #cda369;
     --cardchromeextension: #71ba6a;
     --cardshower: #b8d9ea;
     --cardrememory: #5ad0b9;
@@ -70,6 +70,7 @@ p {
     --noisescape: #FFFCA3;
     --scentconnect: #DF5996;
     --doggymatch: #edd6c6;
+    --dartai: #e45f68;
 }
 
 ::-webkit-scrollbar {
