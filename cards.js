@@ -1,6 +1,8 @@
 var cursorPointer = "url('cursor_pointer.png'), pointer";
 var cursorDefault = "url('cursor.png'), default";
 
+let isRoutingEnabled = false;
+
 let a_card_is_open = false;
 
 // Card ID to URL slug mapping
@@ -719,6 +721,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // URL handling functions
 function updateURLForCard(cardID) {
+    if (!isRoutingEnabled) return;
+
     const slug = cardSlugs[cardID];
     if (slug) {
         const newURL = window.location.pathname + '#' + slug;
@@ -727,6 +731,8 @@ function updateURLForCard(cardID) {
 }
 
 function resetURL() {
+    if (!isRoutingEnabled) return;
+
     const newURL = window.location.pathname;
     window.history.pushState({}, '', newURL);
 }
