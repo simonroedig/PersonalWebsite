@@ -32,6 +32,7 @@ var noiseCard;
 var scentCard;
 var doggyMatchCard;
 var dartAICard;
+var privacyDeckCard;
 
 var copyrighttext;
 var copyrighticon;
@@ -70,6 +71,7 @@ function main() {
     scentCard = document.getElementById("card20");
     doggyMatchCard = document.getElementById("card21");
     dartAICard = document.getElementById("card22");
+    privacyDeckCard = document.getElementById("card23");
     
     // Display X/Y on closed cards
     ammountOfAllCards = document.getElementsByClassName("cards").length;

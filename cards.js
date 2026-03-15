@@ -28,7 +28,8 @@ const cardSlugs = {
     'card19': 'noise-scape',
     'card20': 'scent-connect',
     'card21': 'doggy-match',
-    'card22': 'dartai'
+    'card22': 'dartai',
+    'card23': 'privacydeck'
 };
 
 // URL slug to card ID mapping
@@ -59,9 +60,10 @@ const cardColors = {
     card17: "--cardpulsell",
     card18: "--cardwacker",
     card19: "--noisescape",
-    card20: "--scentconnect"
-    ,card21: "--doggymatch",
-    card22: "--dartai"
+    card20: "--scentconnect",
+    card21: "--doggymatch",
+    card22: "--dartai",
+    card23: "--privacydeck"
 };
 
 function getCSSVariableValue(variableName) {
@@ -144,6 +146,7 @@ function toggleCards(fromStartup = false) {
         scentCard.id = "ignore";        
         doggyMatchCard.id = "ignore";
         dartAICard.id = "ignore";
+        privacyDeckCard.id = "ignore";
 
         bmwCard.id = "ignore";
         rohdeCard.id = "ignore";
@@ -202,6 +205,7 @@ function toggleCards(fromStartup = false) {
         wackerCard.id = "ignore";
         noiseCard.id = "ignore";
         scentCard.id = "ignore";
+        privacyDeckCard.id = "ignore";
     }
 
     // UNI CARDS
@@ -222,13 +226,15 @@ function toggleCards(fromStartup = false) {
         chordSyncCard.id = "card1";
         iotCard.id = "card2";
         pulsellCard.id = "card3";
-        rememoryCard.id = "card4";
+        rememoryCard.id = "card7";
         noiseCard.id = "card5";
         sbinCard.id = "card6";
-        songTreasureCard.id = "card7";
-        showerCard.id = "card8";
-        meetCard.id = "card9";    
-        scentCard.id = "card10"; 
+        privacyDeckCard.id = "card4";
+        songTreasureCard.id = "card8";
+        showerCard.id = "card9";
+        meetCard.id = "card10";    
+        scentCard.id = "card11"; 
+
         quartoCard.id = "ignore";
         chromeCard.id = "ignore";       
         doggyMatchCard.id = "ignore";
@@ -282,6 +288,7 @@ function toggleCards(fromStartup = false) {
         scentCard.id = "ignore";
         doggyMatchCard.id = "ignore";
         dartAICard.id = "ignore";
+        privacyDeckCard.id = "ignore";
     }
 
     
