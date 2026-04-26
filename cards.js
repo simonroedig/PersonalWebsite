@@ -706,24 +706,34 @@ function closeOpenedCard() {
     document.body.style.backgroundColor = getCSSVariableValue("--colbg");
 }
 
+function getStableCardIdFromElement(element) {
+    if (!element || !element.classList) return null;
+
+    // IDs of the closed-card DOM nodes get reassigned when toggling card groups.
+    // The stable identifier is the "cardNNForStyle" class (e.g. card12ForStyle).
+    const stableClass = Array.from(element.classList).find(cls => /^card\d+ForStyle$/.test(cls));
+    if (!stableClass) return null;
+    return stableClass.slice(0, stableClass.indexOf('ForStyle'));
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const goUp = document.getElementById('id_div_go_up');
+    const cards = document.querySelectorAll('.cardsAllForGeneralStyles');
 
-    for (let i = 1; i <= Object.keys(cardColors).length; i++) {
-        const card = document.getElementById(`card${i}`);
-        if (card) {
-            card.addEventListener('mouseenter', function() {
-                goUp.style.backgroundColor = getCSSVariableValue(cardColors[`card${i}`]);
-            });
-            card.addEventListener('mouseleave', function() {
-                if (!a_card_is_open) {
-                    goUp.style.backgroundColor = '';
-                }
-            });
-            
-        }
-    }
-    
+    cards.forEach(cardEl => {
+        cardEl.addEventListener('mouseenter', function(event) {
+            const stableCardId = getStableCardIdFromElement(event.currentTarget);
+            if (stableCardId && cardColors[stableCardId]) {
+                goUp.style.backgroundColor = getCSSVariableValue(cardColors[stableCardId]);
+            }
+        });
+
+        cardEl.addEventListener('mouseleave', function() {
+            if (!a_card_is_open) {
+                goUp.style.backgroundColor = '';
+            }
+        });
+    });
 });
 
 // URL handling functions
