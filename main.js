@@ -72,6 +72,8 @@ function main() {
     doggyMatchCard = document.getElementById("card21");
     dartAICard = document.getElementById("card22");
     privacyDeckCard = document.getElementById("card23");
+    anodiCard = document.getElementById("card24");
+
     
     // Display X/Y on closed cards
     ammountOfAllCards = document.getElementsByClassName("cards").length;

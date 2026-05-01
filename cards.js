@@ -29,7 +29,8 @@ const cardSlugs = {
     'card20': 'scent-connect',
     'card21': 'doggy-match',
     'card22': 'dartai',
-    'card23': 'privacydeck'
+    'card23': 'privacydeck',
+    'card24': 'anodi'
 };
 
 // URL slug to card ID mapping
@@ -63,7 +64,8 @@ const cardColors = {
     card20: "--scentconnect",
     card21: "--doggymatch",
     card22: "--dartai",
-    card23: "--privacydeck"
+    card23: "--privacydeck",
+    card24: "--anodi"
 };
 
 function getCSSVariableValue(variableName) {
@@ -154,6 +156,8 @@ function toggleCards(fromStartup = false) {
         teachingCard.id = "ignore";
         wackerCard.id = "ignore";
 
+        anodiCard.id = "ignore";
+
         
         // hide ignored cards
         allCards.forEach(function(card) {
@@ -184,11 +188,12 @@ function toggleCards(fromStartup = false) {
 
         websiteCard.id = "card1";
         mediaDesignCard.id = "card2";
-        quartoCard.id = "card5";
-        chromeCard.id = "card6";
-        musicCard.id = "card7";
+        quartoCard.id = "card6";
+        chromeCard.id = "card7";
+        musicCard.id = "card8";
         doggyMatchCard.id = "card3";
         dartAICard.id = "card4";
+        anodiCard.id = "card5";
 
         meetCard.id = "ignore";
         teachingCard.id = "ignore";
@@ -248,6 +253,8 @@ function toggleCards(fromStartup = false) {
         rohdeCard.id = "ignore";
         bshCard.id = "ignore";
         wackerCard.id = "ignore";
+
+        anodiCard.id = "ignore";
     }
 
     // WORK CARDS

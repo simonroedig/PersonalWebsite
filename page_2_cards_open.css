@@ -191,6 +191,10 @@
     width: 30vw;
     margin: 2vw;
 }
+.opencard_img_size_1_noborder {
+    width: 30vw;
+    margin: 2vw;
+}
 .opencard_img_size_1_small {
     border: 0.5svh solid black;
     border-radius: 2svh;
@@ -275,6 +279,10 @@
         margin: 8vw 2vw;
     }
     .opencard_img_size_1 {
+        width: 65vw;
+        margin: 8vw;
+    }
+    .opencard_img_size_1_noborder {
         width: 65vw;
         margin: 8vw;
     }
